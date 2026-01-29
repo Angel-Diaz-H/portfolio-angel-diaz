@@ -1,6 +1,10 @@
+export { AppContacto } from "./sections/Hero/AppContacto";
+export { ItemContacto } from "@/components/sections/Hero/ItemContacto";
+export { AppRedesSociales } from "@/components/sections/Hero/AppRedesSociales";
 export { AppScrollTechnologies } from "@/components/sections/ScrollTechnologies/AppScrollTechnologies";
 export { BotonRedSocial } from "@/components/sections/Hero/BotonRedSocial";
 export { Capacitaciones } from "@/components/sections/Capacitaciones";
+export { CopyButton } from "@/components/ui/CopyButton";
 export { Experiencia } from "@/components/sections/Experiencia";
 export { Footer } from "@/components/shared/Footer";
 export { GithubIcon } from "@/components/icons/GitHubIcon";
@@ -9,6 +13,5 @@ export { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 export { MainLayout } from "@/components/layout/MainLayout";
 export { Navbar } from "@/components/shared/Navbar";
 export { Proyectos } from "@/components/sections/Proyectos";
-export { RedesSociales } from "@/components/sections/Hero/RedesSociales";
 export { ScrollTechnologies } from "@/components/sections/ScrollTechnologies/ScrollTechnologies";
 export { Tecnologias } from "@/components/sections/Tecnologias";

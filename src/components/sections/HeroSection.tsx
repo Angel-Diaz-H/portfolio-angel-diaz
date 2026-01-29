@@ -1,4 +1,4 @@
-import { RedesSociales } from "@/components/index";
+import { AppContacto, AppRedesSociales } from "@/components/index";
 
 export const HeroSection = () => {
   return (
@@ -9,7 +9,8 @@ export const HeroSection = () => {
       <div>
         <h1>Angel Díaz.</h1>
         <p>Administrador de bases de datos y desarrollador web.</p>
-        <RedesSociales />
+        <AppContacto />
+        <AppRedesSociales />
       </div>
     </header>
   );

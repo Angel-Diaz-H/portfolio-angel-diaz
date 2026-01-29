@@ -14,39 +14,6 @@
   }
 }
 
-/* Marquee / scroll infinito horizontal para logos/tecnologías */
-/* .marquee {
-  overflow: hidden;
-  width: 100%;
-}
-.marquee__track {
-  display: flex;
-  align-items: center;
-  gap: 1rem; */
-/* la animación mueve el contenedor la mitad hacia la izquierda (por eso duplicamos items) */
-/* animation-name: marquee;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  will-change: transform;
-}
-.marquee__item img {
-  display: block;
-  object-fit: contain;
-  filter: saturate(1);
-}
-.marquee:hover .marquee__track {
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-} */
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -55,6 +22,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -90,71 +58,109 @@
 
 :root {
   --radius: 0.625rem;
+
+  /* Bases neutras */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.886 0.27 137.189);
+  --primary-foreground: oklch(1 0 0);
+
+  /* Secondary: Un gris muy suave, ideal para contraste */
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
+
+  /* Muted: Fondos apagados */
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+
+  /* Accent: Para hovers en listas/dropdowns. */
+  --accent: oklch(0.983 0.042 124.442);
+  --accent-foreground: oklch(0.75 0.243 140.358);
+
+  /* Destructive: Rojo de error */
   --destructive: oklch(0.577 0.245 27.325);
+
+  /* Bordes e Inputs */
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
+
+  /* Ring: El aro de focus del input, usamos el verde principal */
+  --ring: oklch(0.75 0.243 140.358);
+
+  /* Charts: Integrando el verde en las gráficas */
+  --chart-1: oklch(0.75 0.243 140.358);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
+
+  /* Sidebar */
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-primary: oklch(0.75 0.243 140.358);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.983 0.042 124.442);
+  --sidebar-accent-foreground: oklch(0.399 0.125 139.062);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-ring: oklch(0.75 0.243 140.358);
 }
 
 .dark {
+  /* Bases Oscuras */
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+
+  /* Primary Dark: Usamos el 500 (más brillante) para que resalte en negro */
+  --primary: oklch(0.876 0.282 139.907);
+  --primary-foreground: oklch(
+    0.145 0 0
+  ); /* Texto oscuro en botón verde brillante */
+
+  /* Secondary */
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
+
+  /* Muted */
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+
+  /* Accent Dark: Verde muy oscuro para los hovers */
+  --accent: oklch(0.305 0.098 139.895);
+  --accent-foreground: oklch(0.876 0.282 139.907);
+
   --destructive: oklch(0.704 0.191 22.216);
+
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
+
+  /* Ring Dark */
+  --ring: oklch(0.876 0.282 139.907);
+
+  /* Charts Dark */
+  --chart-1: oklch(0.876 0.282 139.907);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
+
+  /* Sidebar Dark */
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-primary: oklch(0.876 0.282 139.907); /* green-house-500 */
+  --sidebar-primary-foreground: oklch(0.145 0 0);
+  --sidebar-accent: oklch(0.305 0.098 139.895); /* green-house-950 */
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-ring: oklch(0.876 0.282 139.907);
 }
 
 @layer base {
@@ -165,3 +171,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* 
+50: oklch(0.983 0.042 124.442);
+100: oklch(0.962 0.092 127.642);
+200: oklch(0.933 0.167 129.924);
+300: oklch(0.904 0.238 133.477);
+400: oklch(0.886 0.270 137.189);
+500: oklch(0.876 0.282 139.907);
+600: oklch(0.750 0.243 140.358);
+700: oklch(0.609 0.197 140.265);
+800: oklch(0.508 0.162 139.647);
+900: oklch(0.399 0.125 139.062);
+950: oklch(0.305 0.098 139.895);
+*/
+
+/* .marquee { overflow: hidden; width: 100%; }
+.marquee__track { display: flex; align-items: center; gap: 1rem; animation-name: marquee; animation-timing-function: linear; animation-iteration-count: infinite; will-change: transform; }
+.marquee__item img { display: block; object-fit: contain; filter: saturate(1); }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } } 
+*/

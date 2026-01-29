@@ -1,12 +1,15 @@
-import { GithubIcon } from "@/components/index";
 import { Button } from "@/components/ui/button";
+import type { ComponentType } from "react";
 
 interface Props {
   nombre: string;
+  Icon: ComponentType<React.SVGProps<SVGSVGElement>>;
   href: string;
   target: string;
   rel: string;
   ariaLabel: string;
+  className?: string;
+  sizeIcon?: string;
 }
 
 export const BotonRedSocial = ({
@@ -15,15 +18,19 @@ export const BotonRedSocial = ({
   target,
   rel,
   ariaLabel,
+  Icon,
+  className,
+  sizeIcon = "4.5",
 }: Props) => {
   return (
     <Button
       variant="outline"
       asChild
-      className="w-25 items-center justify-end rounded-full transition-colors hover:border-lime-500 hover:text-lime-600"
+      className={`hover:border-ring hover:text-accent-foreground h-9 w-33 items-center justify-center rounded-full transition-colors ${className}`}
     >
       <a href={href} target={target} rel={rel} aria-label={ariaLabel}>
-        <GithubIcon /> {nombre}
+        <Icon className={`h-${sizeIcon}! w-${sizeIcon}! shrink-0`} />
+        {nombre}
       </a>
     </Button>
   );
