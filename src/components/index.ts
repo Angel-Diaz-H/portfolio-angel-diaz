@@ -1,3 +1,10 @@
+export { AppScrollTechnologies } from "./sections/ScrollTechnologies/AppScrollTechnologies";
+export { Capacitaciones } from "./sections/Capacitaciones";
+export { Experiencia } from "./sections/Experiencia";
+export { Footer } from "./shared/Footer";
+export { HeroSection } from "./sections/HeroSection";
 export { MainLayout } from "./layout/MainLayout";
 export { Navbar } from "./shared/Navbar";
-export { ScrollTechnologies } from "./sections/ScrollTechnologies";
+export { Proyectos } from "./sections/Proyectos";
+export { ScrollTechnologies } from "./sections/ScrollTechnologies/ScrollTechnologies";
+export { Tecnologias } from "./sections/Tecnologias";

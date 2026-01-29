@@ -1,12 +1,24 @@
-import { MainLayout, ScrollTechnologies } from "./components";
+import {
+  // AppScrollTechnologies,
+  Capacitaciones,
+  Experiencia,
+  HeroSection,
+  MainLayout,
+  Proyectos,
+  Tecnologias,
+} from "./components";
 
 function App() {
   return (
     <MainLayout>
-      <section className="flex items-center justify-center bg-gray-50">
-        <h1 className="text-4xl font-bold">Hola.</h1>
-      </section>
-      <ScrollTechnologies />
+      {/* Header */}
+      <HeroSection />
+      {/* Secciones */}
+      {/* <AppScrollTechnologies /> */}
+      <Proyectos />
+      <Tecnologias />
+      <Experiencia />
+      <Capacitaciones />
     </MainLayout>
   );
 }

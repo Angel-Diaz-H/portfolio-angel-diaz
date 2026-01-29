@@ -10,3 +10,36 @@
     font-family: var(--font-poppins);
   }
 }
+
+/* Marquee / scroll infinito horizontal para logos/tecnologías */
+/* .marquee {
+  overflow: hidden;
+  width: 100%;
+}
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 1rem; */
+/* la animación mueve el contenedor la mitad hacia la izquierda (por eso duplicamos items) */
+/* animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+.marquee__item img {
+  display: block;
+  object-fit: contain;
+  filter: saturate(1);
+}
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+} */
