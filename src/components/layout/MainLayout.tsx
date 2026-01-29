@@ -1,4 +1,4 @@
-import { Navbar, Footer } from "../index";
+import { Navbar, Footer } from "@/components/index";
 import type { ReactNode } from "react";
 
 interface Props {

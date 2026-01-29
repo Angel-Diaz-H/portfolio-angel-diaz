@@ -38,5 +38,3 @@ export const ScrollTechnologies: React.FC<Props> = ({
     </div>
   );
 };
-
-export default ScrollTechnologies;

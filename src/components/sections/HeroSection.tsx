@@ -1,3 +1,5 @@
+import { RedesSociales } from "@/components/index";
+
 export const HeroSection = () => {
   return (
     <header className="grid grid-cols-2">
@@ -7,6 +9,7 @@ export const HeroSection = () => {
       <div>
         <h1>Angel Díaz.</h1>
         <p>Administrador de bases de datos y desarrollador web.</p>
+        <RedesSociales />
       </div>
     </header>
   );

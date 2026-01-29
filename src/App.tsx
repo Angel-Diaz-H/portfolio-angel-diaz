@@ -6,7 +6,7 @@ import {
   MainLayout,
   Proyectos,
   Tecnologias,
-} from "./components";
+} from "@/components/index";
 
 function App() {
   return (

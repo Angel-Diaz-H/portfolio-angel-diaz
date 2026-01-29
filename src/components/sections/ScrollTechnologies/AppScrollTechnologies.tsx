@@ -1,4 +1,4 @@
-import ScrollTechnologies from "./ScrollTechnologies";
+import { ScrollTechnologies } from "@/components/index";
 
 const imagesModules = import.meta.glob("../../../assets/technologies/*.webp", {
   eager: true,
