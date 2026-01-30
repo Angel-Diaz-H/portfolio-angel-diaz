@@ -2,7 +2,10 @@ export const Experiencia = () => {
   return (
     <section>
       <h1>Experiencia Profesional.</h1>
-      <h2>Casas Javer.</h2>
+      <div className="flex">
+        <img className="h-10" src="/experiencia/Casas-Javer.webp" alt="" />
+        <h2 className="text-red-600">Casas Javer.</h2>
+      </div>
       <p>Administrador de Base de Datos Junior (DBA intern).</p>
       <p>Enero 2025 - Noviembre 2025, híbrido.</p>
       <p>

@@ -1,9 +1,13 @@
 import { BotonRedSocial, GithubIcon, LinkedinIcon } from "@/components/index";
 import { AppWindow, FileCode, Mail } from "lucide-react";
 
-export const AppRedesSociales = () => {
+interface Props {
+  className?: string;
+}
+
+export const AppRedesSociales = ({ className }: Props) => {
   return (
-    <div className="flex justify-start space-x-2">
+    <div className={`${className}`}>
       <BotonRedSocial
         nombre="Curriculum"
         Icon={FileCode}

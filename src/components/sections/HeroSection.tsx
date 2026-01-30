@@ -10,7 +10,7 @@ export const HeroSection = () => {
         <h1>Angel Díaz.</h1>
         <p>Administrador de bases de datos y desarrollador web.</p>
         <AppContacto />
-        <AppRedesSociales />
+        <AppRedesSociales className="grid grid-cols-3" />
       </div>
     </header>
   );

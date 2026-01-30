@@ -1,3 +1,7 @@
 export const Proyectos = () => {
-  return <section>Proyectos</section>;
+  return (
+    <section>
+      <h1>Proyectos.</h1>
+    </section>
+  );
 };
