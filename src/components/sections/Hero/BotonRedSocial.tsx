@@ -26,7 +26,7 @@ export const BotonRedSocial = ({
     <Button
       variant="outline"
       asChild
-      className={`hover:border-ring hover:text-accent-foreground h-9 w-33 items-center justify-center rounded-full transition-colors ${className}`}
+      className={`hover:border-ring hover:text-accent-secondary-foreground h-9 w-33 items-center justify-center rounded-full transition-colors ${className}`}
     >
       <a href={href} target={target} rel={rel} aria-label={ariaLabel}>
         <Icon className={`h-${sizeIcon}! w-${sizeIcon}! shrink-0`} />

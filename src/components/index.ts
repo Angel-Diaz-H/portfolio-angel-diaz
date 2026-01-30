@@ -1,14 +1,16 @@
+export { AppCapacitaciones } from "./sections/Capacitaciones/AppCapacitaciones";
 export { AppContacto } from "./sections/Hero/AppContacto";
-export { ItemContacto } from "@/components/sections/Hero/ItemContacto";
 export { AppRedesSociales } from "@/components/sections/Hero/AppRedesSociales";
 export { AppScrollTechnologies } from "@/components/sections/ScrollTechnologies/AppScrollTechnologies";
 export { BotonRedSocial } from "@/components/sections/Hero/BotonRedSocial";
 export { Capacitaciones } from "@/components/sections/Capacitaciones";
+export { CardCapacitacion } from "./sections/Capacitaciones/CardCapacitacion";
 export { CopyButton } from "@/components/ui/CopyButton";
 export { Experiencia } from "@/components/sections/Experiencia";
 export { Footer } from "@/components/shared/Footer";
 export { GithubIcon } from "@/components/icons/GitHubIcon";
 export { HeroSection } from "@/components/sections/HeroSection";
+export { ItemContacto } from "@/components/sections/Hero/ItemContacto";
 export { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 export { MainLayout } from "@/components/layout/MainLayout";
 export { Navbar } from "@/components/shared/Navbar";
