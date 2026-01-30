@@ -37,7 +37,7 @@ export const CardCapacitacion = ({ cert }: Props) => {
         <CardDescription>{cert.description}</CardDescription>
       </CardHeader>
 
-      <CardFooter className="mt-auto flex flex-col gap-4 pt-0">
+      <CardFooter className="flex flex-col gap-4">
         <div className="flex w-full flex-wrap gap-2">
           {cert.technologies.map((tech) => (
             <Badge key={tech}>{tech}</Badge>
