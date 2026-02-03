@@ -1,17 +1,32 @@
-import { AppContacto, AppRedesSociales } from "@/components/index";
+import { AppRedesSociales } from "@/components/index";
 
 export const HeroSection = () => {
   return (
-    <header className="grid grid-cols-2">
-      <div className="flex items-center justify-center">
-        <img className="h-50 w-50 bg-green-500" src="" alt="" />
-      </div>
+    <header className="flex items-center justify-center">
       <div>
-        <h1>Angel Díaz.</h1>
-        <p>Administrador de bases de datos y desarrollador web.</p>
-        <AppContacto />
-        <AppRedesSociales className="grid grid-cols-3" />
+        <p className="font-Ubuntu text-accent-primary-foreground mt-5 text-2xl font-semibold">
+          Hola, ¡mucho gusto! Soy...
+        </p>
+
+        <h1 className="text-primary mb-5 text-7xl font-bold">Angel Díaz.</h1>
+
+        <p className="text-secondary font-Ubuntu my-5 text-3xl font-semibold">
+          Administrador de bases de datos y desarrollador web.
+          <span className="text-primary text-2xl">
+            Actualmente aprendiendo TypeScript y React.
+          </span>
+        </p>
+
+        {/* <AppContacto className="grid text-sm" /> */}
+        <AppRedesSociales className="flex flex-wrap gap-5" />
+        {/* <Descripcion /> */}
       </div>
+
+      <img
+        className="bg-secondary mr-13 ml-5 h-65 w-65 rounded-4xl"
+        src=""
+        alt=""
+      />
     </header>
   );
 };
