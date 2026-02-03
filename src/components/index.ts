@@ -9,7 +9,7 @@ export { CardCapacitacion } from "@/components/sections/Capacitaciones/CardCapac
 export { CardExperiencia } from "@/components/sections/Experiencia/CardExperiencia";
 export { CardTecnologia } from "@/components/sections/Tecnologias/CardTecnologia";
 export { CopyButton } from "@/components/ui/CopyButton";
-export { Descripcion } from "@/components/sections/Hero/Descripcion";
+export { Descripcion } from "@/components/sections/SobreMi/Descripcion";
 export { Experiencia } from "@/components/sections/Experiencia";
 export { Footer } from "@/components/shared/Footer";
 export { GithubIcon } from "@/components/icons/GitHubIcon";
