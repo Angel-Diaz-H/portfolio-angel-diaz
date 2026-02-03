@@ -1,7 +1,10 @@
+import { Title } from "@/components/ui/Title";
+import { Folder } from "lucide-react";
+
 export const Proyectos = () => {
   return (
     <section>
-      <h1>Proyectos.</h1>
+      <Title text="Proyectos." Icon={Folder} />
     </section>
   );
 };
