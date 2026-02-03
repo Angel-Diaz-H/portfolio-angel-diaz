@@ -5,6 +5,7 @@ import {
   HeroSection,
   MainLayout,
   Proyectos,
+  SobreMi,
   Tecnologias,
 } from "@/components/index";
 
@@ -13,11 +14,13 @@ function App() {
     <MainLayout>
       {/* Header */}
       <HeroSection />
+
       {/* Secciones */}
       {/* <AppScrollTechnologies /> */}
+      <SobreMi />
+      <Experiencia />
       <Proyectos />
       <Tecnologias />
-      <Experiencia />
       <Capacitaciones />
     </MainLayout>
   );

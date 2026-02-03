@@ -8,8 +8,10 @@ interface Props {
 
 export const Title = ({ text, className, Icon }: Props) => {
   return (
-    <div className={`text-primary mb-4 text-3xl font-semibold ${className}`}>
-      {Icon && <Icon className="mr-2 inline-block h-6 w-6" />}
+    <div
+      className={`text-primary font-Ubuntu mb-4 text-4xl font-semibold ${className}`}
+    >
+      {Icon && <Icon className="mr-2 inline-block h-8 w-8" />}
       {text}
     </div>
   );

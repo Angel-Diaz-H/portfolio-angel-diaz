@@ -9,6 +9,7 @@ export { CardCapacitacion } from "@/components/sections/Capacitaciones/CardCapac
 export { CardExperiencia } from "@/components/sections/Experiencia/CardExperiencia";
 export { CardTecnologia } from "@/components/sections/Tecnologias/CardTecnologia";
 export { CopyButton } from "@/components/ui/CopyButton";
+export { Descripcion } from "@/components/sections/Hero/Descripcion";
 export { Experiencia } from "@/components/sections/Experiencia";
 export { Footer } from "@/components/shared/Footer";
 export { GithubIcon } from "@/components/icons/GitHubIcon";
@@ -19,4 +20,5 @@ export { MainLayout } from "@/components/layout/MainLayout";
 export { Navbar } from "@/components/shared/Navbar";
 export { Proyectos } from "@/components/sections/Proyectos";
 export { ScrollTechnologies } from "@/components/sections/ScrollTechnologies/ScrollTechnologies";
+export { SobreMi } from "@/components/sections/SobreMi";
 export { Tecnologias } from "@/components/sections/Tecnologias";
