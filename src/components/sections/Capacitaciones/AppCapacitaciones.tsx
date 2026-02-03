@@ -1,5 +1,5 @@
 import { CardCapacitacion } from "@/components/index";
-import { certificates } from "@/data/certificates";
+import { certificates } from "@/data/certificates.data";
 
 interface Props {
   className?: string;
