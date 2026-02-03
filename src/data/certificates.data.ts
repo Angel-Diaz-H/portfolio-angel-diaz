@@ -1,4 +1,4 @@
-export interface Certificate {
+interface Certificate {
   id: number;
   title: string;
   description: string;
