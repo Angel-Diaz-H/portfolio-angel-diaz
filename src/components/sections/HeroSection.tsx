@@ -4,7 +4,7 @@ export const HeroSection = () => {
   return (
     <header className="flex items-center justify-center">
       <div>
-        <p className="font-Ubuntu text-accent-primary-foreground mt-5 text-2xl font-semibold">
+        <p className="font-Ubuntu text-accent-primary-foreground mt-5 text-4xl font-semibold">
           Hola, ¡mucho gusto! Soy...
         </p>
 

@@ -16,6 +16,7 @@ export { GithubIcon } from "@/components/icons/GitHubIcon";
 export { HeroSection } from "@/components/sections/HeroSection";
 export { ItemContacto } from "@/components/sections/Hero/ItemContacto";
 export { LinkedinIcon } from "@/components/icons/LinkedinIcon";
+export { Main } from "@/components/sections/Main";
 export { MainLayout } from "@/components/layout/MainLayout";
 export { Navbar } from "@/components/shared/Navbar";
 export { Proyectos } from "@/components/sections/Proyectos";
