@@ -10,6 +10,7 @@ interface Props {
   ariaLabel: string;
   className?: string;
   sizeIcon?: string;
+  importance?: "primary" | "secondary";
 }
 
 export const BotonRedSocial = ({
@@ -21,10 +22,11 @@ export const BotonRedSocial = ({
   Icon,
   className,
   sizeIcon = "4.5",
+  importance = "primary",
 }: Props) => {
   return (
     <Button
-      variant="outline"
+      variant={importance === "primary" ? "default" : "outline"}
       asChild
       className={`hover:border-ring hover:text-accent-secondary-foreground h-9 w-33 items-center justify-center rounded-full transition-colors ${className}`}
     >

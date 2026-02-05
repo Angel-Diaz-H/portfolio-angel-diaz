@@ -11,14 +11,23 @@ export const HeroSection = () => {
         <h1 className="text-primary mb-5 text-7xl font-bold">Angel Díaz.</h1>
 
         <p className="text-secondary font-Ubuntu my-5 text-3xl font-semibold">
-          Administrador de bases de datos y desarrollador web.
+          Administrador de bases de datos y desarrollador web.{" "}
           <span className="text-primary text-2xl">
-            Actualmente aprendiendo TypeScript y React.
+            {" "}
+            Actualmente formándome en TypeScript y React.
           </span>
         </p>
 
         {/* <AppContacto className="grid text-sm" /> */}
-        <AppRedesSociales className="flex flex-wrap gap-5" />
+        <AppRedesSociales
+          className="my-3 flex flex-wrap gap-4"
+          importance="primary"
+        />
+
+        <AppRedesSociales
+          className="my-3 flex flex-wrap gap-4"
+          importance="secondary"
+        />
         {/* <Descripcion /> */}
       </div>
 
