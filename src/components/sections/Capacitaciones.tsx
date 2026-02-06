@@ -6,7 +6,7 @@ export const Capacitaciones = () => {
   return (
     <section>
       <Title text="Capacitaciones." Icon={GraduationCap} />
-      <AppCapacitaciones className="grid grid-cols-3 gap-x-5 px-5" />
+      <AppCapacitaciones className="grid grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3" />
     </section>
   );
 };

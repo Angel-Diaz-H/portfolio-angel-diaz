@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
@@ -7,6 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface Props {
   cert: {
@@ -17,44 +22,50 @@ interface Props {
     credentialUrl: string;
     technologies: string[];
   };
+  classNameCard?: string;
 }
 
-export const CardCapacitacion = ({ cert }: Props) => {
+export const CardCapacitacion = ({ cert, classNameCard }: Props) => {
   return (
-    <Card
-      key={cert.id}
-      className="relative mx-auto w-full overflow-hidden rounded-4xl pt-0 shadow-md transition-all duration-300 hover:shadow-xl"
-    >
-      <img
-        src={cert.image}
-        alt={cert.title}
-        loading="lazy"
-        className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-      />
+    <Dialog>
+      <DialogTrigger asChild className="cursor-pointer">
+        <Card
+          key={cert.id}
+          className={`hover:border-ring hover:bg-accent-secondary bg-background relative mx-auto w-full overflow-hidden rounded-4xl pt-0 shadow hover:shadow-md ${classNameCard}`}
+        >
+          <img
+            src={cert.image}
+            alt={cert.title}
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
 
-      <CardHeader className="pb-2">
-        <CardTitle>{cert.title}</CardTitle>
-        <CardDescription>{cert.description}</CardDescription>
-      </CardHeader>
+          <CardHeader>
+            <CardTitle>{cert.title}</CardTitle>
+            <CardDescription>{cert.description}</CardDescription>
+          </CardHeader>
 
-      <CardFooter className="flex flex-col gap-4">
-        <div className="flex w-full flex-wrap gap-2">
-          {cert.technologies.map((tech) => (
-            <Badge key={tech}>{tech}</Badge>
-          ))}
-        </div>
-
-        <Button className="w-full rounded-full text-center">
-          <a
-            className="h-full w-full"
-            href={cert.credentialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ir al certificado
-          </a>
-        </Button>
-      </CardFooter>
-    </Card>
+          <CardFooter className="flex flex-col gap-4">
+            <div className="flex w-full flex-wrap gap-2">
+              {cert.technologies.map((tech) => (
+                <Badge key={tech}>{tech}</Badge>
+              ))}
+            </div>
+          </CardFooter>
+        </Card>
+      </DialogTrigger>
+      <DialogContent
+        showCloseButton={false}
+        className="flex h-auto w-auto max-w-none min-w-[55vw] items-center justify-center border-none bg-transparent p-0 shadow-none"
+      >
+        <DialogTitle className="hidden">{cert.title}</DialogTitle>
+        <img
+          src={cert.image}
+          alt={cert.title}
+          loading="lazy"
+          className="max-h-[90vh] w-auto rounded-xl object-contain shadow-2xl"
+        />
+      </DialogContent>
+    </Dialog>
   );
 };
