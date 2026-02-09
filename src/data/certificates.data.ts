@@ -43,9 +43,9 @@ export const certificates: Certificate[] = [
     id: 4,
     title: "Programación para principiantes - Primeros pasos.",
     description: "Conceptos de programación y del desarrollo de software.",
-    image: "/capacitaciones/JavaScript-cert.webp",
+    image: "/capacitaciones/ProgramacionPrincipiantes-cert.webp",
     technologies: ["JavaScript", "Bootstrap"],
-    credentialUrl: "https://cursos.devtalles.com/certificates/oexl95fk8x",
+    credentialUrl: "https://cursos.devtalles.com/certificates/oym8nqbqvz",
     date: "2025-10-06",
   },
   {
@@ -77,7 +77,7 @@ export const certificates: Certificate[] = [
     image: "/capacitaciones/DataAnalyticsPowerBI-cert.webp",
     technologies: ["Power BI", "Análisis de Datos", "Python"],
     credentialUrl:
-      "https://ple.jetro.ws/credential-validation?credentialId=ULX3US6VJ6782",
+      "https://www.linkedin.com/in/angeldiaz-hrn/details/certifications/1749512261084/single-media-viewer/?profileId=ACoAAD1Nz2MBOJq7tgoDIw5pIcX7GbvPbC4PS30",
     date: "2025-05-11",
   },
 ];

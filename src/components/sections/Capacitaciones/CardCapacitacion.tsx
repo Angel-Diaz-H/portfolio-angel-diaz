@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
@@ -12,6 +13,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { ArrowUpRightIcon } from "lucide-react";
 
 interface Props {
   cert: {
@@ -28,32 +30,50 @@ interface Props {
 export const CardCapacitacion = ({ cert, classNameCard }: Props) => {
   return (
     <Dialog>
-      <DialogTrigger asChild className="cursor-pointer">
-        <Card
-          key={cert.id}
-          className={`hover:border-ring hover:bg-accent-secondary bg-background relative mx-auto w-full overflow-hidden rounded-4xl pt-0 shadow hover:shadow-md ${classNameCard}`}
-        >
-          <img
-            src={cert.image}
-            alt={cert.title}
-            loading="lazy"
-            className="h-full w-full object-cover"
+      <Card
+        key={cert.id}
+        className={`hover:border-ring hover:bg-accent-secondary bg-background relative mx-auto w-full overflow-hidden rounded-4xl pt-0 shadow hover:shadow-md ${classNameCard} transition-transform hover:scale-101`}
+      >
+        <DialogTrigger asChild>
+          <button
+            className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
+            aria-label="Ver certificado"
           />
+        </DialogTrigger>
 
-          <CardHeader>
-            <CardTitle>{cert.title}</CardTitle>
-            <CardDescription>{cert.description}</CardDescription>
-          </CardHeader>
+        <img
+          src={cert.image}
+          alt={cert.title}
+          loading="lazy"
+          className="h-full w-full object-cover"
+        />
 
-          <CardFooter className="flex flex-col gap-4">
-            <div className="flex w-full flex-wrap gap-2">
-              {cert.technologies.map((tech) => (
-                <Badge key={tech}>{tech}</Badge>
-              ))}
-            </div>
-          </CardFooter>
-        </Card>
-      </DialogTrigger>
+        <CardHeader>
+          <CardTitle>{cert.title}</CardTitle>
+          <CardDescription>{cert.description}</CardDescription>
+        </CardHeader>
+
+        <CardFooter className="pointer-events-none relative z-20 flex flex-wrap gap-4">
+          <div className="pointer-events-auto flex w-full flex-wrap gap-2">
+            {cert.technologies.map((tech) => (
+              <Badge key={tech}>{tech}</Badge>
+            ))}
+          </div>
+
+          <Button className="bg-primary text-primary-foreground hover:border-ring hover:bg-accent-primary-foreground hover:text-accent-primary pointer-events-auto w-full justify-center rounded-full p-1 text-center text-sm font-medium transition-transform hover:scale-101">
+            <a
+              href={cert.credentialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Ir a la credencial
+            </a>
+            <ArrowUpRightIcon />
+          </Button>
+        </CardFooter>
+      </Card>
+
       <DialogContent
         showCloseButton={false}
         className="flex h-auto w-auto max-w-none min-w-[55vw] items-center justify-center border-none bg-transparent p-0 shadow-none"
