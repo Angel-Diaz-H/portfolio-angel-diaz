@@ -1,30 +1,59 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
-  //   CardAction,
   CardFooter,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { technologies } from "@/data/technologies.data";
+import { Globe, Image, Images } from "lucide-react";
+
+const EXPERIENCE_ORDER = [3, 9, 7, 10, 12, 14, 5];
 
 export const CardExperiencia = () => {
   return (
-    <Card className="">
-      <CardHeader className="flex items-center space-x-4">
-        <img className="h-7" src="/experiencia/Casas-Javer.webp" alt="" />
-        <div className="space-y-2">
-          <CardTitle className="">
-            <p>Administrador de bases de datos junior (Database Intern).</p>
+    <Card className="hover:border-primary">
+      <CardHeader className="flex flex-row items-center gap-7">
+        <img
+          className="h-8 object-contain"
+          src="/experiencia/Casas-Javer.webp"
+          alt="Logo de Casas Javer"
+        />
+        <div className="flex flex-col gap-2">
+          <CardTitle>
+            <p>Database Administrator Intern.</p>
           </CardTitle>
           <CardDescription>
             <p>Casas Javer | Enero 2025 - Noviembre 2025.</p>
             <p>Híbrido, Monterrey, Nuevo León.</p>
           </CardDescription>
         </div>
+        <div className="ml-auto flex items-center gap-5">
+          <Button variant={"outline"} className="rounded-full">
+            <a
+              href="https://www.javer.com.mx/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary text-muted-foreground flex items-center justify-center gap-2"
+            >
+              <Globe className="h-10 object-cover" />
+              Sitio web
+            </a>
+          </Button>
+
+          <Button variant={"outline"} className="rounded-full">
+            <a className="hover:text-primary text-muted-foreground flex items-center justify-center gap-2">
+              <Image className="h-10 object-cover" />
+              Ver galería
+            </a>
+          </Button>
+        </div>
       </CardHeader>
+
       <CardContent className="space-y-4 text-sm">
         <p>
           Rol enfocado en el soporte y mantenimiento de infraestructura.
@@ -34,7 +63,7 @@ export const CardExperiencia = () => {
           </span>
         </p>
 
-        <div className="grid grid-cols-1 gap-x-4 gap-y-3 text-sm md:grid-cols-[180px_1fr]">
+        <div className="grid grid-cols-1 gap-x-4 gap-y-3 md:grid-cols-[180px_1fr]">
           <h4 className="text-primary text-right font-bold">
             Administración de Base de Datos
           </h4>
@@ -101,14 +130,29 @@ export const CardExperiencia = () => {
           </ul>
         </div>
       </CardContent>
-      <CardFooter className="flex space-x-1">
-        <Badge variant={"outline"}>Oracle Database</Badge>
-        <Badge variant={"outline"}>SQL Server</Badge>
-        <Badge variant={"outline"}>Linux</Badge>
-        <Badge variant={"outline"}>Windows Server</Badge>
-        <Badge variant={"outline"}>MySQL</Badge>
-        <Badge variant={"outline"}>PostgreSQL</Badge>
-        <Badge variant={"outline"}>Oracle EBS</Badge>
+
+      <CardFooter className="flex flex-wrap gap-2">
+        {EXPERIENCE_ORDER.map((id) => {
+          const tec = technologies.find((t) => t.id === id);
+
+          if (!tec) return null;
+
+          return (
+            <Badge
+              key={tec.id}
+              variant="outline"
+              className="hover:bg-secondary/50 flex items-center gap-2 px-3 py-1 text-sm font-normal transition-colors"
+            >
+              <img
+                src={tec.img}
+                alt={`${tec.name} icon`}
+                className="h-4 w-4 object-contain"
+                loading="lazy"
+              />
+              <span>{tec.name}</span>
+            </Badge>
+          );
+        })}
       </CardFooter>
     </Card>
   );
