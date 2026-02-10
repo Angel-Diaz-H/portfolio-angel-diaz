@@ -2,40 +2,48 @@ import { AppRedesSociales } from "@/components/index";
 
 export const HeroSection = () => {
   return (
-    <header className="flex items-center justify-center">
-      <div>
-        <p className="font-Ubuntu text-accent-primary-foreground mt-5 text-4xl font-semibold">
-          Hola, ¡mucho gusto! Soy...
-        </p>
+    <header className="mx-full container flex flex-col-reverse items-center justify-between gap-10 px-10 md:pt-16 md:pb-20 lg:flex-row">
+      <div className="flex flex-1 flex-col items-center space-y-10 text-center lg:items-start lg:text-left">
+        <div className="space-y-3">
+          <p className="font-Ubuntu text-accent-primary-foreground text-xl font-semibold md:text-2xl">
+            Hola, ¡mucho gusto! Soy...
+          </p>
+          <h1 className="text-primary text-5xl font-bold tracking-tight md:text-7xl">
+            Angel Díaz
+          </h1>
+          <p className="text-muted-foreground mt-7 max-w-2xl text-lg font-semibold md:text-2xl">
+            DBA & desarrollador de software.
+          </p>
+        </div>
 
-        <h1 className="text-primary mb-5 text-7xl font-bold">Angel Díaz.</h1>
-
-        <p className="text-secondary font-Ubuntu my-5 text-3xl font-semibold">
-          Administrador de bases de datos y desarrollador web.{" "}
-          <span className="text-primary text-2xl">
-            {" "}
+        {/* <div className="text-muted-foreground max-w-2xl text-lg font-semibold md:text-2xl"> */}
+        {/* <p className="text-primary mt-2 font-semibold">
             Actualmente formándome en TypeScript y React.
-          </span>
-        </p>
+          </p> */}
+        {/* </div> */}
 
-        {/* <AppContacto className="grid text-sm" /> */}
-        <AppRedesSociales
-          className="my-3 flex flex-wrap gap-4"
-          importance="primary"
-        />
-
-        <AppRedesSociales
-          className="my-3 flex flex-wrap gap-4"
-          importance="secondary"
-        />
-        {/* <Descripcion /> */}
+        <div className="grid gap-5">
+          <AppRedesSociales
+            className="flex flex-wrap justify-start gap-3"
+            importance="primary"
+          />
+          <AppRedesSociales
+            className="flex flex-wrap justify-start gap-3"
+            importance="secondary"
+          />
+        </div>
       </div>
 
-      <img
-        className="bg-secondary mr-13 ml-5 h-65 w-65 rounded-4xl"
-        src=""
-        alt=""
-      />
+      <div className="relative shrink-0">
+        {/* Decoración opcional (sombra o borde) para resaltar */}
+        <div className="bg-primary/20 absolute -inset-1 rounded-full opacity-50 blur-lg"></div>
+
+        <img
+          className="bg-secondary relative h-64 w-64 transform rounded-full object-cover shadow-xl transition-transform duration-100 hover:scale-101 md:h-80 md:w-80 lg:h-100 lg:w-100"
+          src="tu-ruta-de-imagen.jpg" // ¡No olvides poner tu ruta aquí!
+          alt="Fotografía de perfil de Angel Díaz"
+        />
+      </div>
     </header>
   );
 };

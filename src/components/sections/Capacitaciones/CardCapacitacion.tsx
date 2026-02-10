@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
@@ -32,7 +31,7 @@ export const CardCapacitacion = ({ cert, classNameCard }: Props) => {
     <Dialog>
       <Card
         key={cert.id}
-        className={`hover:border-ring hover:bg-accent-secondary bg-background relative mx-auto w-full overflow-hidden rounded-4xl pt-0 shadow hover:shadow-md ${classNameCard} transition-transform hover:scale-101`}
+        className={`hover:border-ring hover:bg-accent-secondary bg-background relative mx-auto w-full overflow-hidden rounded-4xl pt-0 shadow hover:shadow-md ${classNameCard} transition-transform duration-100 hover:scale-101`}
       >
         <DialogTrigger asChild>
           <button
@@ -60,17 +59,16 @@ export const CardCapacitacion = ({ cert, classNameCard }: Props) => {
             ))}
           </div>
 
-          <Button className="bg-primary text-primary-foreground hover:border-ring hover:bg-accent-primary-foreground hover:text-accent-primary pointer-events-auto w-full justify-center rounded-full p-1 text-center text-sm font-medium transition-transform hover:scale-101">
-            <a
-              href={cert.credentialUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-            >
-              Ir a la credencial
-            </a>
-            <ArrowUpRightIcon />
-          </Button>
+          <a
+            href={cert.credentialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="bg-primary text-primary-foreground hover:border-ring hover:bg-accent-primary-foreground hover:text-accent-primary pointer-events-auto flex w-full items-center justify-center gap-1 rounded-full p-2 text-center text-sm font-medium"
+          >
+            Ir a la credencial
+            <ArrowUpRightIcon className="max-h-5" />
+          </a>
         </CardFooter>
       </Card>
 
