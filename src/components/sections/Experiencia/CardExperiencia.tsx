@@ -8,9 +8,15 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
 import { technologies } from "@/data/technologies.data";
-import { Globe, Image, Images } from "lucide-react";
+import { Globe, Image } from "lucide-react";
 
 const EXPERIENCE_ORDER = [3, 9, 7, 10, 12, 14, 5];
 
@@ -45,12 +51,28 @@ export const CardExperiencia = () => {
             </a>
           </Button>
 
-          <Button variant={"outline"} className="rounded-full">
-            <a className="hover:text-primary text-muted-foreground flex items-center justify-center gap-2">
-              <Image className="h-10 object-cover" />
-              Ver galería
-            </a>
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant={"outline"} className="rounded-full">
+                <a className="hover:text-primary text-muted-foreground flex items-center justify-center gap-2">
+                  <Image className="h-10 object-cover" />
+                  Ver galería
+                </a>
+              </Button>
+            </DialogTrigger>
+            <DialogContent
+              showCloseButton={false}
+              className="flex h-auto w-auto max-w-none min-w-[55vw] items-center justify-center border-none bg-transparent p-0 shadow-none"
+            >
+              <DialogTitle className="hidden">galery</DialogTitle>
+              <p className="bg-amber-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                tempora quia alias doloremque officiis maxime debitis culpa sunt
+                maiores aliquam unde, consectetur exercitationem eum, rem itaque
+                vero repellendus? Libero, accusantium.
+              </p>
+            </DialogContent>
+          </Dialog>
         </div>
       </CardHeader>
 
