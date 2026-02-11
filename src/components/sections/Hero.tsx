@@ -1,9 +1,9 @@
 import { AppRedesSociales } from "@/components/index";
 
-export const HeroSection = () => {
+export const Hero = () => {
   return (
-    <header className="mx-full container flex flex-col-reverse items-center justify-between gap-10 px-10 md:pt-16 md:pb-20 lg:flex-row">
-      <div className="flex flex-1 flex-col items-center space-y-10 text-center lg:items-start lg:text-left">
+    <header className="lg-pt-0 container mx-auto flex min-h-screen flex-col-reverse items-center justify-center gap-10 px-6 lg:flex-row lg:gap-24">
+      <div className="flex flex-col items-center space-y-10 text-center lg:items-start lg:text-left">
         <div className="space-y-3">
           <p className="font-Ubuntu text-accent-primary-foreground text-xl font-semibold md:text-2xl">
             Hola, ¡mucho gusto! Soy...
@@ -19,7 +19,7 @@ export const HeroSection = () => {
         {/* <div className="text-muted-foreground max-w-2xl text-lg font-semibold md:text-2xl"> */}
         {/* <p className="text-primary mt-2 font-semibold">
             Actualmente formándome en TypeScript y React.
-          </p> */}
+            </p> */}
         {/* </div> */}
 
         <div className="grid gap-5">
@@ -35,11 +35,10 @@ export const HeroSection = () => {
       </div>
 
       <div className="relative shrink-0">
-        {/* Decoración opcional (sombra o borde) para resaltar */}
         <div className="bg-primary/20 absolute -inset-1 rounded-full opacity-50 blur-lg"></div>
 
         <img
-          className="bg-secondary relative h-64 w-64 transform rounded-full object-cover shadow-xl transition-transform duration-100 hover:scale-101 md:h-80 md:w-80 lg:h-100 lg:w-100"
+          className="bg-secondary relative h-64 w-64 transform rounded-full object-cover shadow-xl transition-all duration-500 md:h-80 md:w-80 lg:h-100 lg:w-100"
           src="tu-ruta-de-imagen.jpg" // ¡No olvides poner tu ruta aquí!
           alt="Fotografía de perfil de Angel Díaz"
         />

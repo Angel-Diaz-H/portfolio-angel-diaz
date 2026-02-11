@@ -1,7 +1,7 @@
 import {
   Capacitaciones,
   Experiencia,
-  HeroSection,
+  Hero,
   Proyectos,
   SobreMi,
   Tecnologias,
@@ -9,8 +9,8 @@ import {
 
 export const Main = () => {
   return (
-    <main className="mx-60 my-10 grow space-y-20">
-      <HeroSection />
+    <main>
+      <Hero />
       <SobreMi />
       <Experiencia />
       <Proyectos />
