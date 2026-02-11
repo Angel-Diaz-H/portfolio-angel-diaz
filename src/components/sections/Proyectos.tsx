@@ -1,10 +1,15 @@
-import { Title } from "@/components/ui/Title";
+import { AppProyectos, SectionWrapper, Title } from "@/components/index";
 import { Folder } from "lucide-react";
 
-export const Proyectos = () => {
+interface Props {
+  className?: string;
+}
+
+export const Proyectos = ({ className }: Props) => {
   return (
-    <section>
+    <SectionWrapper id="proyectos" className={`${className}`}>
       <Title text="Proyectos." Icon={Folder} />
-    </section>
+      <AppProyectos />
+    </SectionWrapper>
   );
 };
