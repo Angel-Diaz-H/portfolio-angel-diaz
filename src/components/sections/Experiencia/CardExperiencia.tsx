@@ -1,5 +1,7 @@
+import { technologies } from "@/data/technologies.data";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import {
   Card,
   CardHeader,
@@ -8,27 +10,26 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Separator } from "@/components/ui/separator";
-import { technologies } from "@/data/technologies.data";
-import { Globe, Image } from "lucide-react";
+import { Globe } from "lucide-react";
+import { AppGallery } from "@/components/index";
 
 const EXPERIENCE_ORDER = [3, 9, 7, 10, 12, 14, 5];
 
 export const CardExperiencia = () => {
   return (
-    <Card className="hover:border-primary">
+    <Card className="">
       <CardHeader className="flex flex-row items-center gap-7">
-        <img
-          className="h-8 object-contain"
-          src="/experiencia/Casas-Javer.webp"
-          alt="Logo de Casas Javer"
-        />
+        <a
+          href="https://www.javer.com.mx/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="h-8 object-contain"
+            src="/experiencia/Casas-Javer.webp"
+            alt="Logo de Casas Javer"
+          />
+        </a>
         <div className="flex flex-col gap-2">
           <CardTitle>
             <p>Database Administrator Intern.</p>
@@ -39,40 +40,22 @@ export const CardExperiencia = () => {
           </CardDescription>
         </div>
         <div className="ml-auto flex items-center gap-5">
-          <Button variant={"outline"} className="rounded-full">
+          <Button
+            variant={"outline"}
+            className="hover:text-primary cursor-pointer rounded-full"
+          >
             <a
               href="https://www.javer.com.mx/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary text-muted-foreground flex items-center justify-center gap-2"
+              className="flex items-center justify-center gap-2"
             >
-              <Globe className="h-10 object-cover" />
+              <Globe className="h-10 shrink-0 object-cover" />
               Sitio web
             </a>
           </Button>
 
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant={"outline"} className="rounded-full">
-                <a className="hover:text-primary text-muted-foreground flex items-center justify-center gap-2">
-                  <Image className="h-10 object-cover" />
-                  Ver galería
-                </a>
-              </Button>
-            </DialogTrigger>
-            <DialogContent
-              showCloseButton={false}
-              className="flex h-auto w-auto max-w-none min-w-[55vw] items-center justify-center border-none bg-transparent p-0 shadow-none"
-            >
-              <DialogTitle className="hidden">galery</DialogTitle>
-              <p className="bg-amber-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                tempora quia alias doloremque officiis maxime debitis culpa sunt
-                maiores aliquam unde, consectetur exercitationem eum, rem itaque
-                vero repellendus? Libero, accusantium.
-              </p>
-            </DialogContent>
-          </Dialog>
+          <AppGallery />
         </div>
       </CardHeader>
 
