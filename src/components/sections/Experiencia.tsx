@@ -1,12 +1,15 @@
-import { CardExperiencia } from "@/components/index";
-import { Title } from "@/components/ui/Title";
 import { Briefcase } from "lucide-react";
+import { CardExperiencia, SectionWrapper, Title } from "@/components/index";
 
-export const Experiencia = () => {
+interface Props {
+  className?: string;
+}
+
+export const Experiencia = ({ className }: Props) => {
   return (
-    <section>
+    <SectionWrapper id="experiencia" className={`${className}`}>
       <Title text="Experiencia." Icon={Briefcase} />
       <CardExperiencia />
-    </section>
+    </SectionWrapper>
   );
 };

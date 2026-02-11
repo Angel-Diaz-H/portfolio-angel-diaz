@@ -9,7 +9,7 @@ const navList: { name: string; href: string }[] = [
 
 export const Navbar = () => {
   return (
-    <nav className="font-Inter sticky top-0 z-50 flex w-full items-center justify-center bg-white text-sm shadow transition-all">
+    <nav className="font-Inter fixed top-0 z-50 flex w-full items-center justify-center bg-white text-sm shadow backdrop-blur-md transition-all">
       {navList.map((item) => (
         <a
           key={item.name}
