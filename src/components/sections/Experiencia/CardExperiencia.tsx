@@ -1,5 +1,3 @@
-import { technologies } from "@/data/technologies.data";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -12,12 +10,13 @@ import {
 } from "@/components/ui/card";
 import { Globe } from "lucide-react";
 import { AppGallery } from "@/components/index";
+import { BadgesTech } from "../../shared/BadgesTech";
 
 const EXPERIENCE_ORDER = [3, 9, 7, 10, 12, 14, 5];
 
 export const CardExperiencia = () => {
   return (
-    <Card className="">
+    <Card className="px-5 py-8">
       <CardHeader className="flex flex-row items-center gap-7">
         <a
           href="https://www.javer.com.mx/"
@@ -136,28 +135,8 @@ export const CardExperiencia = () => {
         </div>
       </CardContent>
 
-      <CardFooter className="flex flex-wrap gap-2">
-        {EXPERIENCE_ORDER.map((id) => {
-          const tec = technologies.find((t) => t.id === id);
-
-          if (!tec) return null;
-
-          return (
-            <Badge
-              key={tec.id}
-              variant="outline"
-              className="hover:bg-secondary/50 flex items-center gap-2 px-3 py-1 text-sm font-normal transition-colors"
-            >
-              <img
-                src={tec.img}
-                alt={`${tec.name} icon`}
-                className="h-4 w-4 object-contain"
-                loading="lazy"
-              />
-              <span>{tec.name}</span>
-            </Badge>
-          );
-        })}
+      <CardFooter>
+        <BadgesTech order={EXPERIENCE_ORDER} variant="outline" />
       </CardFooter>
     </Card>
   );

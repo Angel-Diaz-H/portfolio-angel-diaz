@@ -55,7 +55,9 @@ export const CardCapacitacion = ({ cert, classNameCard }: Props) => {
         <CardFooter className="pointer-events-none relative z-20 flex flex-wrap gap-4">
           <div className="pointer-events-auto flex w-full flex-wrap gap-2">
             {cert.technologies.map((tech) => (
-              <Badge key={tech}>{tech}</Badge>
+              <Badge variant={"outline"} key={tech}>
+                {tech}
+              </Badge>
             ))}
           </div>
 
