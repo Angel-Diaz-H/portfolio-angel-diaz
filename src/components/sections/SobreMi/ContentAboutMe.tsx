@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { CopyButton } from "@/components/ui/CopyButton";
 import { Laptop, Server, MapPin, Mail } from "lucide-react";
 
 export const ContentAboutMe = () => {
@@ -104,12 +105,19 @@ export const ContentAboutMe = () => {
                 <p className="text-muted-foreground text-xs font-bold tracking-wider uppercase">
                   Contacto.
                 </p>
-                <a
-                  href="mailto:angeldiaz.hrn@gmail.com"
-                  className="hover:text-primary text-foreground text-sm font-medium transition-colors"
-                >
-                  angeldiaz.hrn@gmail.com
-                </a>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="mailto:angeldiaz.hrn@gmail.com"
+                    className="hover:text-primary text-foreground text-sm font-medium transition-colors"
+                  >
+                    angeldiaz.hrn@gmail.com
+                  </a>
+                  <CopyButton
+                    value="angeldiaz.hrn@gmail.com"
+                    variant="muted"
+                    ariaLabel={`Copiar angeldiaz.hrn@gmail.com al portapapeles`}
+                  />
+                </div>
               </div>
             </div>
           </CardContent>

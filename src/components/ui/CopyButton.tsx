@@ -62,7 +62,7 @@ export const CopyButton: React.FC<Props> = ({
         type="button"
         onClick={copy}
         aria-label={ariaLabel ?? `Copiar ${value}`}
-        className={`inline-flex items-center justify-center ${sizeMap[size]} ${variantMap[variant]} transition-colors duration-100 focus:outline-none`}
+        className={`inline-flex cursor-pointer items-center justify-center ${sizeMap[size]} ${variantMap[variant]} transition-colors duration-100 focus:outline-none`}
       >
         <span className="sr-only">{ariaLabel ?? `Copiar ${value}`}</span>
         {copied ? (
