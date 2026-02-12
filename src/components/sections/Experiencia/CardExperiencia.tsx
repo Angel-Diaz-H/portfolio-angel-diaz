@@ -9,8 +9,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Globe } from "lucide-react";
-import { AppGallery } from "@/components/index";
-import { BadgesTech } from "../../shared/BadgesTech";
+import { AppGallery, BadgesTech } from "@/components/index";
 
 const EXPERIENCE_ORDER = [3, 9, 7, 10, 12, 14, 5];
 

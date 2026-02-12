@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { BadgesTech } from "@/components/index";
 import {
   Card,
   CardDescription,
@@ -53,12 +53,8 @@ export const CardCapacitacion = ({ cert, classNameCard }: Props) => {
         </CardHeader>
 
         <CardFooter className="pointer-events-none relative z-20 flex flex-wrap gap-4">
-          <div className="pointer-events-auto flex w-full flex-wrap gap-2">
-            {cert.technologies.map((tech) => (
-              <Badge variant={"outline"} key={tech}>
-                {tech}
-              </Badge>
-            ))}
+          <div className="pointer-events-auto w-full">
+            <BadgesTech order={cert.technologies} variant="outline" />
           </div>
 
           <a

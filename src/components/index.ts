@@ -4,6 +4,7 @@ export { AppProyectos } from "@/components/sections/Proyectos/AppProyectos";
 export { AppRedesSociales } from "@/components/sections/Hero/AppRedesSociales";
 export { AppScrollTechnologies } from "@/components/sections/ScrollTechnologies/AppScrollTechnologies";
 export { AppTecnologias } from "@/components/sections/Tecnologias/AppTecnologias";
+export { BadgesTech } from "./shared/BadgesTech";
 export { BotonRedSocial } from "@/components/sections/Hero/BotonRedSocial";
 export { Capacitaciones } from "@/components/sections/Capacitaciones";
 export { CardCapacitacion } from "@/components/sections/Capacitaciones/CardCapacitacion";
