@@ -9,7 +9,7 @@ import {
 
 export const Main = () => {
   return (
-    <main>
+    <main className="bg-gray-50">
       <Hero />
       <SobreMi />
       <Experiencia />

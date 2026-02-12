@@ -1,5 +1,4 @@
 export { AppCapacitaciones } from "@/components/sections/Capacitaciones/AppCapacitaciones";
-export { AppContacto } from "@/components/sections/Hero/AppContacto";
 export { AppGallery } from "@/components/sections/Experiencia/AppGallery";
 export { AppProyectos } from "@/components/sections/Proyectos/AppProyectos";
 export { AppRedesSociales } from "@/components/sections/Hero/AppRedesSociales";

@@ -1,15 +1,18 @@
-import { Title } from "@/components/ui/Title";
+import { ContentAboutMe } from "@/components/index";
+import { SectionWrapper, Title } from "@/components/index"; // <--- Importas tu molde
 import { User } from "lucide-react";
-import { AppContacto, Descripcion } from "@/components/index";
 
-export const SobreMi = () => {
+interface Props {
+  className?: string;
+}
+
+export const SobreMi = ({ className }: Props) => {
   return (
-    <section>
-      <Title text="Sobre mí." Icon={User} />
-      <div className="grid grid-cols-2">
-        <Descripcion />
-        <AppContacto />
+    <SectionWrapper id="sobre-mi" className={`${className} gap-2`}>
+      <div className="flex flex-col gap-2">
+        <Title text="Sobre mí." Icon={User} />
+        <ContentAboutMe />
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
