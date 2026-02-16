@@ -25,7 +25,7 @@ export const AppGallery = () => {
         >
           <a className="flex items-center justify-center gap-2">
             <Image className="h-10 shrink-0 object-cover" />
-            Ver galería
+            Galería
           </a>
         </Button>
       </DialogTrigger>

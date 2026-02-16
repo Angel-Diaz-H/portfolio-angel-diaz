@@ -1,18 +1,11 @@
-import { BadgesTech } from "@/components/index";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { ArrowUpRightIcon } from "lucide-react";
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ArrowUpRightIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface Props {
   cert: {
@@ -20,55 +13,55 @@ interface Props {
     title: string;
     description: string;
     image: string;
+    iconDark?: string;
+    iconLight?: string;
     credentialUrl: string;
     technologies: string[];
   };
-  classNameCard?: string;
 }
 
-export const CardCapacitacion = ({ cert, classNameCard }: Props) => {
+export const CardCapacitacion = ({ cert }: Props) => {
   return (
     <Dialog>
-      <Card
-        key={cert.id}
-        className={`hover:border-ring hover:bg-accent-secondary bg-background relative mx-auto w-full overflow-hidden rounded-4xl pt-0 shadow hover:shadow-md ${classNameCard} transition-transform duration-100 hover:scale-101`}
-      >
-        <DialogTrigger asChild>
-          <button
-            className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
-            aria-label="Ver certificado"
-          />
-        </DialogTrigger>
-
-        <img
-          src={cert.image}
-          alt={cert.title}
-          loading="lazy"
-          className="h-full w-full object-cover"
-        />
-
-        <CardHeader>
-          <CardTitle>{cert.title}</CardTitle>
-          <CardDescription>{cert.description}</CardDescription>
-        </CardHeader>
-
-        <CardFooter className="pointer-events-none relative z-20 flex flex-wrap gap-4">
-          <div className="pointer-events-auto w-full">
-            <BadgesTech order={cert.technologies} variant="outline" />
+      <DialogTrigger asChild>
+        <div className="group bg-background hover:border-ring hover:bg-accent-secondary/10 flex cursor-pointer items-center gap-4 rounded-2xl border p-3 shadow transition-all duration-150 hover:scale-[1.01] hover:shadow-md">
+          <div className="bg-muted relative h-20 w-20 shrink-0 overflow-hidden rounded-lg border">
+            <img
+              src={cert.iconLight}
+              alt={cert.title}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-102"
+            />
           </div>
 
-          <a
-            href={cert.credentialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="bg-primary text-primary-foreground hover:border-ring hover:bg-accent-primary-foreground hover:text-accent-primary pointer-events-auto flex w-full items-center justify-center gap-1 rounded-full p-2 text-center text-sm font-medium"
+          <div className="flex flex-1 flex-col justify-center text-left">
+            <h3 className="text-foreground line-clamp-2 text-sm leading-tight font-semibold sm:text-sm">
+              {cert.title}
+            </h3>
+
+            <p className="text-muted-foreground mt-2 text-xs font-medium">
+              {cert.technologies.join(" • ")}
+            </p>
+          </div>
+
+          <Button
+            variant="default"
+            className="hover:border-ring hover:text-accent-secondary-foreground h-9 w-28 rounded-full p-0 transition-colors"
+            asChild
           >
-            Ir a la credencial
-            <ArrowUpRightIcon className="max-h-5" />
-          </a>
-        </CardFooter>
-      </Card>
+            <a
+              href={cert.credentialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center justify-center gap-1.5 text-xs font-semibold"
+            >
+              <span className="hidden sm:inline-block">Credencial</span>
+              <ArrowUpRightIcon size={16} />
+            </a>
+          </Button>
+        </div>
+      </DialogTrigger>
 
       <DialogContent
         showCloseButton={false}
