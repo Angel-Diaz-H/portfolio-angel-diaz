@@ -8,7 +8,7 @@ export const Hero = () => {
           <p className="font-Ubuntu text-accent-primary-foreground text-xl font-semibold md:text-2xl">
             Hola, ¡mucho gusto! Soy...
           </p>
-          <h1 className="text-primary text-5xl font-bold tracking-tight md:text-7xl">
+          <h1 className="bg-linear-to-r from-green-600 to-lime-500 bg-clip-text py-3 text-5xl font-bold text-transparent md:text-7xl">
             Angel Díaz
           </h1>
           <p className="text-muted-foreground mt-7 max-w-2xl text-lg font-semibold md:text-2xl">
