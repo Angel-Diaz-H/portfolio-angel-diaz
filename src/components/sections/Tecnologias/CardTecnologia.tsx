@@ -7,7 +7,7 @@ interface Props {
 
 export const CardTecnologia = ({ tec }: Props) => {
   return (
-    <div className="group hover:bg-muted/50 hover:border-muted-foreground/20 flex items-center gap-1.5 rounded-2xl border border-transparent bg-white px-4 shadow-sm transition-all">
+    <div className="group hover:bg-muted/50 hover:border-muted-foreground/20 flex w-50 items-center gap-1.5 rounded-2xl px-4 transition-all">
       <div className="flex h-9.5 w-9.5 shrink-0 items-center justify-center rounded-md p-1.5 dark:bg-white/10">
         <img
           className="h-full w-full object-contain transition-transform group-hover:scale-105"

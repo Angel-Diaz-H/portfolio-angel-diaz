@@ -14,34 +14,22 @@ export const Tecnologias = ({ className }: { className?: string }) => {
     <SectionWrapper id="tecnologias" className={`space-y-8 ${className}`}>
       <Title text="Tecnologías." Icon={Cpu} />
 
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
         <AppTecnologias
           title="Frontend."
           typeTec="frontend"
           Icon={LayoutTemplate}
-          className="md:col-span-2"
         />
 
-        <AppTecnologias
-          title="Backend."
-          typeTec="backend"
-          Icon={Server}
-          className="md:col-span-2"
-        />
+        <AppTecnologias title="Backend." typeTec="backend" Icon={Server} />
 
         <AppTecnologias
           title="Base de datos."
           typeTec="database"
           Icon={Database}
-          className="md:col-span-2"
         />
 
-        <AppTecnologias
-          title="Herramientas."
-          typeTec="tools"
-          Icon={Wrench}
-          className="md:col-span-2"
-        />
+        <AppTecnologias title="Herramientas." typeTec="tools" Icon={Wrench} />
 
         <AppTecnologias
           title="Inteligencia artificial."
@@ -49,6 +37,8 @@ export const Tecnologias = ({ className }: { className?: string }) => {
           Icon={Sparkles}
         />
         <AppTecnologias title="Otras." typeTec="other" Icon={LayoutGrid} />
+        {/* <div className="flex flex-col gap-5">
+        </div> */}
       </div>
     </SectionWrapper>
   );
