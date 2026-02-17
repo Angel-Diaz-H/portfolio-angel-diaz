@@ -1,4 +1,10 @@
-export type TechCategory = "frontend" | "backend" | "database" | "tools" | "ia";
+export type TechCategory =
+  | "frontend"
+  | "backend"
+  | "database"
+  | "tools"
+  | "ia"
+  | "other";
 
 export interface Technology {
   id: number;
@@ -116,7 +122,7 @@ export const technologies: Technology[] = [
     id: 18,
     name: "Power BI",
     img: "/tecnologias/powerbi.webp",
-    type: "tools",
+    type: "other",
   },
   {
     id: 19,
@@ -127,7 +133,7 @@ export const technologies: Technology[] = [
   {
     id: 20,
     name: "GitHub",
-    img: "/tecnologias/github-light.webp",
+    img: "/tecnologias/github.svg",
     type: "tools",
   },
   {
@@ -136,28 +142,34 @@ export const technologies: Technology[] = [
     img: "/tecnologias/vite.webp",
     type: "tools",
   },
-  {
-    id: 22,
-    name: "Angular",
-    img: "/tecnologias/angular.webp",
-    type: "frontend",
-  },
+  // {
+  //   id: 22,
+  //   name: "Angular",
+  //   img: "/tecnologias/angular.webp",
+  //   type: "frontend",
+  // },
   {
     id: 23,
     name: "GitHub Copilot",
-    img: "/tecnologias/github-copilot-dark.webp",
+    img: "/tecnologias/githubCopilot.svg",
     type: "ia",
   },
   {
     id: 25,
     name: "Excel",
     img: "/tecnologias/microsoft-excel.webp",
-    type: "tools",
+    type: "other",
   },
   {
     id: 26,
     name: "Notion",
     img: "/tecnologias/notion.webp",
-    type: "tools",
+    type: "other",
+  },
+  {
+    id: 27,
+    name: "Gemini",
+    img: "/tecnologias/gemini.svg",
+    type: "ia",
   },
 ];

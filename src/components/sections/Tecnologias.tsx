@@ -1,55 +1,55 @@
 import { AppTecnologias, SectionWrapper, Title } from "@/components/index";
-import { Cpu } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import {
+  Cpu,
+  LayoutTemplate,
+  Database,
+  Server,
+  Wrench,
+  Sparkles,
+  LayoutGrid,
+} from "lucide-react";
 
-interface Props {
-  className?: string;
-}
-
-export const Tecnologias = ({ className }: Props) => {
+export const Tecnologias = ({ className }: { className?: string }) => {
   return (
-    <SectionWrapper id="tecnologias" className={`${className}`}>
+    <SectionWrapper id="tecnologias" className={`space-y-8 ${className}`}>
       <Title text="Tecnologías." Icon={Cpu} />
 
-      <Separator />
-      <div className="mx-8 my-4 grid grid-cols-5 items-center">
-        <p className="text-secondary col-span-1 text-2xl font-semibold">
-          Frontend
-        </p>
-        <AppTecnologias className="col-span-4 gap-2" typeTec="frontend" />
-      </div>
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        <AppTecnologias
+          title="Frontend."
+          typeTec="frontend"
+          Icon={LayoutTemplate}
+          className="md:col-span-2"
+        />
 
-      <Separator />
-      <div className="mx-8 my-4 grid grid-cols-5 items-center">
-        <p className="text-secondary col-span-1 text-2xl font-semibold">
-          Backend
-        </p>
-        <AppTecnologias className="col-span-4 gap-2" typeTec="backend" />
-      </div>
+        <AppTecnologias
+          title="Backend."
+          typeTec="backend"
+          Icon={Server}
+          className="md:col-span-2"
+        />
 
-      <Separator />
-      <div className="mx-8 my-4 grid grid-cols-5 items-center">
-        <p className="text-secondary col-span-1 text-2xl font-semibold">
-          Base de datos
-        </p>
-        <AppTecnologias className="col-span-4 gap-2" typeTec="database" />
-      </div>
+        <AppTecnologias
+          title="Base de datos."
+          typeTec="database"
+          Icon={Database}
+          className="md:col-span-2"
+        />
 
-      <Separator />
-      <div className="mx-8 my-4 grid grid-cols-5 items-center">
-        <p className="text-secondary col-span-1 text-2xl font-semibold">
-          Herramientas
-        </p>
-        <AppTecnologias className="col-span-4 gap-2" typeTec="tools" />
-      </div>
+        <AppTecnologias
+          title="Herramientas."
+          typeTec="tools"
+          Icon={Wrench}
+          className="md:col-span-2"
+        />
 
-      <Separator />
-      <div className="mx-8 my-4 grid grid-cols-5 items-center">
-        <p className="text-secondary col-span-1 text-2xl font-semibold">IA</p>
-        <AppTecnologias className="col-span-4 gap-2" typeTec="ia" />
+        <AppTecnologias
+          title="Inteligencia artificial."
+          typeTec="ia"
+          Icon={Sparkles}
+        />
+        <AppTecnologias title="Otras." typeTec="other" Icon={LayoutGrid} />
       </div>
-
-      <Separator />
     </SectionWrapper>
   );
 };

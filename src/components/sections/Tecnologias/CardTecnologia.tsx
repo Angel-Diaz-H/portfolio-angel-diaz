@@ -7,17 +7,18 @@ interface Props {
 
 export const CardTecnologia = ({ tec }: Props) => {
   return (
-    <div>
-      <a href="https://www.google.com" target="_blank" rel="noreferrer">
-        <div className="hover:border-primary hover:bg-primary/50 flex h-14 w-48 items-center justify-center gap-2 rounded-full border px-4 shadow-sm transition-transform hover:scale-105">
-          <img
-            className="h-8 w-8 object-contain"
-            src={tec.img}
-            alt={tec.name}
-          />
-          <p className="truncate font-semibold">{tec.name}</p>
-        </div>
-      </a>
+    <div className="group hover:bg-muted/50 hover:border-muted-foreground/20 flex items-center gap-1.5 rounded-2xl border border-transparent bg-white px-4 shadow-sm transition-all">
+      <div className="flex h-9.5 w-9.5 shrink-0 items-center justify-center rounded-md p-1.5 dark:bg-white/10">
+        <img
+          className="h-full w-full object-contain transition-transform group-hover:scale-105"
+          src={tec.img}
+          alt={tec.name}
+        />
+      </div>
+
+      <span className="text-muted-foreground group-hover:text-foreground text-sm font-medium transition-colors">
+        {tec.name}
+      </span>
     </div>
   );
 };
