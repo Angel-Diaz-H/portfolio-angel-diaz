@@ -4,8 +4,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Tema */
 @custom-variant dark (&:is(.dark *));
 
+/* Fuentes */
 @theme {
   --font-poppins: "Poppins", sans-serif;
 }
@@ -16,16 +18,15 @@
   }
 }
 
+/* Animaciones para fondo */
 @layer utilities {
   .bg-degradado-animado {
-    /* Hacemos el fondo más grande que la pantalla */
     background-size: 200% 200%;
-    /* Ejecutamos la animación en bucle infinito cada 12 segundos */
     animation: mover-degradado 12s ease infinite;
   }
 }
 
-/* Los keyframes le dicen al fondo cómo moverse */
+/* Movimientos de degradado */
 @keyframes mover-degradado {
   0% {
     background-position: 0% 50%;
@@ -39,7 +40,6 @@
 }
 
 @layer utilities {
-  /* Usamos 'alternate' para que vayan y regresen naturalmente, con tiempos impares para que no se sincronicen */
   .animate-orbe-1 {
     animation: mover-orbe-1 25s infinite ease-in-out alternate;
   }
@@ -51,17 +51,15 @@
   }
 }
 
-/* Orbe 1 (Arriba Izquierda): Viaja hacia la derecha de forma horizontal */
 @keyframes mover-orbe-1 {
   0% {
     transform: translate(0vw, 0vh) scale(1);
   }
   100% {
-    transform: translate(45vw, 5vh) scale(1.1);
+    transform: translate(-35vw, 30vh) scale(1.1);
   }
 }
 
-/* Orbe 2 (Abajo Izquierda): Viaja hacia el centro/derecha ligeramente hacia arriba */
 @keyframes mover-orbe-2 {
   0% {
     transform: translate(0vw, 0vh) scale(1);
@@ -71,17 +69,16 @@
   }
 }
 
-/* Orbe 3 (Abajo Derecha): Viaja hacia la esquina superior derecha */
 @keyframes mover-orbe-3 {
   0% {
     transform: translate(0vw, 0vh) scale(1);
   }
-  /* -55vh lo empuja hacia arriba, 15vw lo empuja un poco más a la derecha */
   100% {
     transform: translate(15vw, -55vh) scale(1.3);
   }
 }
 
+/* Colores */
 @theme inline {
   --font-Inter: "Inter", sans-serif;
   --font-Ubuntu: "Ubuntu", sans-serif;
