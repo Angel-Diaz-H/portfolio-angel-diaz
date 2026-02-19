@@ -2,7 +2,7 @@ import { Calendar, ExternalLink, Globe, MapPin } from "lucide-react";
 
 export const HeaderExperience = () => {
   return (
-    <div className="mt-4 mb-5 flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       <div className="flex items-center gap-6">
         <div className="border-muted/20 relative shrink-0 rounded-2xl border bg-white p-3 shadow-sm">
           <img
@@ -47,10 +47,10 @@ export const HeaderExperience = () => {
       </div>
 
       <div>
-        <p className="font-Inter text-md text-muted-foreground">
+        <p className="font-Inter text-muted-foreground">
           Rol enfocado en el soporte y mantenimiento de infraestructura.
         </p>
-        <p className="font-Inter text-md text-muted-foreground">
+        <p className="font-Inter text-muted-foreground">
           Logré aumentar la eficiencia operativa mediante la automatización de
           respaldos clave y la estandarización de consultas complejas.
         </p>

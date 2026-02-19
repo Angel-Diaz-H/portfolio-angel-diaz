@@ -3,8 +3,8 @@ export { AppGallery } from "@/components/sections/Experiencia/AppGallery";
 export { AppProyectos } from "@/components/sections/Proyectos/AppProyectos";
 export { AppRedesSociales } from "@/components/sections/Hero/AppRedesSociales";
 export { AppScrollTechnologies } from "@/components/sections/ScrollTechnologies/AppScrollTechnologies";
+export { BadgesExperience } from "./sections/Experiencia/BadgesExperience";
 export { BadgesTech } from "@/components/shared/BadgesTech";
-export { BadgesTechExperience } from "@/components/sections/Experiencia/BadgesTechExperience";
 export { BotonRedSocial } from "@/components/sections/Hero/BotonRedSocial";
 export { Capacitaciones } from "@/components/sections/Capacitaciones";
 export { CardCapacitacion } from "@/components/sections/Capacitaciones/CardCapacitacion";
@@ -20,6 +20,7 @@ export { HeaderExperience } from "@/components/sections/Experiencia/HeaderExperi
 export { Hero } from "@/components/sections/Hero";
 export { ItemContacto } from "@/components/sections/Hero/ItemContacto";
 export { ItemsTech } from "@/components/shared/ItemsTech";
+export { ItemsTechExperience } from "./sections/Experiencia/ItemsTechExperience";
 export { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 export { Main } from "@/components/sections/Main";
 export { MainLayout } from "@/components/layout/MainLayout";
