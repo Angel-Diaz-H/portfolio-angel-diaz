@@ -3,12 +3,15 @@ interface Props {
     img: string;
     name: string;
   };
+  classNameItem?: string;
 }
 
-export const CardTecnologia = ({ tec }: Props) => {
+export const CardTecnologia = ({ tec, classNameItem }: Props) => {
   return (
-    <div className="group hover:bg-muted/50 hover:border-muted-foreground/20 flex w-50 items-center gap-1.5 rounded-2xl px-4 transition-all">
-      <div className="flex h-9.5 w-9.5 shrink-0 items-center justify-center rounded-md p-1.5 dark:bg-white/10">
+    <div
+      className={`group hover:bg-muted/50 hover:border-muted-foreground/20 flex w-46 items-center gap-1 rounded-3xl px-2 transition-all ${classNameItem}`}
+    >
+      <div className="flex h-7 w-8 shrink-0 items-center justify-center rounded-md p-1 dark:bg-white/10">
         <img
           className="h-full w-full object-contain transition-transform group-hover:scale-105"
           src={tec.img}
@@ -17,7 +20,7 @@ export const CardTecnologia = ({ tec }: Props) => {
       </div>
 
       <span className="text-muted-foreground group-hover:text-foreground text-sm font-medium transition-colors">
-        {tec.name}
+        {tec.name}.
       </span>
     </div>
   );

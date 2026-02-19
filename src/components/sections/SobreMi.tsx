@@ -9,7 +9,7 @@ interface Props {
 export const SobreMi = ({ className }: Props) => {
   return (
     <SectionWrapper id="sobre-mi" className={`${className} gap-2`}>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col">
         <Title text="Sobre mí." Icon={User} />
         <ContentAboutMe />
       </div>
