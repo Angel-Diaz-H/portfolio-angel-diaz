@@ -1,9 +1,4 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -11,8 +6,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Image, Maximize2 } from "lucide-react";
-import { Card } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Image } from "lucide-react";
 
 const galleryImages = [
   "/experiencia/experience-1.webp",
@@ -23,59 +23,63 @@ const galleryImages = [
 export const AppGallery = () => {
   return (
     <Dialog>
-      {/* --- CARRUSEL EN LA VISTA NORMAL --- */}
-      <Card className="border-muted/40 bg-background/50 w-full rounded-3xl border shadow-sm sm:p-4">
-        <p className="text-muted-foreground mb-3 flex items-center gap-2.5 text-lg font-semibold">
-          <Image className="text-primary inline-block h-5 w-5" />
-          Galería.
-        </p>
-        <Carousel className="w-full px-6 hover:cursor-grab active:cursor-grabbing">
-          <CarouselContent>
-            {galleryImages.map((src, index) => (
-              <CarouselItem key={index}>
-                <DialogTrigger asChild>
-                  <div className="border-muted/20 group relative cursor-pointer overflow-hidden rounded-2xl border shadow-md">
-                    <img
-                      src={src}
-                      alt={`Evidencia ${index + 1}`}
-                      className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    {/* Overlay oscuro con ícono al hacer hover */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
-                      <Maximize2 className="h-10 w-10 text-white drop-shadow-lg" />
+      <Card className="bg-background w-full rounded-4xl border-none p-6 sm:p-6">
+        <CardContent className="p-0">
+          <div className="mb-3 flex items-center gap-2.5">
+            <Image className="text-primary inline-block h-5 w-5" />
+            <p className="text-muted-foreground text-lg font-semibold">
+              Galería.
+            </p>
+          </div>
+
+          <Carousel className="w-full bg-none hover:cursor-grab active:cursor-grabbing">
+            <CarouselContent className="bg-none">
+              {galleryImages.map((src, index) => (
+                <CarouselItem key={index} className="bg-none">
+                  <DialogTrigger asChild>
+                    <div className="border-muted/20 group relative cursor-pointer overflow-hidden rounded-3xl border shadow-md">
+                      <img
+                        src={src}
+                        alt={`Evidencia ${index + 1}`}
+                        className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
-                  </div>
-                </DialogTrigger>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hover:bg-primary left-2 h-8 w-8 border-none bg-black/50 text-white backdrop-blur-sm" />
-          <CarouselNext className="hover:bg-primary right-2 h-8 w-8 border-none bg-black/50 text-white backdrop-blur-sm" />
-        </Carousel>
+                  </DialogTrigger>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="absolute right-2 bottom-2 flex gap-1">
+              <CarouselPrevious className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white" />
+              <CarouselNext className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white" />
+            </div>
+          </Carousel>
+        </CardContent>
       </Card>
 
-      {/* --- MODAL / DIALOG FULL SCREEN --- */}
-      <DialogContent className="flex max-w-5xl justify-center border-none bg-transparent p-0 shadow-none">
+      <DialogContent className="flex max-w-full justify-center border-none bg-transparent p-0 shadow-none">
         <DialogTitle className="sr-only">
           Galería de imágenes de experiencia
         </DialogTitle>
-        <Carousel className="w-full max-w-4xl">
+        <Carousel className="w-full max-w-full">
           <CarouselContent>
             {galleryImages.map((src, index) => (
               <CarouselItem
                 key={index}
-                className="flex items-center justify-center p-2"
+                className="flex items-center justify-center"
               >
                 <img
                   src={src}
                   alt={`Evidencia ampliada ${index + 1}`}
-                  className="max-h-[80vh] w-auto rounded-xl object-contain shadow-2xl"
+                  className="min-h-[90vh] w-auto rounded-xl object-cover shadow-2xl"
                 />
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hover:bg-primary -left-4 h-12 w-12 border-none bg-black/50 text-white backdrop-blur-sm sm:-left-12" />
-          <CarouselNext className="hover:bg-primary -right-4 h-12 w-12 border-none bg-black/50 text-white backdrop-blur-sm sm:-right-12" />
+
+          <div className="absolute right-2 bottom-2 flex gap-1">
+            <CarouselPrevious className="hover:bg-primary static h-8 w-8 translate-y-0 border-none bg-black/40 text-white" />
+            <CarouselNext className="hover:bg-primary static h-8 w-8 translate-y-0 border-none bg-black/40 text-white" />
+          </div>
         </Carousel>
       </DialogContent>
     </Dialog>
