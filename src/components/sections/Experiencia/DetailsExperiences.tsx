@@ -3,20 +3,18 @@ import { Database, Rocket, Server, Wrench } from "lucide-react";
 const EXPERIENCES_DATA = [
   {
     id: 1,
-    title: "Administración de base de datos.",
+    title: "Base de datos.",
     icon: Database,
     items: [
-      "Gestión integral de instancias Oracle, SQL Server, MySQL, MariaDB y PostgreSQL en ambientes productivos y de desarrollo.",
-      // "Responsable de la seguridad (usuarios, permisos), ejecución de planes de respaldo y administración de almacenamiento (tablespaces, datafiles).",
+      "Administración de bases de datos abarcando seguridad de usuarios, respaldos y gestión de objetos, tanto en ambientes productivos como de desarrollo.",
     ],
   },
   {
     id: 2,
-    title: "Infraestructura y servidores.",
+    title: "Infraestructura de servidores.",
     icon: Server,
     items: [
-      "Configuración y monitoreo de servicios IIS y clientes Oracle TNS en Windows Server.",
-      // "Administración de entornos Linux (Oracle Linux, Ubuntu, Solaris) mediante línea de comandos.",
+      "Administración de servidores Windows y Linux, abarcando la configuración de servicios, conectividad de bases de datos, así como tareas de monitoreo y mantenimiento.",
     ],
   },
   {
@@ -24,7 +22,7 @@ const EXPERIENCES_DATA = [
     title: "Despliegue.",
     icon: Rocket,
     items: [
-      "Liberación de objetos a producción utilizando control de versiones Git y gestores como PM2.",
+      "Despliegues en producción y desarrollo de objetos de base de datos, así como la gestión de ramas utilizando Git y PM2.",
     ],
   },
   {
@@ -32,7 +30,7 @@ const EXPERIENCES_DATA = [
     title: "Herramientas ERP.",
     icon: Wrench,
     items: [
-      "Soporte a Oracle EBS (workflows, SOA) y gestión de reportes en Oracle APEX y Power BI.",
+      "Soporte a sistemas internos abarcando monitoreo en Oracle EBS, coordinación de incidencias, así como la gestión de Oracle APEX y publicación de tableros.",
     ],
   },
 ];
