@@ -19,7 +19,7 @@ export const CardTecnologia = ({ tec, classNameItem }: Props) => {
         />
       </div>
 
-      <span className="text-muted-foreground group-hover:text-foreground text-sm font-medium transition-colors">
+      <span className="text-muted-foreground text-sm font-medium transition-colors">
         {tec.name}.
       </span>
     </div>

@@ -3,8 +3,8 @@ export type TechCategory =
   | "backend"
   | "database"
   | "tools"
-  | "ia"
-  | "other";
+  | "productivity"
+  | "nextSteps";
 
 export interface Technology {
   id: number;
@@ -41,6 +41,12 @@ export const technologies: Technology[] = [
     type: "frontend",
   },
   {
+    id: 9,
+    name: "SQL Server",
+    img: "/tecnologias/sql-server.webp",
+    type: "database",
+  },
+  {
     id: 5,
     name: "PostgreSQL",
     img: "/tecnologias/postgresql.webp",
@@ -63,12 +69,6 @@ export const technologies: Technology[] = [
     name: "Python",
     img: "/tecnologias/python.webp",
     type: "backend",
-  },
-  {
-    id: 9,
-    name: "SQL Server",
-    img: "/tecnologias/sql-server.webp",
-    type: "database",
   },
   {
     id: 10,
@@ -119,12 +119,6 @@ export const technologies: Technology[] = [
     type: "frontend",
   },
   {
-    id: 18,
-    name: "Power BI",
-    img: "/tecnologias/powerbi.webp",
-    type: "other",
-  },
-  {
     id: 19,
     name: "Git",
     img: "/tecnologias/git.webp",
@@ -142,34 +136,70 @@ export const technologies: Technology[] = [
     img: "/tecnologias/vite.webp",
     type: "tools",
   },
-  // {
-  //   id: 22,
-  //   name: "Angular",
-  //   img: "/tecnologias/angular.webp",
-  //   type: "frontend",
-  // },
   {
-    id: 23,
-    name: "GitHub Copilot",
-    img: "/tecnologias/githubCopilot.svg",
-    type: "ia",
-  },
-  {
-    id: 25,
-    name: "Excel",
-    img: "/tecnologias/microsoft-excel.webp",
-    type: "other",
-  },
-  {
-    id: 26,
-    name: "Notion",
-    img: "/tecnologias/notion.webp",
-    type: "other",
+    id: 22,
+    name: "Angular",
+    img: "/tecnologias/angular.webp",
+    type: "nextSteps",
   },
   {
     id: 27,
     name: "Gemini",
     img: "/tecnologias/gemini.svg",
-    type: "ia",
+    type: "productivity",
+  },
+  {
+    id: 23,
+    name: "GitHub Copilot",
+    img: "/tecnologias/githubCopilot.svg",
+    type: "productivity",
+  },
+  // {
+  //   id: 25,
+  //   name: "Excel",
+  //   img: "/tecnologias/microsoft-excel.webp",
+  //   type: "productivity",
+  {
+    id: 18,
+    name: "Power BI",
+    img: "/tecnologias/powerbi.webp",
+    type: "productivity",
+  },
+  {
+    id: 26,
+    name: "Notion",
+    img: "/tecnologias/notion.webp",
+    type: "productivity",
+  },
+  // },
+  {
+    id: 28,
+    name: "NestJS",
+    img: "/tecnologias/nestjs.svg",
+    type: "nextSteps",
+  },
+  {
+    id: 29,
+    name: "Vitest",
+    img: "/tecnologias/vitest.svg",
+    type: "nextSteps",
+  },
+  // {
+  //   id: 30,
+  //   name: "aws",
+  //   img: "/tecnologias/aws.svg",
+  //   type: "nextSteps",
+  // },
+  // {
+  //   id: 31,
+  //   name: "kubernetes",
+  //   img: "/tecnologias/kubernetes.svg",
+  //   type: "nextSteps",
+  // },
+  {
+    id: 30,
+    name: "N8n",
+    img: "/tecnologias/n8n.svg",
+    type: "nextSteps",
   },
 ];

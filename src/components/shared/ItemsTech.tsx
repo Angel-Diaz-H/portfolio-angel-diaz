@@ -38,7 +38,7 @@ export const ItemsTech = ({
   if (filteredTechnologies.length === 0) return null;
 
   return (
-    <div className={`${className}`}>
+    <div className={` ${className}`}>
       {(title || Icon) && (
         <div className="mb-3 flex items-center gap-2.5">
           {Icon && <Icon className="text-primary h-5 w-5" />}
