@@ -6,8 +6,8 @@ const EXPERIENCE_ORDER = [3, 9, 10, 7, 12, 14, 5];
 
 export const ItemsTechExperience = () => {
   return (
-    <Card className="bg-background w-full rounded-4xl border-none p-6">
-      <CardContent className="p-0">
+    <Card borderAnimation className="w-full">
+      <CardContent className="px-6">
         <ItemsTech
           Icon={TerminalSquare}
           title="Tecnologías aprendidas."

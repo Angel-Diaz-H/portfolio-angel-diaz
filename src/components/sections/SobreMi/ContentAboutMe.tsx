@@ -46,7 +46,7 @@ export const ContentAboutMe = () => {
 
       {/* COLUMNA 2: Tarjeta de Datos Rápidos */}
       <div className="space-y-4">
-        <Card className="bg-background rounded-4xl border-none">
+        <Card borderAnimation>
           <CardContent className="space-y-5 p-6">
             {/* Estado Actual */}
             <div className="flex items-start gap-3">

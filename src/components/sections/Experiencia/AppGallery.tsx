@@ -62,8 +62,8 @@ export const AppGallery = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <Card className="bg-background w-full rounded-4xl border-none p-6">
-        <CardContent className="p-0">
+      <Card borderAnimation className="w-full">
+        <CardContent className="px-6">
           <div className="mb-3 flex items-center gap-2.5">
             <ImageIcon className="text-primary h-5 w-5" />
             <p className="text-muted-foreground text-lg font-semibold">
