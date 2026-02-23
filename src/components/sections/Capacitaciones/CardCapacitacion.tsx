@@ -6,6 +6,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface Props {
   cert: {
@@ -24,43 +25,45 @@ export const CardCapacitacion = ({ cert }: Props) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="group bg-background hover:border-ring hover:bg-accent-secondary/10 flex cursor-pointer items-center gap-4 rounded-2xl border p-3 shadow transition-all duration-150 hover:scale-[1.01] hover:shadow-md">
-          <div className="bg-muted relative h-20 w-20 shrink-0 overflow-hidden rounded-lg border">
-            <img
-              src={cert.iconLight}
-              alt={cert.title}
-              loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-102"
-            />
-          </div>
+        <Card borderAnimation className="group cursor-pointer">
+          <CardContent className="flex items-center gap-3">
+            <div className="h-12 shrink-0 overflow-hidden rounded-lg">
+              <img
+                src={cert.iconLight}
+                alt={cert.title}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-102"
+              />
+            </div>
 
-          <div className="flex flex-1 flex-col justify-center text-left">
-            <h3 className="text-foreground line-clamp-2 text-sm leading-tight font-semibold sm:text-sm">
-              {cert.title}
-            </h3>
+            <div className="flex flex-1 flex-col justify-center text-left">
+              <h3 className="text-foreground line-clamp-2 text-sm leading-tight font-semibold sm:text-sm">
+                {cert.title}
+              </h3>
 
-            <p className="text-muted-foreground mt-2 text-xs font-medium">
-              {cert.technologies.join(" • ")}
-            </p>
-          </div>
+              <p className="text-muted-foreground mt-2 text-xs font-medium">
+                {cert.technologies.join(" • ")}
+              </p>
+            </div>
 
-          <Button
-            variant="default"
-            className="hover:border-ring hover:text-accent-secondary-foreground h-9 w-28 rounded-full p-0 transition-colors"
-            asChild
-          >
-            <a
-              href={cert.credentialUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="flex items-center justify-center gap-1.5 text-xs font-semibold"
+            <Button
+              variant="default"
+              className="hover:border-ring hover:text-accent-secondary-foreground h-9 w-28 rounded-full p-0 transition-colors"
+              asChild
             >
-              <span className="hidden sm:inline-block">Credencial</span>
-              <ArrowUpRightIcon size={16} />
-            </a>
-          </Button>
-        </div>
+              <a
+                href={cert.credentialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center justify-center gap-1.5 text-xs font-semibold"
+              >
+                <span className="hidden sm:inline-block">Credencial</span>
+                <ArrowUpRightIcon size={16} />
+              </a>
+            </Button>
+          </CardContent>
+        </Card>
       </DialogTrigger>
 
       <DialogContent
