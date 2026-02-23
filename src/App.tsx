@@ -1,9 +1,10 @@
-import { Footer, Main, Navbar } from "@/components/index";
+import { Footer, Main, Navbar, NavbarFloating } from "@/components/index";
 
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <NavbarFloating />
       <Main />
       <Footer />
     </>
