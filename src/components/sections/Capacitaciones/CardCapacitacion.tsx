@@ -25,8 +25,8 @@ export const CardCapacitacion = ({ cert }: Props) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Card borderAnimation className="group cursor-pointer">
-          <CardContent className="flex items-center gap-3">
+        <Card borderAnimation className="group my-0 cursor-pointer">
+          <CardContent className="flex items-center gap-3 py-0">
             <div className="h-12 shrink-0 overflow-hidden rounded-lg">
               <img
                 src={cert.iconLight}
@@ -41,7 +41,7 @@ export const CardCapacitacion = ({ cert }: Props) => {
                 {cert.title}
               </h3>
 
-              <p className="text-muted-foreground mt-2 text-xs font-medium">
+              <p className="text-muted-foreground mt-1 text-xs font-medium">
                 {cert.technologies.join(" • ")}
               </p>
             </div>
