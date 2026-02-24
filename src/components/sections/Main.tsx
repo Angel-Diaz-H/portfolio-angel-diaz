@@ -1,5 +1,6 @@
 import {
   Capacitaciones,
+  Contacto,
   Experiencia,
   Hero,
   Proyectos,
@@ -44,6 +45,7 @@ export const Main = () => {
         <Proyectos />
         <Tecnologias />
         <Capacitaciones />
+        <Contacto />
       </div>
     </main>
   );

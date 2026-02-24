@@ -9,6 +9,7 @@ export { BotonRedSocial } from "@/components/sections/Hero/BotonRedSocial";
 export { Capacitaciones } from "@/components/sections/Capacitaciones";
 export { CardCapacitacion } from "@/components/sections/Capacitaciones/CardCapacitacion";
 export { CardTecnologia } from "@/components/sections/Tecnologias/CardTecnologia";
+export { Contacto } from "./sections/Contacto";
 export { ContentAboutMe } from "@/components/sections/SobreMi/ContentAboutMe";
 export { ContentExperience } from "@/components/sections/Experiencia/ContentExperience";
 export { CopyButton } from "@/components/ui/CopyButton";
