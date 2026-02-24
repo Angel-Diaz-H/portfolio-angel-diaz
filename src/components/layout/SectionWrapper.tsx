@@ -8,7 +8,10 @@ interface Props {
 
 export const SectionWrapper = ({ children, className = "", id }: Props) => {
   return (
-    <section id={id} className={`my-30 h-full w-full py-1 ${className}`}>
+    <section
+      id={id}
+      className={`my-30 h-full w-full scroll-mt-16 py-1 ${className}`}
+    >
       <div className="mx-auto w-full max-w-6xl px-10">{children}</div>
     </section>
   );

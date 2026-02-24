@@ -4,6 +4,7 @@ import {
   Folder,
   GraduationCap,
   Home,
+  Mail,
   User,
 } from "lucide-react";
 import { FloatingDock } from "../ui/floating-dock";
@@ -50,6 +51,13 @@ const navList = [
       <GraduationCap className="h-full w-full text-neutral-600 dark:text-neutral-300" />
     ),
     href: "#capacitaciones",
+  },
+  {
+    title: "Contacto",
+    icon: (
+      <Mail className="h-full w-full text-neutral-600 dark:text-neutral-300" />
+    ),
+    href: "#contacto",
   },
 ];
 
