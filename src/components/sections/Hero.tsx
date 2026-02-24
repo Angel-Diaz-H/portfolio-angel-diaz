@@ -39,7 +39,7 @@ export const Hero = () => {
 
         <img
           className="bg-secondary relative h-64 w-64 transform rounded-full object-cover shadow-xl transition-all duration-500 md:h-80 md:w-80 lg:h-100 lg:w-100"
-          src="tu-ruta-de-imagen.jpg" // ¡No olvides poner tu ruta aquí!
+          src="/"
           alt="Fotografía de perfil de Angel Díaz"
         />
       </div>
