@@ -7,12 +7,12 @@ import {
   Tecnologias,
 } from "@/components/index";
 import { SparklesCore } from "../ui/sparkles";
-import { CustomCursor } from "../ui/customCursor";
+// import { CustomCursor } from "../ui/customCursor";
 
 export const Main = () => {
   return (
-    <main className="relative min-h-screen w-full cursor-none bg-white">
-      <CustomCursor />
+    <main className="relative min-h-screen w-full bg-white">
+      {/* <CustomCursor /> */}
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 h-screen w-full">
           <SparklesCore
@@ -37,7 +37,7 @@ export const Main = () => {
         {/* 3. Esquina inferior derecha, detrás de la foto. */}
         <div className="animate-orbe-3 absolute right-0 -bottom-20 h-120 w-120 rounded-full bg-lime-100 opacity-40 mix-blend-multiply blur-[128px] filter"></div>
       </div>
-      <div className="relative z-10">
+      <div className="relative z-10 gap-20">
         <Hero />
         <SobreMi />
         <Experiencia />

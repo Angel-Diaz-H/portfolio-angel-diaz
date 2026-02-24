@@ -34,14 +34,14 @@ export const CustomCursor = () => {
   return (
     <>
       <motion.div
-        className="bg-primary/20 dark:bg-primary/30 pointer-events-none fixed top-0 left-0 z-9998 h-8 w-8 rounded-full blur-sm"
+        className="bg-primary/20 dark:bg-primary/30 pointer-events-none fixed top-0 left-0 z-9998 h-9 w-9 rounded-full blur-sm"
         style={{
           x: smoothX,
           y: smoothY,
         }}
       />
 
-      <motion.div
+      {/* <motion.div
         className="pointer-events-none fixed top-0 left-0 z-9999 flex h-8 w-8 items-center justify-center rounded-full"
         style={{
           x: mouseX,
@@ -49,7 +49,7 @@ export const CustomCursor = () => {
         }}
       >
         <div className="bg-primary h-2 w-2 rounded-full shadow-[0_0_10px_2px_rgba(var(--primary),0.5)]" />
-      </motion.div>
+      </motion.div> */}
     </>
   );
 };
