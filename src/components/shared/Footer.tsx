@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="pb-8 text-center text-sm">
+    <footer className="font-Ubuntu px-12 pb-2 text-center text-sm md:px-10">
       <p>Diseñado y desarrollado por Angel Díaz.</p>
       <p>
         Proyecto realizado con
