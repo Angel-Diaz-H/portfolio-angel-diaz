@@ -1,6 +1,7 @@
 export { AppCapacitaciones } from "@/components/sections/Capacitaciones/AppCapacitaciones";
 export { AppGallery } from "@/components/sections/Experiencia/AppGallery";
-export { AppProyectos } from "@/components/sections/Proyectos/AppProyectos";
+export { AppProyectosIndividuales } from "./sections/Proyectos/AppProyectosIndividuales";
+export { AppProyectosIntegrales } from "@/components/sections/Proyectos/AppProyectosIntegrales";
 export { AppRedesSociales } from "@/components/sections/Hero/AppRedesSociales";
 export { AppScrollTechnologies } from "@/components/sections/ScrollTechnologies/AppScrollTechnologies";
 export { BadgesExperience } from "./sections/Experiencia/BadgesExperience";
