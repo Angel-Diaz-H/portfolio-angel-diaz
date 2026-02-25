@@ -9,7 +9,6 @@ interface Props {
   tech: string[];
   github?: string;
   link?: string;
-  //   date: string;
 }
 
 export const CardProyectos = ({
@@ -19,12 +18,11 @@ export const CardProyectos = ({
   tech,
   github,
   link,
-  //   date,
 }: Props) => {
   return (
     <Card borderAnimation>
-      <CardContent className="grid gap-4">
-        <div className="h-25 w-full rounded-2xl bg-gray-200">
+      <CardContent className="grid gap-3 py-0">
+        <div className="bg-muted h-16 w-full rounded-2xl">
           <img
             src={img}
             alt="Proyecto"
@@ -32,7 +30,7 @@ export const CardProyectos = ({
           />
         </div>
         <div className="grid w-full gap-3">
-          <div className="grid gap-2">
+          <div className="grid gap-1">
             <p className="font-semibold">{title}</p>
             <p className="text-muted-foreground text-sm font-normal">
               {description}
@@ -43,16 +41,20 @@ export const CardProyectos = ({
               <BadgesTech order={tech} variant="outline" />
             </div>
             <div className="flex w-full items-center gap-3">
-              <Button variant={"default"} className="rounded-full">
-                <a className="h-full w-full" href={github}>
-                  Github
-                </a>
-              </Button>
-              <Button variant={"default"} className="rounded-full">
-                <a className="h-full w-full" href={link}>
-                  Enlace
-                </a>
-              </Button>
+              {github && (
+                <Button variant={"default"} className="rounded-full" asChild>
+                  <a href={github} target="_blank" rel="noreferrer">
+                    Github
+                  </a>
+                </Button>
+              )}
+              {link && (
+                <Button variant={"default"} className="rounded-full" asChild>
+                  <a href={link} target="_blank" rel="noreferrer">
+                    Enlace
+                  </a>
+                </Button>
+              )}
               {/* <p className="text-muted-foreground text-sm font-semibold">
                 {date}
               </p> */}

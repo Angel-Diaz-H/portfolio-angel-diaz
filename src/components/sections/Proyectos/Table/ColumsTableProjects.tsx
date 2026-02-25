@@ -1,23 +1,8 @@
 "use client";
 import type { ColumnDef } from "@tanstack/react-table";
+import type { Project } from "@/data/projects.data";
 
-export type Projects = {
-  id: string;
-  title: string;
-  description: string;
-  tech: string[];
-  date: string;
-};
-
-/*   id: number;
-  title: string;
-  description: string;
-  technologies?: string[];
-  github?: string;
-  date?: string;
-  level: number; */
-
-export const ColumnsTableProjects: ColumnDef<Projects>[] = [
+export const ColumnsTableProjects: ColumnDef<Project>[] = [
   {
     accessorKey: "title",
     header: "Título",
@@ -27,11 +12,13 @@ export const ColumnsTableProjects: ColumnDef<Projects>[] = [
     header: "Descripción",
   },
   {
-    accessorKey: "tech",
+    accessorKey: "technologies",
     header: "Tecnologías",
+    cell: ({ row }) => row.original.technologies?.join(", ") ?? "-",
   },
   {
     accessorKey: "date",
     header: "Fecha",
+    cell: ({ row }) => row.original.date ?? "-",
   },
 ];
