@@ -10,7 +10,7 @@ export const Capacitaciones = ({ className }: Props) => {
   return (
     <SectionWrapper id="capacitaciones" className={className}>
       <Title text="Capacitaciones." Icon={GraduationCap} />
-      <AppCapacitaciones className="grid gap-2 sm:grid-cols-2 lg:grid-cols-2" />
+      <AppCapacitaciones className="mx-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-2" />
     </SectionWrapper>
   );
 };
