@@ -11,9 +11,17 @@ interface Props {
     | "ghost"
     | "link";
   classname?: string;
+  classNameItems?: string;
+  icons?: boolean;
 }
 
-export const BadgesTech = ({ order, variant, classname }: Props) => {
+export const BadgesTech = ({
+  order,
+  variant,
+  classname,
+  classNameItems,
+  icons = true,
+}: Props) => {
   const normalize = (value: string) =>
     value
       .toLowerCase()
@@ -22,7 +30,7 @@ export const BadgesTech = ({ order, variant, classname }: Props) => {
       .replace(/[^a-z0-9]/g, "");
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className={`flex flex-wrap gap-x-1 gap-y-2 ${classNameItems ?? ""}`}>
       {order.map((item, index) => {
         const tec =
           typeof item === "number"
@@ -47,15 +55,19 @@ export const BadgesTech = ({ order, variant, classname }: Props) => {
           <Badge
             key={tec.id}
             variant={variant ?? "outline"}
-            className={`${classname} gap-2 px-3 py-1 text-sm font-normal`}
+            className={`${classname} gap-2 px-2 py-1 text-xs font-normal`}
           >
-            <img
-              src={tec.img}
-              alt={`${tec.name} icon`}
-              className="h-4 w-4 object-contain"
-              loading="lazy"
-            />
-            <span>{tec.name}</span>
+            {icons && (
+              <img
+                src={tec.img}
+                alt={`${tec.name} icon`}
+                className="h-4 w-4 object-contain"
+                loading="lazy"
+              />
+            )}
+            <span className="text-muted-foreground text-xs font-medium">
+              {tec.name}
+            </span>
           </Badge>
         );
       })}

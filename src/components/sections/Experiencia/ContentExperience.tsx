@@ -8,7 +8,7 @@ import {
 
 export const ContentExperience = () => {
   return (
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_0.9fr]">
+    <div className="mx-2 grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_0.9fr]">
       {/* IZQUIERDA. */}
       <div className="flex flex-col gap-3">
         <HeaderExperience />

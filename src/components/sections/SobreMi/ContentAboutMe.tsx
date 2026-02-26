@@ -4,7 +4,7 @@ import { Laptop, Server, MapPin, Mail } from "lucide-react";
 
 export const ContentAboutMe = () => {
   return (
-    <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
+    <div className="mx-2 grid grid-cols-1 items-center gap-6 md:grid-cols-2">
       {/* COLUMNA 1: Historia Profesional */}
       <div className="font-Inter text-md text-muted-foreground space-y-4">
         <p className="text-foreground text-lg font-medium">

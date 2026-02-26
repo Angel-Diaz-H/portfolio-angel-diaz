@@ -37,9 +37,9 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Sistema integral de ventas y ofimática.",
+    title: "Sistema integral de productos, ventas y ofimática.",
     description:
-      "Privado. Sistema de para gestión de productos y ventas. Incluye manipulación de documentos y procesos administrativos.",
+      "Sistema de para gestión de productos y ventas. Incluye manipulación de documentos.",
     // images: ["/Icon.svg"],
     technologies: [
       "TypeScript",
@@ -47,16 +47,16 @@ export const projects: Project[] = [
       "Next.js",
       "MySQL",
       "Docker",
-      "TailwindCSS",
+      "Tailwind",
     ],
     date: "2025-12-30",
     level: 1,
   },
   {
     id: 4,
-    title: "Portal de incidencias de nóminas.",
+    title: "Portal para gestión de incidencias de nóminas.",
     description:
-      "Privado. Portal con autentificación de usuarios para gestión de incidencias de nóminas.",
+      "Portal con autentificación de usuarios para gestión de incidencias para empresa de nóminas.",
     // images: ["/Icon.svg"],
     technologies: [
       "TypeScript",
@@ -64,7 +64,7 @@ export const projects: Project[] = [
       "Next.js",
       "PostgreSQL",
       "Docker",
-      "TailwindCSS",
+      "Tailwind",
     ],
     date: "2025-11-1",
     level: 1,
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     date: "//!2025-09-21",
     github:
       "https://github.com/Angel-Diaz-H/DevTalles-React-de-cero-a-experto-Edicion-2025/tree/main/03-gifs-app",
-    level: 1,
+    level: 2,
   },
   {
     id: 9,

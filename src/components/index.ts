@@ -1,7 +1,7 @@
 export { AppCapacitaciones } from "@/components/sections/Capacitaciones/AppCapacitaciones";
 export { AppGallery } from "@/components/sections/Experiencia/AppGallery";
-export { AppProyectosIndividuales } from "./sections/Proyectos/AppProyectosIndividuales";
-export { AppProyectosIntegrales } from "@/components/sections/Proyectos/AppProyectosIntegrales";
+export { AppProyectosIndividuales } from "./sections/Proyectos/Individuals/AppProyectosIndividuales";
+export { AppProyectosIntegrales } from "./sections/Proyectos/Integrals/AppProyectosIntegrales";
 export { AppRedesSociales } from "@/components/sections/Hero/AppRedesSociales";
 export { AppScrollTechnologies } from "@/components/sections/ScrollTechnologies/AppScrollTechnologies";
 export { BadgesExperience } from "./sections/Experiencia/BadgesExperience";
@@ -9,6 +9,7 @@ export { BadgesTech } from "@/components/shared/BadgesTech";
 export { BotonRedSocial } from "@/components/sections/Hero/BotonRedSocial";
 export { Capacitaciones } from "@/components/sections/Capacitaciones";
 export { CardCapacitacion } from "@/components/sections/Capacitaciones/CardCapacitacion";
+export { CardProyectos } from "./sections/Proyectos/Integrals/CardProyectos";
 export { CardTecnologia } from "@/components/sections/Tecnologias/CardTecnologia";
 export { Contacto } from "./sections/Contacto";
 export { ContentAboutMe } from "@/components/sections/SobreMi/ContentAboutMe";

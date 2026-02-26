@@ -1,4 +1,4 @@
-import { BadgesTech } from "@/components/shared/BadgesTech";
+import { BadgesTech } from "@/components/index";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -22,7 +22,7 @@ export const CardProyectos = ({
   return (
     <Card borderAnimation>
       <CardContent className="grid gap-3 py-0">
-        <div className="bg-muted h-16 w-full rounded-2xl">
+        <div className="bg-primary/10 h-16 w-full rounded-3xl">
           <img
             src={img}
             alt="Proyecto"
@@ -31,25 +31,38 @@ export const CardProyectos = ({
         </div>
         <div className="grid w-full gap-3">
           <div className="grid gap-1">
-            <p className="font-semibold">{title}</p>
-            <p className="text-muted-foreground text-sm font-normal">
+            <p className="text-foreground/75 text-sm font-semibold">{title}</p>
+            <p className="text-muted-foreground font-Inter text-sm font-normal">
               {description}
             </p>
           </div>
           <div className="grid gap-3">
-            <div className="flex w-full flex-wrap gap-2">
-              <BadgesTech order={tech} variant="outline" />
+            <div className="flex">
+              <BadgesTech
+                order={tech}
+                variant="outline"
+                classNameItems="flex flex-wrap"
+                icons={false}
+              />
             </div>
             <div className="flex w-full items-center gap-3">
               {github && (
-                <Button variant={"default"} className="rounded-full" asChild>
+                <Button
+                  variant={"default"}
+                  className="rounded-full py-0 text-xs"
+                  asChild
+                >
                   <a href={github} target="_blank" rel="noreferrer">
                     Github
                   </a>
                 </Button>
               )}
               {link && (
-                <Button variant={"default"} className="rounded-full" asChild>
+                <Button
+                  variant={"default"}
+                  className="rounded-full p-0 text-xs"
+                  asChild
+                >
                   <a href={link} target="_blank" rel="noreferrer">
                     Enlace
                   </a>

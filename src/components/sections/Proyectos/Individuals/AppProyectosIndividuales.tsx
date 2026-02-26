@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import { projects } from "@/data/projects.data";
 import type { Project } from "@/data/projects.data";
-import { DataTable } from "./Table/DataTableProjects";
-import { ColumnsTableProjects } from "./Table/ColumsTableProjects";
+import { DataTable } from "./DataTableProjects";
+import { ColumnsTableProjects } from "./ColumsTableProjects";
 import {
   Dialog,
   DialogContent,
