@@ -37,7 +37,7 @@ export const CardCapacitacion = ({ cert }: Props) => {
             </div>
 
             <div className="flex flex-1 flex-col justify-center text-left">
-              <h3 className="text-foreground line-clamp-2 text-sm leading-tight font-semibold sm:text-sm">
+              <h3 className="text-muted-foreground line-clamp-2 text-sm leading-tight font-semibold sm:text-sm">
                 {cert.title}
               </h3>
 

@@ -35,22 +35,31 @@ export const AppProyectosIndividuales = () => {
           }
         }}
       >
-        <DialogContent className="max-w-3xl">
-          <DialogHeader>
-            <DialogTitle>{projectSelected?.title}</DialogTitle>
-            <DialogDescription>
+        {/* 1. Ajuste de ancho y padding del Dialog */}
+        <DialogContent className="w-[95vw] max-w-5xl rounded-3xl p-4 sm:p-5">
+          <DialogHeader className="mb-2">
+            <DialogTitle className="text-2xl">
+              {projectSelected?.title}
+            </DialogTitle>
+            <DialogDescription className="text-base">
               {projectSelected?.description}
             </DialogDescription>
           </DialogHeader>
 
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div
+            className={`grid gap-4 ${
+              projectSelected?.images?.length === 1
+                ? "grid-cols-1"
+                : "sm:grid-cols-2"
+            }`}
+          >
             {projectSelected?.images?.length ? (
               projectSelected.images.map((image, index) => (
                 <div key={`${projectSelected.id}-${index}`} className="w-full">
                   <img
                     src={image}
                     alt={`${projectSelected.title} imagen ${index + 1}`}
-                    className="h-48 w-full rounded-md object-cover"
+                    className="border-border/50 bg-muted/20 max-h-125 w-full rounded-2xl border object-contain p-2"
                   />
                 </div>
               ))

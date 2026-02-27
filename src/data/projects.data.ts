@@ -118,7 +118,7 @@ export const projects: Project[] = [
     id: 9,
     title: "Calendario 2026.",
     description: "Visualización de calendario 2026.",
-    // images: ["/Icon.svg"],
+    images: ["/projects/calendar.png"],
     technologies: ["React"],
     date: "2026-02-02",
     github: "https://github.com/Angel-Diaz-H/calendar-2026",
