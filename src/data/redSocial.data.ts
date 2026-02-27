@@ -27,7 +27,7 @@ export const redesSociales: Props[] = [
   {
     nombre: "Portafolio",
     Icon: AppWindow,
-    href: "//! TODO: Agregar enlace al portafolio",
+    href: "https://angel-diaz-h.github.io/portfolio-angel-diaz/",
     target: "_blank",
     rel: "noopener noreferrer",
     ariaLabel: "Mi portafolio",
