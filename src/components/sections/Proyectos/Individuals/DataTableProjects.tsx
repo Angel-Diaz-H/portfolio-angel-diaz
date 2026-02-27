@@ -56,9 +56,9 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="w-full">
-      <div className="border-border/50 w-full overflow-hidden rounded-2xl border shadow-sm">
-        <Table>
+    <div className="w-full min-w-0">
+      <div className="border-border/50 w-full overflow-x-auto rounded-2xl border shadow-sm">
+        <Table className="min-w-175 md:min-w-full">
           <TableHeader className="bg-muted">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow

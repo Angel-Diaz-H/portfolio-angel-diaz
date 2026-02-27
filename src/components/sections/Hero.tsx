@@ -27,11 +27,11 @@ export const Hero = () => {
 
         <div className="grid gap-5">
           <AppRedesSociales
-            className="flex flex-wrap justify-start gap-3"
+            className="flex flex-wrap justify-center gap-3 md:justify-start"
             importance="primary"
           />
           <AppRedesSociales
-            className="flex flex-wrap justify-start gap-3"
+            className="flex flex-wrap justify-center gap-3 md:justify-start"
             importance="secondary"
           />
         </div>

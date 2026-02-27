@@ -5,7 +5,7 @@ export const AppProyectosIntegrales = () => {
   const levelOneProjects = projects.filter((project) => project.level === 1);
 
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
       {levelOneProjects.map((project) => (
         <CardProyectos
           key={project.id}

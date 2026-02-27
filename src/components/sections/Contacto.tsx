@@ -35,8 +35,11 @@ export const Contacto = ({ className }: { className?: string }) => {
             ariaLabel={`Copiar angeldiaz.hrn@gmail.com al portapapeles`}
           />
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          <AppRedesSociales className="flex gap-4" importance="secondary" />
+        <div className="grid gap-5">
+          <AppRedesSociales
+            className="flex flex-wrap justify-center gap-3 md:justify-start"
+            importance="secondary"
+          />
         </div>
       </div>
     </SectionWrapper>
