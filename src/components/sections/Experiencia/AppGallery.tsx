@@ -17,9 +17,9 @@ import { Image as ImageIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const galleryImages = [
-  "/experiencia/experience-1.webp",
-  "/experiencia/experience-2.webp",
-  "/experiencia/experience-3.webp",
+  "./experiencia/experience-1.webp",
+  "./experiencia/experience-2.webp",
+  "./experiencia/experience-3.webp",
 ];
 
 export const AppGallery = () => {
