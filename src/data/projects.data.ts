@@ -20,7 +20,7 @@ export const projects: Project[] = [
     technologies: ["Python"],
     github:
       "https://github.com/Angel-Diaz-H/Generate-SELECT-from-DELETEs-UPDATEs/blob/Version-in-work/Generate-selects-v5.py",
-    date: "2025-08-05",
+    date: "2025-08-19",
     level: 2,
   },
   {
@@ -88,6 +88,8 @@ export const projects: Project[] = [
     technologies: ["Bootstrap"],
     date: "2025-10-22",
     level: 2,
+    github:
+      "https://github.com/Angel-Diaz-H/U_S7_Programacion_Distribuida_Evidencias",
   },
   {
     id: 7,
@@ -96,7 +98,7 @@ export const projects: Project[] = [
       "Juego de Blackjack aplicando conceptos de JavaScript moderno.",
     // images: ["/Icon.svg"],
     technologies: ["JavaScript"],
-    date: "//!2025-09-21",
+    date: "2025-09-20",
     github:
       "https://github.com/Angel-Diaz-H/DevTalles-JavaScript-Moderno-Guia-para-dominar-el-lenguaje/tree/main/04-blackjack-vite",
     level: 2,
@@ -106,8 +108,8 @@ export const projects: Project[] = [
     title: "Gifs app.",
     description: "Aplicación para visualizar y buscar gifs.",
     // images: ["/Icon.svg"],
-    technologies: ["TypeScript", "React", "Vite"],
-    date: "//!2025-09-21",
+    technologies: ["TypeScript"],
+    date: "2026-01-10",
     github:
       "https://github.com/Angel-Diaz-H/DevTalles-React-de-cero-a-experto-Edicion-2025/tree/main/03-gifs-app",
     level: 2,
@@ -118,7 +120,7 @@ export const projects: Project[] = [
     description: "Visualización de calendario 2026.",
     // images: ["/Icon.svg"],
     technologies: ["React"],
-    date: "//!2025-09-21",
+    date: "2026-02-02",
     github: "https://github.com/Angel-Diaz-H/calendar-2026",
     level: 2,
   },
@@ -129,7 +131,7 @@ export const projects: Project[] = [
       "Herramientas para retocar monografías incluye su optimización de peso.",
     // images: ["/Icon.svg"],
     technologies: ["Python"],
-    date: "//!2025-09-21",
+    date: "2026-01-13",
     github: "https://github.com/Angel-Diaz-H/tools-pdf-monographs",
     level: 2,
   },
@@ -140,7 +142,7 @@ export const projects: Project[] = [
       "Ejecutar Whatsapp en terminal para gestionar perfil de negocio.",
     // images: ["/Icon.svg"],
     technologies: ["Node.js"],
-    date: "//!2025-09-21",
+    date: "2025-01-14",
     level: 2,
   },
   {
@@ -150,7 +152,9 @@ export const projects: Project[] = [
       "Sistema de punto de venta y gestión de clientes en taller mecánico con terminal.",
     // images: ["/Icon.svg"],
     technologies: ["Python"],
-    date: "//!2025-09-21",
+    date: "2023-11-12",
     level: 2,
+    github:
+      "https://github.com/Angel-Diaz-H/U_S3_Programacion_Python/blob/main/PIA.py",
   },
 ];
