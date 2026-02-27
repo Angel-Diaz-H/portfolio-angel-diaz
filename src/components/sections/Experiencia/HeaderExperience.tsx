@@ -7,7 +7,7 @@ export const HeaderExperience = () => {
         <div className="border-muted/20 relative shrink-0 rounded-2xl border bg-white p-3 shadow-sm">
           <img
             className="h-18 w-18 object-contain"
-            src="/experiencia/casasJaver.svg"
+            src="./experiencia/casasJaver.svg"
             alt="Logo de Casas Javer"
           />
         </div>
