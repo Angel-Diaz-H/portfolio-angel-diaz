@@ -12,7 +12,9 @@ export const Contacto = ({ className }: { className?: string }) => {
       <Title text="Contacto." Icon={Mail} />
 
       <div className="flex flex-col items-center justify-center gap-8 py-8 text-center">
-        <h3 className="text-4xl font-bold md:text-3xl">¡Conversemos!</h3>
+        <h3 className="text-foreground/80 text-4xl font-bold md:text-3xl">
+          ¡Conversemos!
+        </h3>
         <div className="text-muted-foreground">
           <p>Estoy disponible para nuevas oportunidades.</p>
           <p>
@@ -21,7 +23,6 @@ export const Contacto = ({ className }: { className?: string }) => {
           </p>
         </div>
 
-        {/* Reutilizamos tus botones existentes pero centrados */}
         <div className="flex items-center gap-2">
           <a
             href="mailto:angeldiaz.hrn@gmail.com"
