@@ -1,46 +1,51 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CopyButton } from "@/components/ui/CopyButton";
-import { Laptop, Server, MapPin, Mail } from "lucide-react";
+import { Laptop, Server, MapPin, Mail, GraduationCap } from "lucide-react";
 
 export const ContentAboutMe = () => {
   return (
     <div className="mx-2 grid grid-cols-1 items-center gap-6 md:grid-cols-2">
       {/* COLUMNA 1: Historia Profesional */}
-      <div className="font-Inter text-md text-muted-foreground space-y-4">
-        <p className="text-foreground text-lg font-medium">
+      <div className="font-Inter text-muted-foreground space-y-3">
+        <p className="text-foreground/80 font-bold">
           Desarrollador de software con bases en infraestructura.
+        </p>
+
+        <p>
+          Soy un desarrollador enfocado en el backend y el ecosistema web, con
+          bases en infraestructura.
         </p>
 
         <p>
           Inicié mi carrera profesional gestionando bases de datos Oracle y SQL
           Server en servidores Linux y Windows. Esta experiencia me enseñó que
-          más allá de simplemente funcionar, los sistemas deben ser{" "}
-          <span className="text-foreground font-medium">
-            eficientes, seguros y escalables
-          </span>
-          .
+          los sistemas deben ser{" "}
+          <span className="text-foreground/80 font-semibold">eficientes</span>,{" "}
+          <span className="text-foreground/80 font-semibold">seguros</span> y{" "}
+          <span className="text-foreground/80 font-semibold">escalables</span>.
         </p>
 
         <p>
-          Actualmente, traslado esa disciplina operativa al desarrollo
-          fullstack, construyendo aplicaciones modernas con el ecosistema{" "}
-          <span className="text-primary font-semibold">JavaScript</span> (
-          <span className="text-primary font-semibold">TypeScript</span>,{" "}
-          <span className="text-primary font-semibold">React</span>,{" "}
-          <span className="text-primary font-semibold">Node.js</span>) y{" "}
-          <span className="text-primary font-semibold">Python</span>.
+          Actualmente, traslado esta disciplina operativa al desarrollo
+          fullstack, construyendo aplicaciones con el ecosistema{" "}
+          <span className="text-primary font-semibold">JavaScript</span> como lo
+          son <span className="text-primary font-semibold">TypeScript</span>,{" "}
+          <span className="text-primary font-semibold">React</span> y{" "}
+          <span className="text-primary font-semibold">Node.js</span>{" "}
         </p>
 
         <p>
-          Busco integrarme como{" "}
-          <strong className="text-foreground">Desarrollador Junior</strong> o{" "}
-          <strong className="text-foreground">Data Analyst</strong> en un equipo
-          colaborativo, donde pueda aportar valor mientras continúo mi formación
-          hacia la{" "}
-          <strong className="text-foreground font-medium">
-            arquitectura de software y DevOps
-          </strong>
-          .
+          Mi objetivo es integrarme a un equipo colaborativo como{" "}
+          <span className="text-foreground/80 font-semibold">
+            desarrollador backend
+          </span>{" "}
+          o <span className="text-foreground/80 font-semibold">fullstack</span>.
+          Busco aportar valor resolviendo problemas reales mientras consolido
+          mis buenas prácticas y mi formación hacia la{" "}
+          <span className="text-primary font-semibold">
+            arquitectura de software
+          </span>{" "}
+          y <span className="text-primary font-semibold">DevOps</span>.
         </p>
       </div>
 
@@ -58,7 +63,7 @@ export const ContentAboutMe = () => {
                   Estado Actual.
                 </p>
                 <p className="text-foreground text-sm font-medium">
-                  Estudiante - Servicio social.
+                  Estudiante último año - Servicio social.
                 </p>
                 <p className="text-muted-foreground mt-1 flex items-center gap-2 text-xs">
                   <span className="relative flex size-2">
@@ -66,6 +71,24 @@ export const ContentAboutMe = () => {
                     <span className="bg-primary relative inline-flex size-2 rounded-full"></span>
                   </span>
                   Disponible medio tiempo (Full-time en Mayo 2026).
+                </p>
+              </div>
+            </div>
+
+            {/* Educación */}
+            <div className="flex items-start gap-3">
+              <div className="bg-primary/10 text-primary mt-1 rounded-full p-2">
+                <GraduationCap size={18} />
+              </div>
+              <div>
+                <p className="text-muted-foreground text-xs font-bold tracking-wider uppercase">
+                  Educación.
+                </p>
+                <p className="text-foreground text-sm font-medium">
+                  Lic. en Tecnologías de Información.
+                </p>
+                <p className="text-muted-foreground mt-1 flex items-center gap-2 text-xs">
+                  Facultad de Contaduría Pública y Administración, UANL.
                 </p>
               </div>
             </div>
