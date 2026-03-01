@@ -4,7 +4,7 @@ export const Hero = () => {
   return (
     <header
       id="inicio"
-      className="lg-pt-0 container mx-auto flex min-h-screen flex-col-reverse items-center justify-center gap-10 px-6 lg:flex-row lg:gap-24"
+      className="lg-pt-0 container mx-auto flex min-h-[90vh] flex-col-reverse items-center justify-center gap-10 px-6 lg:flex-row lg:gap-24"
     >
       <div className="flex flex-col items-center space-y-10 text-center lg:items-start lg:text-left">
         <div className="space-y-3">
