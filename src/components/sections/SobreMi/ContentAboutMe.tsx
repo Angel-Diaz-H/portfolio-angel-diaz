@@ -11,10 +11,7 @@ export const ContentAboutMe = () => {
           Desarrollador de software con bases en infraestructura.
         </p>
 
-        <p>
-          Soy un desarrollador enfocado en el backend y el ecosistema web, con
-          bases en infraestructura.
-        </p>
+        <p>Soy un desarrollador enfocado en el backend y el ecosistema web.</p>
 
         <p>
           Inicié mi carrera profesional gestionando bases de datos Oracle y SQL
