@@ -43,9 +43,7 @@ export const ItemsTech = ({
         <div className="mb-3 flex items-center gap-2.5">
           {Icon && <Icon className="text-primary h-5 w-5" />}
           {title && (
-            <h3 className="text-muted-foreground text-lg font-semibold">
-              {title}
-            </h3>
+            <h3 className="text-foreground/65 text-lg font-bold">{title}</h3>
           )}
         </div>
       )}
