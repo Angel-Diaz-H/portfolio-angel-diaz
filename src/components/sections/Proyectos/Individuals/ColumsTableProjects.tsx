@@ -3,13 +3,25 @@ import type { ColumnDef } from "@tanstack/react-table";
 import type { Project } from "@/data/projects.data";
 import { ExternalLink, Github, ChevronRight } from "lucide-react";
 
+const formatDate = (value?: string) => {
+  if (!value) return "-";
+
+  const [year, month, day] = value.split("-").map(Number);
+
+  if (!year || !month || !day) return value;
+
+  const paddedDay = String(day).padStart(2, "0");
+  const paddedMonth = String(month).padStart(2, "0");
+
+  return `${paddedDay}-${paddedMonth}-${year}`;
+};
+
 export const ColumnsTableProjects: ColumnDef<Project>[] = [
   {
     accessorKey: "title",
     header: "Proyecto",
     cell: ({ row }) => (
-      // Limitamos el ancho y ponemos font-medium para destacar el título
-      <div className="text-foreground/60 font-poppins max-w-37.5 truncate text-sm font-semibold sm:max-w-50">
+      <div className="text-foreground/80 font-Inter max-w-37.5 truncate text-sm font-semibold sm:max-w-50">
         {row.original.title}
       </div>
     ),
@@ -18,7 +30,6 @@ export const ColumnsTableProjects: ColumnDef<Project>[] = [
     accessorKey: "description",
     header: "Descripción",
     cell: ({ row }) => (
-      // Truncamos la descripción si es muy larga
       <div className="text-muted-foreground max-w-50 truncate sm:max-w-87.5">
         {row.original.description}
       </div>
@@ -28,7 +39,6 @@ export const ColumnsTableProjects: ColumnDef<Project>[] = [
     accessorKey: "technologies",
     header: "Tecnologías",
     cell: ({ row }) => {
-      // Mostramos máximo 3 tecnologías para no saturar la tabla, el resto con "..."
       const techs = row.original.technologies?.slice(0, 3) || [];
       const hasMore = (row.original.technologies?.length ?? 0) > 3;
 
@@ -54,7 +64,7 @@ export const ColumnsTableProjects: ColumnDef<Project>[] = [
     header: "Fecha",
     cell: ({ row }) => (
       <span className="text-muted-foreground text-sm whitespace-nowrap">
-        {row.original.date ?? "-"}
+        {formatDate(row.original.date)}
       </span>
     ),
   },
@@ -62,10 +72,8 @@ export const ColumnsTableProjects: ColumnDef<Project>[] = [
     id: "actions",
     enableSorting: false,
     cell: ({ row }) => {
-      // Asumiendo que tu interface Project tiene "githubUrl" y "siteUrl" o similar.
-      // Ajusta los nombres de las propiedades según tu projects.data.ts
-      const github = (row.original as any).github; // Cambia .github por la propiedad real
-      const link = (row.original as any).link; // Cambia .link por la propiedad real
+      const github = (row.original as any).github;
+      const link = (row.original as any).link;
 
       return (
         <div className="text-muted-foreground flex items-center justify-end gap-3">
@@ -74,9 +82,8 @@ export const ColumnsTableProjects: ColumnDef<Project>[] = [
               href={github}
               target="_blank"
               rel="noreferrer"
-              // Esto evita que al hacer clic en Github se abra el Dialog de la fila
               onClick={(e) => e.stopPropagation()}
-              className="hover:text-primary transition-colors"
+              className="text-primary hover:text-muted-foreground transition-colors"
             >
               <Github className="h-4 w-4" />
             </a>
@@ -92,7 +99,6 @@ export const ColumnsTableProjects: ColumnDef<Project>[] = [
               <ExternalLink className="h-5 w-5" />
             </a>
           )}
-          {/* Indicador visual de que la fila entera es clickeable */}
           <ChevronRight className="h-4 w-4 opacity-40 transition-transform group-hover:translate-x-1 group-hover:opacity-100" />
         </div>
       );

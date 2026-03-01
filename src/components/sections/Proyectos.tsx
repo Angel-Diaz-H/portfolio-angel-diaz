@@ -18,14 +18,18 @@ export const Proyectos = ({ className }: Props) => {
         <div className="grid gap-2">
           <div className="flex items-center gap-2.5">
             <SquareCode className="text-primary h-5 w-5" />
-            <p className="text-lg font-semibold">Proyectos integrales.</p>
+            <p className="text-foreground/80 text-lg font-bold">
+              Proyectos integrales.
+            </p>
           </div>
           <AppProyectosIntegrales />
         </div>
         <div className="grid gap-2">
           <div className="flex items-center gap-2.5">
             <SquareDashedBottomCode className="text-primary h-5 w-5" />
-            <p className="text-lg font-semibold">Proyectos individuales.</p>
+            <p className="text-foreground/80 text-lg font-bold">
+              Proyectos individuales.
+            </p>
           </div>
           <AppProyectosIndividuales />
         </div>

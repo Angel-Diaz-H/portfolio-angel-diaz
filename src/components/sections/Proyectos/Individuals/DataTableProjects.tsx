@@ -7,7 +7,6 @@ import {
   getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-
 import type { SortingState } from "@tanstack/react-table";
 import type { ColumnDef } from "@tanstack/react-table";
 
@@ -20,7 +19,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-// 1. Importamos los íconos para indicar el orden
 import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react";
 
 interface DataTableProps<TData, TValue> {
@@ -72,11 +70,10 @@ export function DataTable<TData, TValue>({
                       className="text-muted-foreground text-sm font-semibold"
                     >
                       {header.isPlaceholder ? null : (
-                        // 2. Envolvemos el header en un div clickeable
                         <div
                           className={`flex items-center gap-2 ${
                             header.column.getCanSort()
-                              ? "hover:text-foreground cursor-pointer transition-colors select-none"
+                              ? "text-foreground/80 cursor-pointer transition-colors select-none"
                               : ""
                           }`}
                           onClick={header.column.getToggleSortingHandler()}
@@ -85,7 +82,6 @@ export function DataTable<TData, TValue>({
                             header.column.columnDef.header,
                             header.getContext(),
                           )}
-                          {/* 3. Mostramos la flecha correspondiente según el estado */}
                           {header.column.getCanSort() && (
                             <span className="shrink-0">
                               {header.column.getIsSorted() === "asc" ? (

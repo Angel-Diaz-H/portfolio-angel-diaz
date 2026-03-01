@@ -31,7 +31,7 @@ export const CardProyectos = ({
         </div>
         <div className="grid w-full gap-3">
           <div className="grid gap-1">
-            <p className="text-foreground/65 text-sm font-semibold">{title}</p>
+            <p className="text-foreground/80 text-sm font-semibold">{title}</p>
             <p className="text-muted-foreground font-Inter text-sm font-normal">
               {description}
             </p>
