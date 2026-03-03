@@ -1,6 +1,7 @@
 import { BadgesTech } from "@/components/index";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Image as ImageIcon } from "lucide-react";
 
 interface Props {
   title: string;
@@ -9,6 +10,8 @@ interface Props {
   tech: string[];
   github?: string;
   link?: string;
+  hasImages?: boolean;
+  onOpenGallery?: () => void;
 }
 
 export const CardProyectos = ({
@@ -18,14 +21,16 @@ export const CardProyectos = ({
   tech,
   github,
   link,
+  hasImages,
+  onOpenGallery,
 }: Props) => {
   return (
     <Card borderAnimation>
       <CardContent className="grid gap-3 py-0">
-        <div className="bg-primary/10 h-16 w-full rounded-3xl">
+        <div className="bg-primary/10 h-16 w-full overflow-hidden rounded-3xl">
           <img
             src={img}
-            alt="Proyecto"
+            alt={`Portada de ${title}`}
             className="h-full w-full object-cover"
           />
         </div>
@@ -45,7 +50,7 @@ export const CardProyectos = ({
                 icons={false}
               />
             </div>
-            <div className="flex w-full items-center gap-3">
+            <div className="flex w-full flex-wrap items-center gap-2">
               {github && (
                 <Button
                   variant={"default"}
@@ -68,9 +73,16 @@ export const CardProyectos = ({
                   </a>
                 </Button>
               )}
-              {/* <p className="text-muted-foreground text-sm font-semibold">
-                {date}
-              </p> */}
+              {hasImages && (
+                <Button
+                  variant="outline"
+                  className="text-muted-foreground cursor-pointer rounded-full px-3 py-0 text-xs font-semibold shadow-none"
+                  onClick={onOpenGallery}
+                >
+                  <ImageIcon className="mr-1.5 h-3 w-3" />
+                  Galería
+                </Button>
+              )}
             </div>
           </div>
         </div>

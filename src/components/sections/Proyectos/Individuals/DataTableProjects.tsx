@@ -166,7 +166,7 @@ export function DataTable<TData, TValue>({
             size="sm"
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
-            className="rounded-full"
+            className="cursor-pointer rounded-full"
           >
             Anterior
           </Button>
@@ -175,7 +175,7 @@ export function DataTable<TData, TValue>({
             size="sm"
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
-            className="rounded-full"
+            className="cursor-pointer rounded-full"
           >
             Siguiente
           </Button>

@@ -85,7 +85,7 @@ export const ColumnsTableProjects: ColumnDef<Project>[] = [
               onClick={(e) => e.stopPropagation()}
               className="text-primary hover:text-muted-foreground transition-colors"
             >
-              <Github className="h-4 w-4" />
+              <Github className="h-4.5 w-4.5" />
             </a>
           )}
           {link && (
@@ -94,12 +94,12 @@ export const ColumnsTableProjects: ColumnDef<Project>[] = [
               target="_blank"
               rel="noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="hover:text-primary transition-colors"
+              className="text-primary hover:text-muted-foreground transition-colors"
             >
-              <ExternalLink className="h-5 w-5" />
+              <ExternalLink className="h-4.5 w-4.5" />
             </a>
           )}
-          <ChevronRight className="h-4 w-4 opacity-40 transition-transform group-hover:translate-x-1 group-hover:opacity-100" />
+          <ChevronRight className="h-4.5 w-4.5 opacity-40 transition-transform group-hover:translate-x-1 group-hover:opacity-100" />
         </div>
       );
     },
