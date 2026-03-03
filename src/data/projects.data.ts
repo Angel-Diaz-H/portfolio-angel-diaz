@@ -40,7 +40,7 @@ export const projects: Project[] = [
     title: "Sistema integral de productos, ventas y ofimática.",
     description:
       "Sistema de para gestión de productos y ventas. Incluye manipulación de documentos.",
-    // images: ["./Icon.svg"],
+    images: ["./projects/sipm-1.webp"],
     technologies: [
       "TypeScript",
       "React",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     title: "Portal para gestión de incidencias de nóminas.",
     description:
       "Portal con autentificación de usuarios para gestión de incidencias para empresa de nóminas.",
-    // images: ["./Icon.svg"],
+    images: ["./projects/incidencias-1.webp"],
     technologies: [
       "TypeScript",
       "React",
@@ -74,7 +74,18 @@ export const projects: Project[] = [
     title: "Sitio web de restaurante de comida saludable.",
     description:
       "Sitio web para restaurante de comida saludable con registro de usuarios y solicitar pedidos.",
-    // images: ["./Icon.svg"],
+    images: [
+      "./projects/restaurante-1.webp",
+      "./projects/restaurante-2.webp",
+      "./projects/restaurante-3.webp",
+      "./projects/restaurante-4.webp",
+      "./projects/restaurante-5.webp",
+      "./projects/restaurante-6.webp",
+      "./projects/restaurante-7.webp",
+      "./projects/restaurante-8.webp",
+      "./projects/restaurante-9.webp",
+      "./projects/restaurante-10.webp",
+    ],
     technologies: ["Bootstrap", "C#"],
     date: "2025-11-6",
     level: 1,
@@ -84,7 +95,11 @@ export const projects: Project[] = [
     id: 6,
     title: "Sitio web imitación de Pollo Loco.",
     description: "Sitio web imitando el estilo de Pollo Loco.",
-    // images: ["./Icon.svg"],
+    images: [
+      "./projects/pollo-1.webp",
+      "./projects/pollo-2.webp",
+      "./projects/pollo-3.webp",
+    ],
     technologies: ["Bootstrap"],
     date: "2025-10-22",
     level: 2,
@@ -93,32 +108,64 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    title: "Blackjack.",
-    description:
-      "Juego de Blackjack aplicando conceptos de JavaScript moderno.",
-    // images: ["./Icon.svg"],
-    technologies: ["JavaScript"],
-    date: "2025-09-20",
-    github:
-      "https://github.com/Angel-Diaz-H/DevTalles-JavaScript-Moderno-Guia-para-dominar-el-lenguaje/tree/main/04-blackjack-vite",
-    level: 2,
-  },
-  {
-    id: 8,
     title: "Gifs app.",
     description: "Aplicación para visualizar y buscar gifs.",
-    // images: ["./Icon.svg"],
+    images: [
+      "./projects/gifs-1.webp",
+      "./projects/gifs-2.webp",
+      "./projects/gifs-3.webp",
+      "./projects/gifs-4.webp",
+      "./projects/gifs-5.webp",
+    ],
     technologies: ["TypeScript"],
     date: "2026-01-10",
     github:
       "https://github.com/Angel-Diaz-H/DevTalles-React-de-cero-a-experto-Edicion-2025/tree/main/03-gifs-app",
     level: 2,
+    link: "https://my-gifs-app-react.netlify.app/",
+  },
+  {
+    id: 13,
+    title: "To Do App.",
+    description:
+      "Aplicación para gestionar tareas pendientes con almacenamiento local.",
+    technologies: ["JavaScript"],
+    images: [
+      "./projects/todo-1.webp",
+      "./projects/todo-2.webp",
+      "./projects/todo-3.webp",
+      "./projects/todo-4.webp",
+      "./projects/todo-5.webp",
+    ],
+    date: "2025-09-30",
+    level: 2,
+    github:
+      "https://github.com/Angel-Diaz-H/DevTalles-JavaScript-Moderno-Guia-para-dominar-el-lenguaje/tree/main/05-todo-app",
+    link: "https://my-todo-app-js-course.netlify.app/",
+  },
+
+  {
+    id: 8,
+    title: "Blackjack.",
+    description:
+      "Juego de Blackjack aplicando conceptos de JavaScript moderno.",
+    images: [
+      "./projects/blackjack-1.webp",
+      "./projects/blackjack-2.webp",
+      "./projects/blackjack-3.webp",
+    ],
+    technologies: ["JavaScript"],
+    date: "2025-09-20",
+    github:
+      "https://github.com/Angel-Diaz-H/DevTalles-JavaScript-Moderno-Guia-para-dominar-el-lenguaje/tree/main/04-blackjack-vite",
+    level: 2,
+    link: "https://shimmering-begonia-83478a.netlify.app/",
   },
   {
     id: 9,
     title: "Calendario 2026.",
     description: "Visualización de calendario 2026.",
-    images: ["./projects/calendar.png"],
+    images: ["./projects/calendar.webp"],
     technologies: ["React"],
     date: "2026-02-02",
     github: "https://github.com/Angel-Diaz-H/calendar-2026",
