@@ -13,8 +13,6 @@ export interface Technology {
   type: TechCategory;
 }
 
-// TODO: Quizá dividir en más categorías.
-
 export const technologies: Technology[] = [
   {
     id: 1,
@@ -41,31 +39,31 @@ export const technologies: Technology[] = [
     type: "frontend",
   },
   {
-    id: 9,
+    id: 5,
     name: "SQL Server",
     img: "./tecnologias/sql-server.webp",
     type: "database",
   },
   {
-    id: 5,
+    id: 6,
     name: "PostgreSQL",
     img: "./tecnologias/postgresql.webp",
     type: "database",
   },
   {
-    id: 6,
+    id: 7,
     name: "Node.js",
     img: "./tecnologias/nodejs.webp",
     type: "backend",
   },
   {
-    id: 7,
+    id: 8,
     name: "Linux",
     img: "./tecnologias/linux.webp",
     type: "tools",
   },
   {
-    id: 8,
+    id: 9,
     name: "Python",
     img: "./tecnologias/python.webp",
     type: "backend",
@@ -119,33 +117,39 @@ export const technologies: Technology[] = [
     type: "frontend",
   },
   {
-    id: 19,
+    id: 18,
     name: "Git",
     img: "./tecnologias/git.webp",
     type: "tools",
   },
   {
-    id: 20,
+    id: 19,
     name: "GitHub",
     img: "./tecnologias/github.svg",
     type: "tools",
   },
   {
-    id: 21,
+    id: 20,
     name: "Vite",
     img: "./tecnologias/vite.webp",
     type: "tools",
   },
+  // {
+  //   id: 22,
+  //   name: "Angular",
+  //   img: "./tecnologias/angular.webp",
+  //   type: "nextSteps",
+  // },
   {
-    id: 22,
-    name: "Angular",
-    img: "./tecnologias/angular.webp",
-    type: "nextSteps",
+    id: 21,
+    name: "Gemini CLI",
+    img: "./tecnologias/gemini.svg",
+    type: "productivity",
   },
   {
-    id: 27,
-    name: "Gemini",
-    img: "./tecnologias/gemini.svg",
+    id: 22,
+    name: "Claude Code",
+    img: "./tecnologias/claude.svg",
     type: "productivity",
   },
   {
@@ -155,35 +159,41 @@ export const technologies: Technology[] = [
     type: "productivity",
   },
   // {
+  //   id: 24,
+  //   name: "Power BI",
+  //   img: "./tecnologias/powerbi.webp",
+  //   type: "productivity",
+  // },
+  // {
   //   id: 25,
   //   name: "Excel",
   //   img: "./tecnologias/microsoft-excel.webp",
   //   type: "productivity",
   {
-    id: 18,
-    name: "Power BI",
-    img: "./tecnologias/powerbi.webp",
-    type: "productivity",
-  },
-  {
-    id: 26,
+    id: 25,
     name: "Notion",
     img: "./tecnologias/notion.webp",
     type: "productivity",
   },
+  {
+    id: 26,
+    name: "Obsidian",
+    img: "./tecnologias/obsidian.svg",
+    type: "productivity",
+  },
   // },
-  {
-    id: 28,
-    name: "NestJS",
-    img: "./tecnologias/nestjs.svg",
-    type: "nextSteps",
-  },
-  {
-    id: 29,
-    name: "Vitest",
-    img: "./tecnologias/vitest.svg",
-    type: "nextSteps",
-  },
+  // {
+  //   id: 28,
+  //   name: "NestJS",
+  //   img: "./tecnologias/nestjs.svg",
+  //   type: "nextSteps",
+  // },
+  // {
+  //   id: 29,
+  //   name: "Vitest",
+  //   img: "./tecnologias/vitest.svg",
+  //   type: "nextSteps",
+  // },
   // {
   //   id: 30,
   //   name: "aws",
@@ -196,10 +206,22 @@ export const technologies: Technology[] = [
   //   img: "./tecnologias/kubernetes.svg",
   //   type: "nextSteps",
   // },
+  // {
+  //   id: 30,
+  //   name: "N8n",
+  //   img: "./tecnologias/n8n.svg",
+  //   type: "nextSteps",
+  // },
   {
-    id: 30,
-    name: "N8n",
-    img: "./tecnologias/n8n.svg",
+    id: 31,
+    name: ".NET",
+    img: "./tecnologias/dotnet.svg",
+    type: "nextSteps",
+  },
+  {
+    id: 32,
+    name: "Open Code",
+    img: "./tecnologias/opencode.svg",
     type: "nextSteps",
   },
 ];
