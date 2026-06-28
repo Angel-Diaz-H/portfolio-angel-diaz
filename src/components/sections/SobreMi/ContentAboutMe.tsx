@@ -60,14 +60,14 @@ export const ContentAboutMe = () => {
                   Estado Actual.
                 </p>
                 <p className="text-foreground text-sm font-medium">
-                  Estudiante último año - Servicio social.
+                  Estudiante último semestre.
                 </p>
                 <p className="text-muted-foreground mt-1 flex items-center gap-2 text-xs">
                   <span className="relative flex size-2">
                     <span className="bg-primary absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"></span>
                     <span className="bg-primary relative inline-flex size-2 rounded-full"></span>
                   </span>
-                  Disponible medio tiempo (Full-time en Mayo 2026).
+                  Disponible tiempo completo.
                 </p>
               </div>
             </div>
