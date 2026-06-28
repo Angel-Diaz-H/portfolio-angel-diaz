@@ -96,4 +96,16 @@ export const certificates: Certificate[] = [
       "https://www.linkedin.com/in/angeldiaz-hrn/details/certifications/1749512261084/single-media-viewer/?profileId=ACoAAD1Nz2MBOJq7tgoDIw5pIcX7GbvPbC4PS30",
     date: "2025-05-11",
   },
+  {
+    id: 8,
+    title: "React: de cero a experto.",
+    description:
+      "React desde conceptos básicos hasta avanzados, incluyendo hooks, context y más.",
+    iconDark: "./capacitaciones/React-dark.svg",
+    iconLight: "./capacitaciones/React-light.svg",
+    image: "./capacitaciones/React.webp",
+    technologies: ["React", "TypeScript"],
+    credentialUrl: "https://cursos.devtalles.com/certificates/m5027zaud1",
+    date: "2026-06-19",
+  },
 ];

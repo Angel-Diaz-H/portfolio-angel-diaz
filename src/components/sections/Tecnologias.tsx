@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 
-// 1. Extraemos la configuración a un arreglo
 const techCategories = [
   {
     id: "frontend",

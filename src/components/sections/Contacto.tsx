@@ -39,7 +39,7 @@ export const Contacto = ({ className }: { className?: string }) => {
         <div className="grid gap-5">
           <AppRedesSociales
             className="flex flex-wrap justify-center gap-3 md:justify-start"
-            importance="secondary"
+            importance="primary"
           />
         </div>
       </div>

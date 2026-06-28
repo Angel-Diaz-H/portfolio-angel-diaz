@@ -1,6 +1,6 @@
 import { GithubIcon } from "@/components/icons/GitHubIcon";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
-import { AppWindow, FileCode, Mail } from "lucide-react";
+import { AppWindow, Mail } from "lucide-react";
 import type { ComponentType } from "react";
 
 interface Props {
