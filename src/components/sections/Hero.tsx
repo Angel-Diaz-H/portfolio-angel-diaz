@@ -19,12 +19,6 @@ export const Hero = () => {
           </p>
         </div>
 
-        {/* <div className="text-muted-foreground max-w-2xl text-lg font-semibold md:text-2xl"> */}
-        {/* <p className="text-primary mt-2 font-semibold">
-            Actualmente formándome en TypeScript y React.
-            </p> */}
-        {/* </div> */}
-
         <div className="grid gap-5">
           <AppRedesSociales
             className="flex flex-wrap justify-center gap-3 md:justify-start"
