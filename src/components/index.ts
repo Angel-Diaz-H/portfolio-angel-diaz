@@ -38,5 +38,6 @@ export { ScrollTechnologies } from "@/components/sections/ScrollTechnologies/Scr
 export { SectionWrapper } from "@/components/layout/SectionWrapper";
 export { SobreMi } from "@/components/sections/SobreMi";
 export { Sparkles } from "@/components/shared/Sparkles";
+export { TechInline } from "@/components/shared/TechInline";
 export { Tecnologias } from "@/components/sections/Tecnologias";
 export { Title } from "@/components/shared/Title";

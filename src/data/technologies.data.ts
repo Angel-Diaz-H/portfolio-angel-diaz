@@ -76,7 +76,7 @@ export const technologies: Technology[] = [
   },
   {
     id: 11,
-    name: "Tailwind",
+    name: "Tailwind CSS",
     img: "./tecnologias/tailwind.webp",
     type: "frontend",
   },

@@ -1,15 +1,16 @@
+import { TechInline } from "./TechInline";
+
 export const Footer = () => {
   return (
-    <footer className="font-Ubuntu px-12 pb-2 text-center text-sm md:px-10">
-      <p>Diseñado y desarrollado por Angel Díaz.</p>
-      <p>
-        Proyecto realizado con
-        <span className="text-primary font-semibold"> TypeScript</span>,
-        <span className="text-primary font-semibold"> React</span>,
-        <span className="text-primary font-semibold"> Tailwind CSS</span>,
-        <span className="text-primary font-semibold"> Vite</span> y
-        <span className="text-primary font-semibold"> ShadCN</span>.
-      </p>
+    <footer className="font-Ubuntu text-muted-foreground px-12 pb-10 text-center text-lg">
+      <p>Proyecto realizado con cariño y con:</p>
+      <div className="mt-2 flex flex-wrap justify-center gap-2">
+        <TechInline name="TypeScript" />|
+        <TechInline name="React" />|
+        <TechInline name="Tailwind CSS" />|
+        <TechInline name="Vite" />|
+        <TechInline name="ShadCN" />
+      </div>
     </footer>
   );
 };

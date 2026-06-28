@@ -3,6 +3,7 @@ import {
   Capacitaciones,
   Contacto,
   Experiencia,
+  Footer,
   Hero,
   Proyectos,
   SobreMi,
@@ -21,6 +22,7 @@ export const Main = () => {
         <Tecnologias />
         <Capacitaciones />
         <Contacto />
+        <Footer />
       </div>
     </main>
   );
