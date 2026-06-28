@@ -44,7 +44,7 @@ export const BadgesTech = ({
             <Badge
               key={`${item}-${index}`}
               variant={variant ?? "outline"}
-              className={`${classname} px-3 py-1 text-sm font-normal`}
+              className={`${classname} text-medium text-muted-foreground px-3 py-1 font-medium`}
             >
               <span>{item}</span>
             </Badge>

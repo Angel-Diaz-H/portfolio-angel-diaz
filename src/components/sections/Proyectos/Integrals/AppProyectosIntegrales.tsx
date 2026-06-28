@@ -18,7 +18,12 @@ import {
 } from "@/components/ui/carousel";
 
 export const AppProyectosIntegrales = () => {
-  const levelOneProjects = projects.filter((project) => project.level === 1);
+  const levelOneProjects = projects
+    .filter((project) => project.level === 1)
+    .sort(
+      (leftProject, rightProject) =>
+        new Date(rightProject.date).getTime() - new Date(leftProject.date).getTime(),
+    );
 
   const [projectSelected, setProjectSelected] = useState<Project | null>(null);
 

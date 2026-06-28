@@ -6,7 +6,7 @@ export interface Project {
   technologies?: string[];
   github?: string;
   link?: string;
-  date?: string;
+  date: string;
   level: number;
 }
 
@@ -203,5 +203,77 @@ export const projects: Project[] = [
     level: 2,
     github:
       "https://github.com/Angel-Diaz-H/U_S3_Programacion_Python/blob/main/PIA.py",
+  },
+  {
+    id: 13,
+    title: "Aplicación móvil para trámites de facultad",
+    description:
+      "Aplicación móvil para alumnos de facultad FACPYA para solicitar trámites.",
+    technologies: ["C#", "Docker", "SQL Server", "Ionic"],
+    date: "2026-05-12",
+    level: 1,
+    github: "https://github.com/Angel-Diaz-H/U_S8_Programacion_Moviles",
+    images: [
+      "./projects/appmovil-1.webp",
+      "./projects/appmovil-2.webp",
+      "./projects/appmovil-3.webp",
+      "./projects/appmovil-4.webp",
+      "./projects/appmovil-5.webp",
+    ],
+  },
+  {
+    id: 14,
+    title: "Separador de audio con IA",
+    description: "Script para separar audio utilizando Demucs de Meta.",
+    technologies: ["Python"],
+    date: "2026-06-02",
+    level: 2,
+    github: "https://github.com/Angel-Diaz-H/U_S8_Programacion_Moviles",
+    images: ["./projects/music-ia-1.webp"],
+  },
+  {
+    id: 15,
+    title: "Teslo shop",
+    description:
+      "Tienda en línea de productos de Teslo con panel de administración y autenticación de usuarios.",
+    technologies: [
+      "React",
+      "Typescript",
+      "Docker",
+      "PostgreSQL",
+      "Tailwind",
+      "Nest.js",
+    ],
+    date: "2026-06-18",
+    level: 1,
+    github:
+      "https://github.com/Angel-Diaz-H/DevTalles-React-de-cero-a-experto-Edicion-2025/tree/main/07-teslo-shop",
+    images: [
+      "./projects/teslo-1.webp",
+      "./projects/teslo-2.webp",
+      "./projects/teslo-3.webp",
+      "./projects/teslo-4.webp",
+      "./projects/teslo-5.webp",
+      "./projects/teslo-6.webp",
+      "./projects/teslo-7.webp",
+    ],
+    link: "https://r-teslo-shop.netlify.app/#/",
+  },
+  {
+    id: 16,
+    title: "Heroes app",
+    description: "Aplicación para visualizar información de superhéroes.",
+    technologies: ["React", "Typescript", "Tailwind"],
+    date: "2026-06-18",
+    level: 1,
+    github:
+      "https://github.com/Angel-Diaz-H/DevTalles-React-de-cero-a-experto-Edicion-2025/tree/main/07-teslo-shop",
+    images: [
+      "./projects/heroes-1.webp",
+      "./projects/heroes-2.webp",
+      "./projects/heroes-3.webp",
+      "./projects/heroes-4.webp",
+    ],
+    link: "https://r-heroes-app.netlify.app/#/",
   },
 ];

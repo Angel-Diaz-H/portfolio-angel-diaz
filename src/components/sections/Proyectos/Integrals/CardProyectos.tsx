@@ -1,7 +1,7 @@
 import { BadgesTech } from "@/components/index";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Image as ImageIcon } from "lucide-react";
+import { ExternalLink, Image as ImageIcon } from "lucide-react";
 
 interface Props {
   title: string;
@@ -69,7 +69,7 @@ export const CardProyectos = ({
                   asChild
                 >
                   <a href={link} target="_blank" rel="noreferrer">
-                    Enlace
+                    Enlace <ExternalLink className="h-3 w-3" />
                   </a>
                 </Button>
               )}
@@ -79,7 +79,7 @@ export const CardProyectos = ({
                   className="text-muted-foreground cursor-pointer rounded-full px-3 py-0 text-xs font-semibold shadow-none"
                   onClick={onOpenGallery}
                 >
-                  <ImageIcon className="mr-1.5 h-3 w-3" />
+                  <ImageIcon className="mr-1 h-3 w-3" />
                   Galería
                 </Button>
               )}
