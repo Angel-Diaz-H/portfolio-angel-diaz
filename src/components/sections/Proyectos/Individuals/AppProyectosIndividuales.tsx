@@ -57,6 +57,7 @@ export const AppProyectosIndividuales = () => {
                 <img
                   src={projectSelected.images[0]}
                   alt={projectSelected.title}
+                  loading="lazy"
                   className="bg-muted/10 h-full w-full object-contain p-2"
                 />
               </div>
@@ -69,6 +70,7 @@ export const AppProyectosIndividuales = () => {
                         <img
                           src={image}
                           alt={`${projectSelected.title} imagen ${index + 1}`}
+                          loading="lazy"
                           className="bg-muted/10 h-full w-full object-contain p-2"
                         />
                       </div>

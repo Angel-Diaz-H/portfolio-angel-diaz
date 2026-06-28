@@ -16,6 +16,7 @@ export const CardTecnologia = ({ tec, classNameItem }: Props) => {
           className="h-full w-full object-contain transition-transform group-hover:scale-105"
           src={tec.img}
           alt={tec.name}
+          loading="lazy"
         />
       </div>
 

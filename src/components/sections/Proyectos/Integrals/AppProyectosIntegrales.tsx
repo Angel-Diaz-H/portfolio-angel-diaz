@@ -69,6 +69,7 @@ export const AppProyectosIntegrales = () => {
                 <img
                   src={projectSelected.images[0]}
                   alt={projectSelected.title}
+                  loading="lazy"
                   className="bg-muted/10 h-full w-full object-contain p-2"
                 />
               </div>
@@ -81,6 +82,7 @@ export const AppProyectosIntegrales = () => {
                         <img
                           src={image}
                           alt={`${projectSelected.title} imagen ${index + 1}`}
+                          loading="lazy"
                           className="bg-muted/10 h-full w-full object-contain p-2"
                         />
                       </div>

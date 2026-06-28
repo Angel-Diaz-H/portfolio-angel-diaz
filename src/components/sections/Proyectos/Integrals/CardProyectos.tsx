@@ -31,6 +31,7 @@ export const CardProyectos = ({
           <img
             src={img}
             alt={`Portada de ${title}`}
+            loading="lazy"
             className="h-full w-full object-cover"
           />
         </div>
