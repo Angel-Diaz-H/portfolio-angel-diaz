@@ -1,4 +1,4 @@
-import { BadgesTech } from "@/components/index";
+import { TechList } from "@/components/index";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Image as ImageIcon } from "lucide-react";
@@ -43,9 +43,10 @@ export const CardProyectos = ({
           </div>
           <div className="grid gap-3">
             <div className="flex">
-              <BadgesTech
+              <TechList
                 order={tech}
-                variant="outline"
+                variant="badge"
+                badgeVariant="outline"
                 classNameItems="flex flex-wrap"
                 icons={false}
               />

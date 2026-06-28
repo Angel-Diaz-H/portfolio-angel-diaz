@@ -1,20 +1,34 @@
 import { technologies } from "@/data/technologies.data";
 import { cn } from "@/lib/utils";
+import { CardTecnologia } from "@/components/index";
+import { Badge } from "@/components/ui/badge";
 
-interface TechInlineProps {
+export interface TechInlineProps {
   name?: string;
   id?: number;
   img?: string;
-  type?: string;
   className?: string;
+  classNameItem?: string;
+  variant?: "inline" | "card" | "badge";
+  badgeVariant?:
+    | "default"
+    | "secondary"
+    | "destructive"
+    | "outline"
+    | "ghost"
+    | "link";
+  icons?: boolean;
 }
 
 export const TechInline = ({
   name,
   id,
   img,
-  // type,
   className,
+  classNameItem,
+  variant = "inline",
+  badgeVariant = "outline",
+  icons = true,
 }: TechInlineProps) => {
   const normalize = (value: string) =>
     value
@@ -35,6 +49,55 @@ export const TechInline = ({
 
   if (!displayName) return null;
 
+  //? Estilo badge.
+  if (variant === "badge") {
+    if (!tec && !displayImg) {
+      return (
+        <Badge
+          variant={badgeVariant}
+          className={cn(
+            "text-medium text-muted-foreground px-3 py-1 font-medium",
+            className,
+          )}
+        >
+          <span>{displayName}</span>
+        </Badge>
+      );
+    }
+
+    return (
+      <Badge
+        variant={badgeVariant}
+        className={cn("gap-2 px-2 py-1 text-xs font-normal", className)}
+      >
+        {icons && displayImg && (
+          <img
+            src={displayImg}
+            alt={`${displayName} icon`}
+            className="h-4 w-4 object-contain"
+            loading="lazy"
+          />
+        )}
+        <span className="text-muted-foreground text-xs font-medium">
+          {displayName}
+        </span>
+      </Badge>
+    );
+  }
+
+  //? Estilo card.
+  if (variant === "card") {
+    return (
+      <div className={cn("inline-block", className)}>
+        <CardTecnologia
+          tec={{ name: displayName, img: displayImg || "" }}
+          classNameItem={classNameItem}
+        />
+      </div>
+    );
+  }
+
+  //? Estilo inline.
   return (
     <span
       className={cn(
@@ -42,7 +105,7 @@ export const TechInline = ({
         className,
       )}
     >
-      {displayImg && (
+      {icons && displayImg && (
         <img
           src={displayImg}
           alt={`${displayName} icon`}

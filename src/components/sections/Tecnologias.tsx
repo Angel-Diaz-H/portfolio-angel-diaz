@@ -1,4 +1,4 @@
-import { ItemsTech, SectionWrapper, Title } from "@/components/index";
+import { SectionWrapper, Title, TechList } from "@/components/index";
 import {
   Cpu,
   Database,
@@ -58,10 +58,11 @@ export const Tecnologias = ({ className }: { className?: string }) => {
         {techCategories.map(({ id, title, typeTec, Icon }) => (
           <Card key={id} borderAnimation className="h-full">
             <CardContent className="space-y-5 px-6">
-              <ItemsTech
+              <TechList
                 title={title}
-                typeTec={typeTec}
+                type={typeTec}
                 Icon={Icon}
+                variant="card"
                 className="border-none bg-transparent p-0"
               />
             </CardContent>
