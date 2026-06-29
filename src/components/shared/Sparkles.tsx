@@ -2,7 +2,7 @@ import { SparklesCore } from "../ui/sparkles";
 
 export const Sparkles = () => {
   return (
-    <div>
+    <div className="hidden md:block">
       <div className="absolute inset-0 h-screen w-full">
         <SparklesCore
           id="tsparticlesfullpage"
@@ -18,4 +18,3 @@ export const Sparkles = () => {
     </div>
   );
 };
-
