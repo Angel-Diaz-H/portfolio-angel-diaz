@@ -1,4 +1,5 @@
 import { ArrowUpRightIcon } from "lucide-react";
+import { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -22,8 +23,10 @@ interface Props {
 }
 
 export const CardCapacitacion = ({ cert }: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <Card
         borderAnimation
         className="group hover:bg-muted/10 my-0 transition-all"
@@ -72,14 +75,16 @@ export const CardCapacitacion = ({ cert }: Props) => {
 
       <DialogContent
         showCloseButton={false}
-        className="flex h-auto w-auto max-w-none min-w-[55vw] items-center justify-center border-none bg-transparent p-0 shadow-none"
+        className="flex h-dvh w-screen max-w-none items-center justify-center border-none bg-transparent p-0 shadow-none"
+        onClick={() => setIsOpen(false)}
       >
         <DialogTitle className="hidden">{cert.title}</DialogTitle>
         <img
           src={cert.image}
           alt={cert.title}
           loading="lazy"
-          className="max-h-[90vh] w-auto rounded-xl object-contain shadow-2xl"
+          onClick={(e) => e.stopPropagation()}
+          className="max-h-[90vh] max-w-[95vw] rounded-xl object-contain shadow-2xl md:w-auto md:max-w-[90vw]"
         />
       </DialogContent>
     </Dialog>

@@ -99,7 +99,10 @@ export const AppGallery = () => {
         </CardContent>
       </Card>
 
-      <DialogContent className="h-[80vh] w-[70vw] max-w-[70vw] cursor-grab border-none bg-transparent p-0 shadow-none sm:max-w-[90vw]">
+      <DialogContent
+        showCloseButton={false}
+        className="h-[80vh] w-[95vw] max-w-[95vw] cursor-grab border-none bg-transparent p-0 shadow-none md:w-[70vw] md:max-w-[70vw]"
+      >
         <DialogTitle className="sr-only">Galería de imágenes</DialogTitle>
 
         <Carousel
@@ -108,21 +111,27 @@ export const AppGallery = () => {
         >
           <CarouselContent className="ml-0 h-[80vh]">
             {galleryImages.map((src, index) => (
-              <CarouselItem key={index} className="h-full w-full pl-0">
+              <CarouselItem
+                key={index}
+                className="flex h-full w-full items-center justify-center pl-0"
+                onClick={() => setIsOpen(false)}
+              >
                 <img
                   src={src}
                   alt={`Evidencia ampliada ${index + 1}`}
-                  className="h-full w-full rounded-2xl object-cover shadow-2xl"
+                  loading="lazy"
+                  onClick={(e) => e.stopPropagation()}
+                  className="max-h-full max-w-full rounded-2xl object-contain shadow-2xl md:h-full md:w-full md:object-cover"
                 />
               </CarouselItem>
             ))}
           </CarouselContent>
 
-          <div className="absolute inset-y-0 left-4 flex items-center">
-            <CarouselPrevious className="static h-12 w-12 translate-y-0 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60" />
+          <div className="absolute inset-y-0 left-2 flex items-center md:left-4">
+            <CarouselPrevious className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60 md:h-12 md:w-12" />
           </div>
-          <div className="absolute inset-y-0 right-4 flex items-center">
-            <CarouselNext className="static h-12 w-12 translate-y-0 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60" />
+          <div className="absolute inset-y-0 right-2 flex items-center md:right-4">
+            <CarouselNext className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60 md:h-12 md:w-12" />
           </div>
         </Carousel>
       </DialogContent>
