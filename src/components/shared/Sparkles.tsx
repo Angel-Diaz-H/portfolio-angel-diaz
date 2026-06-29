@@ -10,7 +10,7 @@ export const Sparkles = () => {
           minSize={0.4}
           maxSize={1}
           speed={1}
-          particleDensity={100}
+          particleDensity={50}
           className="h-full w-full"
           particleColor="#34b900"
         />
@@ -18,3 +18,4 @@ export const Sparkles = () => {
     </div>
   );
 };
+
