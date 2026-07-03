@@ -35,8 +35,8 @@ export const Hero = () => {
         <div className="bg-primary/20 absolute -inset-1 rounded-full opacity-50 blur-lg"></div>
 
         <img
-          className="bg-secondary relative h-64 w-64 transform rounded-full object-cover shadow-xl transition-all duration-500 md:h-80 md:w-80 lg:h-100 lg:w-100"
-          src="/"
+          className="relative h-64 w-64 transform rounded-full object-cover shadow-xl transition-all duration-500 md:h-80 md:w-80 lg:h-100 lg:w-100"
+          src="./perfil.webp"
           alt="Fotografía de perfil de Angel Díaz"
         />
       </div>
