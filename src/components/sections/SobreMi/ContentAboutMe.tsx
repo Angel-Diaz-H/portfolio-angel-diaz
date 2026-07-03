@@ -140,12 +140,12 @@ export const ContentAboutMe = () => {
                     href="mailto:angeldiaz.hrn@gmail.com"
                     className="text-foreground hover:text-primary text-sm font-medium transition-colors"
                   >
-                    angeldiaz.hrn@gmail.com
+                    angeldiaz.hrd@gmail.com
                   </a>
                   <CopyButton
-                    value="angeldiaz.hrn@gmail.com"
+                    value="angeldiaz.hrd@gmail.com"
                     variant="muted"
-                    ariaLabel={`Copiar angeldiaz.hrn@gmail.com al portapapeles`}
+                    ariaLabel={`Copiar angeldiaz.hrd@gmail.com al portapapeles`}
                   />
                 </div>
               </div>

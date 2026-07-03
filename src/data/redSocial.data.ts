@@ -27,7 +27,7 @@ export const redesSociales: Props[] = [
   {
     nombre: "Mail",
     Icon: Mail,
-    href: "mailto:angeldiaz.hrn@gmail.com",
+    href: "mailto:angeldiaz.hrd@gmail.com",
     target: "_blank",
     rel: "noopener noreferrer",
     ariaLabel: "Mi correo electrónico",
