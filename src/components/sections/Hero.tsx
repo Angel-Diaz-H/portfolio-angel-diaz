@@ -1,6 +1,9 @@
 import { AppRedesSociales } from "@/components/index";
+import { heroData } from "@/data";
 
 export const Hero = () => {
+  const { greeting, name, roles, avatar } = heroData;
+
   return (
     <header
       id="inicio"
@@ -9,14 +12,21 @@ export const Hero = () => {
       <div className="flex flex-col items-center space-y-10 text-center lg:items-start lg:text-left">
         <div className="space-y-3">
           <p className="font-Ubuntu text-accent-primary-foreground text-xl font-semibold md:text-2xl">
-            Hola, ¡mucho gusto! Soy...
+            {greeting}
           </p>
           <h1 className="bg-linear-to-r from-green-600 to-lime-500 bg-clip-text py-3 text-5xl font-bold text-transparent md:text-7xl">
-            Angel Díaz
+            {name}
           </h1>
-          <p className="text-muted-foreground mt-7 max-w-2xl text-lg font-semibold md:text-2xl">
-            DBA & desarrollador de software.
-          </p>
+          <div className="space-y-1">
+            {roles.map((role) => (
+              <p
+                key={role}
+                className="text-muted-foreground max-w-2xl text-lg font-semibold md:text-xl"
+              >
+                {role}
+              </p>
+            ))}
+          </div>
         </div>
 
         <div className="grid gap-5">
@@ -36,8 +46,8 @@ export const Hero = () => {
 
         <img
           className="relative h-64 w-64 transform rounded-full object-cover shadow-xl transition-all duration-500 md:h-80 md:w-80 lg:h-100 lg:w-100"
-          src="./perfil.webp"
-          alt="Fotografía de perfil de Angel Díaz"
+          src={avatar.src}
+          alt={avatar.alt}
         />
       </div>
     </header>

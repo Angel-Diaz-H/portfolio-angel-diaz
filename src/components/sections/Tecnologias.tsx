@@ -1,53 +1,7 @@
 import { SectionWrapper, Title, TechList } from "@/components/index";
-import {
-  Cpu,
-  Database,
-  LayoutTemplate,
-  Rocket,
-  Server,
-  Sparkles,
-  Wrench,
-} from "lucide-react";
+import { Cpu } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
-
-const techCategories = [
-  {
-    id: "frontend",
-    title: "Frontend.",
-    typeTec: "frontend",
-    Icon: LayoutTemplate,
-  },
-  {
-    id: "backend",
-    title: "Backend.",
-    typeTec: "backend",
-    Icon: Server,
-  },
-  {
-    id: "database",
-    title: "Base de datos.",
-    typeTec: "database",
-    Icon: Database,
-  },
-  {
-    id: "tools",
-    title: "Herramientas.",
-    typeTec: "tools",
-    Icon: Wrench,
-  },
-  {
-    id: "productivity",
-    title: "Productividad.",
-    typeTec: "productivity",
-    Icon: Sparkles,
-  },
-  {
-    id: "nextSteps",
-    title: "Próximos pasos.",
-    typeTec: "nextSteps",
-    Icon: Rocket,
-  },
-] as const;
+import { techCategories } from "@/data";
 
 export const Tecnologias = ({ className }: { className?: string }) => {
   return (
