@@ -1,72 +1,20 @@
-import {
-  Briefcase,
-  Cpu,
-  Folder,
-  GraduationCap,
-  Home,
-  Mail,
-  User,
-} from "lucide-react";
 import { FloatingDock } from "../ui/floating-dock";
-
-const navList = [
-  {
-    title: "Inicio",
-    icon: (
-      <Home className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
-    href: "#inicio",
-  },
-  {
-    title: "Sobre mí",
-    icon: (
-      <User className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
-    href: "#sobre-mi",
-  },
-  {
-    title: "Experiencia",
-    icon: (
-      <Briefcase className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
-    href: "#experiencia",
-  },
-  {
-    title: "Proyectos",
-    icon: (
-      <Folder className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
-    href: "#proyectos",
-  },
-  {
-    title: "Tecnologías",
-    icon: (
-      <Cpu className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
-    href: "#tecnologias",
-  },
-  {
-    title: "Capacitaciones",
-    icon: (
-      <GraduationCap className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
-    href: "#capacitaciones",
-  },
-  {
-    title: "Contacto",
-    icon: (
-      <Mail className="h-full w-full text-neutral-600 dark:text-neutral-300" />
-    ),
-    href: "#contacto",
-  },
-];
+import { navigationItems } from "@/data";
 
 export function NavbarFloating() {
+  const dockItems = navigationItems.map(({ title, href, icon: Icon }) => ({
+    title,
+    href,
+    icon: (
+      <Icon className="h-full w-full text-neutral-600 dark:text-neutral-300" />
+    ),
+  }));
+
   return (
     // Subimos un poco el bottom (bottom-6) para que no roce tanto el borde
     <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
       <FloatingDock
-        items={navList}
+        items={dockItems}
         // ESTILO PREMIUM:
         // 1. bg-neutral-100/50: Un blanco translúcido muy sutil
         // 2. backdrop-blur-md: El efecto de vidrio real

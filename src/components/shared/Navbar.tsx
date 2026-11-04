@@ -1,22 +1,15 @@
-const navList: { name: string; href: string }[] = [
-  { name: "Inicio", href: "" },
-  { name: "Sobre mí", href: "" },
-  { name: "Experiencia", href: "" },
-  { name: "Proyectos", href: "" },
-  { name: "Tecnologías", href: "" },
-  { name: "Capacitaciones", href: "" },
-];
+import { navigationItems } from "@/data";
 
 export const Navbar = () => {
   return (
     <nav className="font-Inter fixed top-0 z-50 flex w-full items-center justify-center bg-white text-sm shadow backdrop-blur-md transition-all">
-      {navList.map((item) => (
+      {navigationItems.map((item) => (
         <a
-          key={item.name}
+          key={item.title}
           className="hover:text-accent-primary-foreground hover:bg-accent-primary px-3 py-3"
           href={item.href}
         >
-          {item.name}
+          {item.title}
         </a>
       ))}
     </nav>
