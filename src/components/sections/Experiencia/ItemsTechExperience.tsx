@@ -1,18 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TechList } from "@/components/index";
 import { TerminalSquare } from "lucide-react";
+import { experiences, type Experience } from "@/data";
 
-const EXPERIENCE_ORDER = [
-  "Oracle Database",
-  "SQL Server",
-  "Windows Server",
-  "Linux",
-  "MySQL",
-  "Maria DB",
-  "PostgreSQL",
-];
+interface Props {
+  experience?: Experience;
+}
 
-export const ItemsTechExperience = () => {
+export const ItemsTechExperience = ({
+  experience = experiences[0],
+}: Props) => {
   return (
     <Card borderAnimation className="w-full">
       <CardContent className="px-6">
@@ -20,7 +17,7 @@ export const ItemsTechExperience = () => {
           title="Tecnologías aprendidas."
           Icon={TerminalSquare}
           variant="card"
-          order={EXPERIENCE_ORDER}
+          order={experience.technologies}
           classNameItems="grid grid-cols-2 gap-y-0"
           classNameItem="py-1 m-0 border-0"
         />

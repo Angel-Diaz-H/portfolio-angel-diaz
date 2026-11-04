@@ -15,14 +15,14 @@ import {
 } from "@/components/ui/dialog";
 import { Image as ImageIcon } from "lucide-react";
 import { useState, useEffect } from "react";
+import { experiences, type Experience } from "@/data";
 
-const galleryImages = [
-  "./experiencia/experience-1.webp",
-  "./experiencia/experience-2.webp",
-  "./experiencia/experience-3.webp",
-];
+interface Props {
+  experience?: Experience;
+}
 
-export const AppGallery = () => {
+export const AppGallery = ({ experience = experiences[0] }: Props) => {
+  const galleryImages = experience.galleryImages;
   const [mainApi, setMainApi] = useState<CarouselApi>();
   const [dialogApi, setDialogApi] = useState<CarouselApi>();
   const [isOpen, setIsOpen] = useState(false);
