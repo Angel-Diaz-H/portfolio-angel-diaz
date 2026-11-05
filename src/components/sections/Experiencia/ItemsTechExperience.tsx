@@ -12,7 +12,7 @@ export const ItemsTechExperience = ({ experience = experiences[0] }: Props) => {
     <Card borderAnimation className="w-full">
       <CardContent className="px-6">
         <TechList
-          title="Tecnologías aprendidas."
+          title="Tecnologías utilizadas."
           Icon={TerminalSquare}
           variant="card"
           order={experience.technologies}

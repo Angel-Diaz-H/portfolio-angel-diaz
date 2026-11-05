@@ -40,8 +40,8 @@ export const experiences: Experience[] = [
     logo: "./experiencia/casas-javer-logo.webp",
     logoAlt: "Logo de Casas Javer",
     summary: [
-      "Rol enfocado en el soporte y mantenimiento de infraestructura.",
-      "Logré aumentar la eficiencia operativa mediante la automatización de respaldos clave y la estandarización de consultas complejas.",
+      "Rol enfocado en el soporte y mantenimiento de bases de datos.",
+      "Logré aumentar la eficiencia operativa mediante la automatización de respaldos SQL y la estandarización de consultas.",
     ],
     pillars: [
       {
