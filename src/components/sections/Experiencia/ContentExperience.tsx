@@ -11,9 +11,7 @@ interface Props {
   experience?: Experience;
 }
 
-export const ContentExperience = ({
-  experience = experiences[0],
-}: Props) => {
+export const ContentExperience = ({ experience = experiences[0] }: Props) => {
   return (
     <div className="mx-2 grid grid-cols-1 gap-8 md:grid-cols-[1fr_1fr] lg:grid-cols-[1.3fr_0.9fr]">
       <div className="flex flex-col gap-3">

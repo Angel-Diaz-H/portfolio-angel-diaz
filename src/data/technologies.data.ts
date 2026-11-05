@@ -219,18 +219,18 @@ export const technologies: Technology[] = [
     type: "productivity",
   },
   // {
-  //   id: 17,
-  //   name: "Bootstrap",
-  //   img: "./tecnologias/bootstrap.webp",
-  //   type: "frontend",
-  // },
-  // {
-  //   id: 14,
+  //   id: 25,
   //   name: "Maria DB",
   //   img: "./tecnologias/mariadb.webp",
   //   type: "database",
   // },
   // {
+  // {
+  //   id: 17,
+  //   name: "Bootstrap",
+  //   img: "./tecnologias/bootstrap.webp",
+  //   type: "frontend",
+  // },
   //   id: 20,
   //   name: "Vite",
   //   img: "./tecnologias/vite.svg",

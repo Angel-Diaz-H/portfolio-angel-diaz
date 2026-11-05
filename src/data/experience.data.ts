@@ -77,7 +77,7 @@ export const experiences: Experience[] = [
         ],
       },
     ],
-    badges: ["Respaldos", "Soporte Oracle EBS", "Gestión Oracle APEX"],
+    badges: ["Respaldos SQL", "Soporte Oracle EBS", "Gestión Oracle APEX"],
     galleryImages: [
       "./experiencia/experience-1.webp",
       "./experiencia/experience-2.webp",
@@ -89,7 +89,6 @@ export const experiences: Experience[] = [
       "Windows Server",
       "Linux",
       "MySQL",
-      "Maria DB",
       "PostgreSQL",
     ],
   },

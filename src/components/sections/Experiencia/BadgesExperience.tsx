@@ -11,7 +11,7 @@ export const BadgesExperience = ({ experience = experiences[0] }: Props) => {
       {experience.badges.map((badge, idx) => (
         <span
           key={idx}
-          className="inline-flex items-center gap-1.5 rounded-md bg-green-50 px-2.5 py-1 text-xs font-medium tracking-wide text-sky-900/90 dark:bg-green-900/20 dark:text-blue-400"
+          className="inline-flex items-center gap-1.5 rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium tracking-wide text-sky-900/90 dark:bg-blue-900/20 dark:text-blue-400"
         >
           <CheckCircle2 className="h-3.5 w-3.5" /> {badge}
         </span>
