@@ -8,18 +8,10 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import type { Certificate } from "@/data";
 
 interface Props {
-  cert: {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    iconDark?: string;
-    iconLight?: string;
-    credentialUrl: string;
-    technologies: string[];
-  };
+  cert: Certificate;
 }
 
 export const CardCapacitacion = ({ cert }: Props) => {
@@ -39,7 +31,7 @@ export const CardCapacitacion = ({ cert }: Props) => {
                   src={cert.iconLight}
                   alt={cert.title}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="h-full w-full object-cover"
                 />
               </div>
 

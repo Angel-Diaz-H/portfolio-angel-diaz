@@ -13,7 +13,7 @@ export const CardTecnologia = ({ tec, classNameItem }: Props) => {
     >
       <div className="flex h-7 w-8 shrink-0 items-center justify-center rounded-md p-1 dark:bg-white/10">
         <img
-          className="h-full w-full object-contain transition-transform group-hover:scale-105"
+          className="h-full w-full object-contain"
           src={tec.img}
           alt={tec.name}
           loading="lazy"
