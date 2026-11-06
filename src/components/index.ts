@@ -2,6 +2,7 @@ export { AppCapacitaciones } from "@/components/sections/Capacitaciones/AppCapac
 export { AppGallery } from "@/components/sections/Experiencia/AppGallery";
 export { AppProyectosIndividuales } from "./sections/Proyectos/Individuals/AppProyectosIndividuales";
 export { AppProyectosIntegrales } from "./sections/Proyectos/Integrals/AppProyectosIntegrales";
+export { AppProyectoPrincipal } from "./sections/Proyectos/Featured/AppProyectoPrincipal";
 export { AppRedesSociales } from "@/components/sections/Hero/AppRedesSociales";
 export { AppScrollTechnologies } from "@/components/sections/ScrollTechnologies/AppScrollTechnologies";
 export { Background } from "@/components/sections/Background";

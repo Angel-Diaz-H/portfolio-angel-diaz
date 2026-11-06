@@ -3,11 +3,13 @@ export interface Project {
   title: string;
   description: string;
   images?: string[];
+  imageCaptions?: string[];
   technologies?: string[];
   github?: string;
   link?: string;
   date: string;
   level: number;
+  featured?: boolean;
 }
 
 export const projects: Project[] = [
@@ -37,20 +39,31 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Sistema integral de productos, ventas y ofimática.",
+    title: "SIPM. Sistema integral para negocios de oficina.",
     description:
-      "Sistema de para gestión de productos y ventas. Incluye manipulación de documentos.",
-    images: ["./projects/sipm-1.webp"],
+      "Punto de venta para gestionar productos, ventas, clientes y proveedores. Incluye gestión de imágenes y documentos a las necesidades del negocio.",
+    images: [
+      "./projects/sipm-1.png",
+      "./projects/sipm-2.png",
+      "./projects/sipm-3.webp",
+    ],
+    imageCaptions: [
+      "Pantalla principal de venta.",
+      "Sección de gestión de productos.",
+      "Servidor físico Ubuntu Server ejecutando contenedores Docker.",
+    ],
     technologies: [
       "TypeScript",
       "React",
       "Next.js",
-      "MySQL",
+      "Tailwind CSS",
+      "PostgreSQL",
       "Docker",
-      "Tailwind",
+      "Ubuntu Server",
     ],
     date: "2025-12-30",
     level: 1,
+    featured: true,
   },
   {
     id: 4,

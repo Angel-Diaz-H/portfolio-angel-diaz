@@ -19,10 +19,11 @@ import {
 
 export const AppProyectosIntegrales = () => {
   const levelOneProjects = projects
-    .filter((project) => project.level === 1)
+    .filter((project) => project.level === 1 && !project.featured)
     .sort(
       (leftProject, rightProject) =>
-        new Date(rightProject.date).getTime() - new Date(leftProject.date).getTime(),
+        new Date(rightProject.date).getTime() -
+        new Date(leftProject.date).getTime(),
     );
 
   const [projectSelected, setProjectSelected] = useState<Project | null>(null);
