@@ -14,7 +14,7 @@ export const Hero = () => {
           <p className="font-Ubuntu text-accent-primary-foreground text-xl font-semibold md:text-2xl">
             {greeting}
           </p>
-          <h1 className="bg-linear-to-r from-green-600 to-lime-500 bg-clip-text py-3 text-5xl font-bold text-transparent md:text-7xl">
+          <h1 className="bg-linear-to-r from-blue-800 to-sky-700 bg-clip-text py-3 text-5xl font-bold text-transparent md:text-7xl">
             {name}
           </h1>
           <div className="space-y-1">

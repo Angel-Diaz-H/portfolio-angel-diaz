@@ -12,7 +12,7 @@ export const Sparkles = () => {
           speed={1}
           particleDensity={50}
           className="h-full w-full"
-          particleColor="#34b900"
+          particleColor="#38bdf8"
         />
       </div>
     </div>

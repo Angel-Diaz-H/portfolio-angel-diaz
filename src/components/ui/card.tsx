@@ -15,7 +15,7 @@ function Card({ className, borderAnimation, ...props }: CardProps) {
           className,
         )}
       >
-        <div className="absolute top-1/2 left-1/2 aspect-square min-h-[max(300%,600px)] min-w-[max(300%,600px)] -translate-x-1/2 -translate-y-1/2 animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_88%,#22c55e_98%,transparent_100%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="absolute top-1/2 left-1/2 aspect-square min-h-[max(300%,600px)] min-w-[max(300%,600px)] -translate-x-1/2 -translate-y-1/2 animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_88%,#38bdf8_98%,transparent_100%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
         <div
           data-slot="card"

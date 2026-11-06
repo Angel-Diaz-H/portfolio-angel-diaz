@@ -162,23 +162,24 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
-  --primary: oklch(68.72% 0.22303 140.4);
+  /* Primary: azul oscuro */
+  --primary: oklch(40.668% 0.11349 255.409);
   --primary-foreground: oklch(1 0 0);
 
-  /* Secondary: Un gris muy suave, ideal para contraste */
-  --secondary: oklch(0.305 0.098 139.895);
-  --secondary-foreground: oklch(0.886 0.27 137.189);
+  /* Secondary: azul muy oscuro (títulos h2) con texto celeste */
+  --secondary: oklch(0.32 0.11 258);
+  --secondary-foreground: oklch(0.9 0.06 230);
 
   /* Muted: Fondos apagados */
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
 
-  /* Accent: Para hovers en listas/dropdowns. */
-  --accent-primary: oklch(0.983 0.042 124.442);
-  --accent-primary-foreground: oklch(0.609 0.197 140.265);
+  /* Accent: celeste suave para hovers */
+  --accent-primary: oklch(0.96 0.03 230);
+  --accent-primary-foreground: oklch(47.787% 0.13095 250.251);
 
-  --accent-secondary: oklch(0.983 0.042 124.442);
-  --accent-secondary-foreground: oklch(0.75 0.243 140.358);
+  --accent-secondary: oklch(0.96 0.03 230);
+  --accent-secondary-foreground: oklch(0.38 0.14 258);
 
   /* Destructive: Rojo de error */
   --destructive: oklch(0.577 0.245 27.325);
@@ -187,25 +188,25 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
 
-  /* Ring: El aro de focus del input, usamos el verde principal */
-  --ring: oklch(0.75 0.243 140.358);
+  /* Ring: aro de focus en azul */
+  --ring: oklch(0.62 0.17 245);
 
-  /* Charts: Integrando el verde en las gráficas */
-  --chart-1: oklch(0.75 0.243 140.358);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  /* Charts: gama de azules */
+  --chart-1: oklch(0.45 0.17 258);
+  --chart-2: oklch(0.6 0.17 245);
+  --chart-3: oklch(0.75 0.13 230);
+  --chart-4: oklch(0.85 0.09 225);
+  --chart-5: oklch(0.32 0.11 258);
 
   /* Sidebar */
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.75 0.243 140.358);
+  --sidebar-primary: oklch(0.45 0.17 258);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.983 0.042 124.442);
-  --sidebar-accent-foreground: oklch(0.399 0.125 139.062);
+  --sidebar-accent: oklch(0.96 0.03 230);
+  --sidebar-accent-foreground: oklch(0.32 0.11 258);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.75 0.243 140.358);
+  --sidebar-ring: oklch(0.62 0.17 245);
 }
 
 .dark {
@@ -217,11 +218,9 @@
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
 
-  /* Primary Dark: Usamos el 500 (más brillante) para que resalte en negro */
-  --primary: oklch(0.876 0.282 139.907);
-  --primary-foreground: oklch(
-    0.145 0 0
-  ); /* Texto oscuro en botón verde brillante */
+  /* Primary Dark: celeste brillante para que resalte sobre negro */
+  --primary: oklch(0.78 0.13 230);
+  --primary-foreground: oklch(0.2 0.06 258);
 
   /* Secondary */
   --secondary: oklch(0.269 0 0);
@@ -231,9 +230,9 @@
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
 
-  /* Accent Dark: Verde muy oscuro para los hovers */
-  --accent: oklch(0.305 0.098 139.895);
-  --accent-foreground: oklch(0.876 0.282 139.907);
+  /* Accent Dark: azul oscuro para los hovers */
+  --accent: oklch(0.3 0.08 258);
+  --accent-foreground: oklch(0.85 0.09 225);
 
   --destructive: oklch(0.704 0.191 22.216);
 
@@ -241,24 +240,24 @@
   --input: oklch(1 0 0 / 15%);
 
   /* Ring Dark */
-  --ring: oklch(0.876 0.282 139.907);
+  --ring: oklch(0.78 0.13 230);
 
   /* Charts Dark */
-  --chart-1: oklch(0.876 0.282 139.907);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
+  --chart-1: oklch(0.78 0.13 230);
+  --chart-2: oklch(0.65 0.17 245);
+  --chart-3: oklch(0.5 0.17 258);
+  --chart-4: oklch(0.88 0.08 220);
+  --chart-5: oklch(0.38 0.12 258);
 
   /* Sidebar Dark */
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.876 0.282 139.907); /* green-house-500 */
-  --sidebar-primary-foreground: oklch(0.145 0 0);
-  --sidebar-accent: oklch(0.305 0.098 139.895); /* green-house-950 */
+  --sidebar-primary: oklch(0.78 0.13 230);
+  --sidebar-primary-foreground: oklch(0.2 0.06 258);
+  --sidebar-accent: oklch(0.3 0.08 258);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.876 0.282 139.907);
+  --sidebar-ring: oklch(0.78 0.13 230);
 }
 
 @layer base {
@@ -270,19 +269,7 @@
   }
 }
 
-/* 
-50: oklch(0.983 0.042 124.442);
-100: oklch(0.962 0.092 127.642);
-200: oklch(0.933 0.167 129.924);
-300: oklch(0.904 0.238 133.477);
-400: oklch(0.886 0.270 137.189);
-500: oklch(0.876 0.282 139.907);
-600: oklch(0.750 0.243 140.358);
-700: oklch(0.609 0.197 140.265);
-800: oklch(0.508 0.162 139.647);
-900: oklch(0.399 0.125 139.062);
-950: oklch(0.305 0.098 139.895);
-*/
+/* Paleta base: azul oscuro (primary) + celeste (acentos). */
 
 @layer base {
   /* h1 {
