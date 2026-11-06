@@ -17,7 +17,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { projects } from "@/data/projects.data";
-import { ExternalLink, Github } from "lucide-react";
+import { CheckCircle2, ExternalLink, Github } from "lucide-react";
 import { useEffect, useState } from "react";
 
 // `duration` más bajo = desplazamiento más rápido (por defecto 25).
@@ -139,7 +139,7 @@ export const AppProyectoPrincipal = () => {
               {project.description}
             </p>
 
-            <div className="mt-5">
+            <div className="mt-3">
               <p className="text-foreground/75 mb-2 text-sm font-semibold">
                 Tecnologías
               </p>
@@ -149,6 +149,11 @@ export const AppProyectoPrincipal = () => {
                 badgeVariant="outline"
                 icons
               />
+            </div>
+            <div>
+              <span className="mt-3 inline-flex gap-1.5 rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium tracking-wide text-sky-900/90 dark:bg-blue-900/20 dark:text-blue-400">
+                <CheckCircle2 className="h-3.5 w-3.5" /> Proyecto en producción
+              </span>
             </div>
 
             {(project.github || project.link) && (
