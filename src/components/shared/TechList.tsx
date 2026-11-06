@@ -2,6 +2,7 @@ import { technologies } from "@/data/technologies.data";
 import { TechInline } from "@/components/index";
 import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 interface TechListProps {
   className?: string;
@@ -20,6 +21,8 @@ interface TechListProps {
     | "ghost"
     | "link";
   icons?: boolean;
+  /** Máximo de elementos visibles; el resto se muestra como "+N". */
+  max?: number;
 }
 
 export const TechList = ({
@@ -33,6 +36,7 @@ export const TechList = ({
   variant = "inline",
   badgeVariant = "outline",
   icons = true,
+  max,
 }: TechListProps) => {
   const normalize = (value: string) =>
     value
@@ -78,6 +82,10 @@ export const TechList = ({
 
   if (itemsToRender.length === 0) return null;
 
+  const hasLimit = max !== undefined && itemsToRender.length > max;
+  const visibleItems = hasLimit ? itemsToRender.slice(0, max) : itemsToRender;
+  const hiddenCount = itemsToRender.length - visibleItems.length;
+
   return (
     <div className={cn(className)}>
       {(title || Icon) && (
@@ -95,7 +103,7 @@ export const TechList = ({
           classNameItems,
         )}
       >
-        {itemsToRender.map((item, index) => (
+        {visibleItems.map((item, index) => (
           <TechInline
             key={item.id ?? `${item.name}-${index}`}
             id={item.id}
@@ -107,6 +115,11 @@ export const TechList = ({
             classNameItem={variant === "card" ? classNameItem : ""}
           />
         ))}
+        {hiddenCount > 0 && (
+          <Badge variant={badgeVariant} className="text-muted-foreground">
+            +{hiddenCount}
+          </Badge>
+        )}
       </div>
     </div>
   );

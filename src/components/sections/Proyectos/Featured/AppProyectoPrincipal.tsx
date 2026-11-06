@@ -12,12 +12,16 @@ import {
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
+  DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { projects } from "@/data/projects.data";
-import { ExternalLink, Github, Images } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { useEffect, useState } from "react";
+
+// `duration` más bajo = desplazamiento más rápido (por defecto 25).
+const CAROUSEL_OPTS = { duration: 18, align: "start" as const };
 
 export const AppProyectoPrincipal = () => {
   const project = projects.find((item) => item.featured);
@@ -26,43 +30,27 @@ export const AppProyectoPrincipal = () => {
   const [dialogApi, setDialogApi] = useState<CarouselApi>();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [dialogStartIndex, setDialogStartIndex] = useState(0);
 
+  // El carrusel principal es la fuente de verdad del índice actual.
   useEffect(() => {
     if (!mainApi) return;
 
-    const syncSelectedImage = () => {
-      setSelectedImageIndex(mainApi.selectedScrollSnap());
-    };
+    const sync = () => setSelectedImageIndex(mainApi.selectedScrollSnap());
 
-    syncSelectedImage();
-    mainApi.on("select", syncSelectedImage);
+    sync();
+    mainApi.on("select", sync);
     return () => {
-      mainApi.off("select", syncSelectedImage);
+      mainApi.off("select", sync);
     };
   }, [mainApi]);
-
-  useEffect(() => {
-    if (!dialogApi) return;
-
-    const syncSelectedImage = () => {
-      setSelectedImageIndex(dialogApi.selectedScrollSnap());
-    };
-
-    dialogApi.on("select", syncSelectedImage);
-    return () => {
-      dialogApi.off("select", syncSelectedImage);
-    };
-  }, [dialogApi]);
-
-  useEffect(() => {
-    mainApi?.scrollTo(selectedImageIndex, true);
-    if (isOpen) dialogApi?.scrollTo(selectedImageIndex, true);
-  }, [dialogApi, isOpen, mainApi, selectedImageIndex]);
 
   useEffect(() => {
     if (!isOpen || !dialogApi) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
+      // El carrusel ya gestiona las flechas cuando tiene el foco.
+      if (event.defaultPrevented) return;
       if (event.key === "ArrowLeft") dialogApi.scrollPrev();
       if (event.key === "ArrowRight") dialogApi.scrollNext();
     };
@@ -73,70 +61,78 @@ export const AppProyectoPrincipal = () => {
 
   if (!project) return null;
 
-  const openImage = (index: number) => {
-    setSelectedImageIndex(index);
-    mainApi?.scrollTo(index, true);
-    dialogApi?.scrollTo(index, true);
+  const openGallery = (index: number) => {
+    // Se congela el índice inicial para no reiniciar el carrusel del diálogo.
+    setDialogStartIndex(index);
+    setIsOpen(true);
+  };
+
+  const handleOpenChange = (open: boolean) => {
+    if (!open && dialogApi && mainApi) {
+      // Al cerrar, el carrusel principal queda en la imagen vista en el diálogo.
+      const index = dialogApi.selectedScrollSnap();
+      setSelectedImageIndex(index);
+      mainApi.scrollTo(index, true);
+    }
+    setIsOpen(open);
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <Card borderAnimation>
-        <CardContent className="grid gap-5 py-5 lg:grid-cols-[minmax(0,1.65fr)_minmax(18rem,0.85fr)] lg:items-stretch">
+        <CardContent className="grid gap-4 px-3 py-4 sm:px-6 sm:py-5 lg:grid-cols-[minmax(0,1.65fr)_minmax(18rem,0.85fr)] lg:items-stretch">
           <div className="min-w-0">
             {images.length > 0 ? (
               <Carousel
                 setApi={setMainApi}
+                opts={CAROUSEL_OPTS}
                 className="relative w-full hover:cursor-grab active:cursor-grabbing"
               >
-                <CarouselContent>
+                <CarouselContent className="ml-0 touch-pan-y will-change-transform">
                   {images.map((image, index) => (
-                    <CarouselItem key={`${project.id}-${image}`}>
-                      <figure className="grid gap-1">
-                        <div className="border-border/60 relative aspect-16/10 w-full overflow-hidden rounded-xl border shadow-sm">
-                          <DialogTrigger asChild>
-                            <button
-                              type="button"
-                              onClick={() => openImage(index)}
-                              className="group/image h-full w-full cursor-pointer text-left"
-                              aria-label={`Abrir captura ${index + 1} de ${project.title}`}
-                            >
-                              <img
-                                src={image}
-                                alt={`${project.title}: captura ${index + 1}`}
-                                loading="lazy"
-                                className="h-full w-full object-cover transition-transform duration-500 group-hover/image:scale-105"
-                              />
-                            </button>
-                          </DialogTrigger>
-                          <div className="absolute right-2 bottom-2 z-10 flex gap-1">
-                            <CarouselPrevious className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60" />
-                            <CarouselNext className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60" />
-                          </div>
-                        </div>
-                        {project.imageCaptions?.[index] && (
-                          <figcaption className="text-muted-foreground px-4 text-xs leading-6">
-                            {project.imageCaptions[index]}
-                          </figcaption>
-                        )}
-                      </figure>
+                    <CarouselItem
+                      key={`${project.id}-${image}`}
+                      className="pl-0"
+                    >
+                      <button
+                        type="button"
+                        onClick={() => openGallery(index)}
+                        className="group/image border-border/60 block aspect-4/3 w-full cursor-pointer overflow-hidden rounded-xl border shadow-sm outline-none sm:aspect-16/10"
+                        aria-label={`Abrir captura ${index + 1} de ${project.title}`}
+                      >
+                        <img
+                          src={image}
+                          alt={`${project.title}: captura ${index + 1}`}
+                          loading={index === 0 ? "eager" : "lazy"}
+                          decoding="async"
+                          draggable={false}
+                          className="h-full w-full object-cover md:transition-transform md:duration-500 md:group-hover/image:scale-105"
+                        />
+                      </button>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
+                {images.length > 1 && (
+                  <div className="absolute right-2 bottom-2 z-10 flex gap-1">
+                    <CarouselPrevious className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white hover:bg-black/60" />
+                    <CarouselNext className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white hover:bg-black/60" />
+                  </div>
+                )}
               </Carousel>
             ) : (
               <div className="bg-muted/30 text-muted-foreground flex aspect-16/10 items-center justify-center rounded-2xl text-sm">
                 Próximamente se añadirán capturas del proyecto.
               </div>
             )}
+            {project.imageCaptions?.[selectedImageIndex] && (
+              <p className="text-muted-foreground mt-1 px-2 text-xs leading-6 sm:px-4">
+                {project.imageCaptions[selectedImageIndex]}
+              </p>
+            )}
           </div>
 
-          <aside className="flex flex-col rounded-2xl p-5">
-            <div className="text-primary mb-4 flex items-center gap-2 text-sm font-semibold">
-              <Images className="h-4 w-4" />
-              Proyecto destacado
-            </div>
-            <h3 className="text-foreground/90 text-xl leading-snug font-bold">
+          <aside className="flex flex-col rounded-2xl p-2 sm:p-5">
+            <h3 className="text-foreground/80 text-xl leading-snug font-bold">
               {project.title}
             </h3>
             <p className="text-muted-foreground font-Inter mt-3 text-sm leading-6">
@@ -182,42 +178,46 @@ export const AppProyectoPrincipal = () => {
       </Card>
 
       <DialogContent
-        showCloseButton={false}
-        className="h-[80vh] w-[95vw] max-w-[95vw] cursor-grab border-none bg-transparent p-0 shadow-none md:w-[70vw] md:max-w-[70vw]"
+        // Evita que Radix devuelva el foco al trigger (y desplace el carrusel).
+        onCloseAutoFocus={(event) => event.preventDefault()}
+        className="w-[95vw]! max-w-5xl! rounded-3xl p-4 sm:p-5"
       >
-        <DialogTitle className="sr-only">
-          Galería del proyecto principal
-        </DialogTitle>
+        <DialogHeader className="mb-2">
+          <DialogTitle className="text-foreground/80 text-2xl font-bold">
+            {project.title}
+          </DialogTitle>
+          <DialogDescription className="text-base">
+            {project.description}
+          </DialogDescription>
+        </DialogHeader>
+
         <Carousel
           setApi={setDialogApi}
-          className="group relative h-full w-full"
+          opts={{ ...CAROUSEL_OPTS, startIndex: dialogStartIndex }}
+          className="group relative mt-2 w-full hover:cursor-grab active:cursor-grabbing"
         >
-          <CarouselContent className="ml-0 h-[80vh]">
+          <CarouselContent className="ml-0 touch-pan-y will-change-transform">
             {images.map((image, index) => (
               <CarouselItem
                 key={`${project.id}-dialog-${image}`}
-                className="flex h-full w-full items-center justify-center pl-0"
-                onClick={() => setIsOpen(false)}
+                className="pl-0"
               >
-                <img
-                  src={image}
-                  alt={`${project.title}: captura ampliada ${index + 1}`}
-                  loading="lazy"
-                  onClick={(event) => event.stopPropagation()}
-                  className="h-full w-full rounded-2xl object-cover shadow-2xl"
-                />
+                <div className="border-border/50 relative flex h-[50vh] w-full items-center justify-center overflow-hidden rounded-2xl border sm:h-[65vh]">
+                  <img
+                    src={image}
+                    alt={`${project.title}: captura ampliada ${index + 1}`}
+                    decoding="async"
+                    draggable={false}
+                    className="bg-muted/10 h-full w-full object-contain p-2"
+                  />
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-
           {images.length > 1 && (
             <>
-              <div className="absolute inset-y-0 left-2 flex items-center md:left-4">
-                <CarouselPrevious className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60 md:h-12 md:w-12" />
-              </div>
-              <div className="absolute inset-y-0 right-2 flex items-center md:right-4">
-                <CarouselNext className="static h-8 w-8 translate-y-0 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60 md:h-12 md:w-12" />
-              </div>
+              <CarouselPrevious className="absolute top-1/2 left-4 h-10 w-10 -translate-y-1/2 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60 md:opacity-0 md:group-hover:opacity-100" />
+              <CarouselNext className="absolute top-1/2 right-4 h-10 w-10 -translate-y-1/2 cursor-pointer border-none bg-black/40 text-white backdrop-blur-sm transition-all hover:bg-black/60 md:opacity-0 md:group-hover:opacity-100" />
             </>
           )}
         </Carousel>

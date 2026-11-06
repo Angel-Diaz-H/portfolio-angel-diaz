@@ -39,7 +39,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "SIPM. Sistema integral para negocios de oficina.",
+    title: "Sistema integral para negocios de oficina.",
     description:
       "Punto de venta para gestionar productos, ventas, clientes y proveedores. Incluye gestión de imágenes y documentos a las necesidades del negocio.",
     images: [

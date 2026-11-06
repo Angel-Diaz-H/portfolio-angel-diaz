@@ -34,7 +34,7 @@ export const Proyectos = ({ className }: Props) => {
           <div className="flex items-center gap-2.5">
             <SquareCode className="text-primary h-5 w-5" />
             <p className="text-foreground/80 text-lg font-bold">
-              Otros proyectos destacados.
+              Proyectos destacados.
             </p>
           </div>
           <AppProyectosIntegrales />
