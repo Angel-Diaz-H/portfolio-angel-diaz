@@ -42,57 +42,52 @@ export interface AboutData {
 }
 
 export const aboutData: AboutData = {
-  storyHeadline: "Desarrollador de software con bases en infraestructura.",
+  storyHeadline: "Bases de datos, infraestructura y desarrollo backend.",
   paragraphs: [
     {
       segments: [
         {
-          text: "Soy un desarrollador enfocado en el backend y el ecosistema web.",
+          text: "Egresado de Tecnologías de Información con experiencia en administración de bases de datos, servidores e infraestructura, gestionando entornos Oracle y SQL Server sobre Linux y Windows, desarrollando una visión orientada a la ",
         },
-      ],
-    },
-    {
-      segments: [
-        {
-          text: "Inicié mi carrera profesional gestionando bases de datos Oracle y SQL Server en servidores Linux y Windows. Esta experiencia me enseñó que los sistemas deben ser ",
-        },
-        { text: "eficientes", highlight: "semi-bold" },
+        { text: "estabilidad", highlight: "semi-bold" },
         { text: ", " },
-        { text: "seguros", highlight: "semi-bold" },
+        { text: "seguridad", highlight: "semi-bold" },
         { text: " y " },
-        { text: "escalables", highlight: "semi-bold" },
-        { text: "." },
+        { text: "eficiencia", highlight: "semi-bold" },
+        { text: " de los sistemas empresariales." },
       ],
     },
     {
       segments: [
         {
-          text: "Actualmente, traslado esta disciplina operativa al desarrollo fullstack, construyendo aplicaciones con el ecosistema ",
+          text: "Además de mi experiencia en infraestructura, he desarrollado soluciones utilizando tecnologías como ",
         },
-        { text: "JavaScript", highlight: "primary" },
-        { text: " como lo son " },
         { text: "TypeScript", highlight: "primary" },
         { text: ", " },
-        { text: "React", highlight: "primary" },
+        { text: ".NET", highlight: "primary" },
         { text: " y " },
-        { text: "Node.js", highlight: "primary" },
-        { text: "." },
+        { text: "Next.js", highlight: "primary" },
+        {
+          text: ", combinando buenas prácticas de desarrollo con una sólida base operativa.",
+        },
       ],
     },
     {
       segments: [
         {
-          text: "Mi objetivo es integrarme a un equipo colaborativo como ",
+          text: "Mi objetivo es continuar creciendo en áreas como ",
         },
-        { text: "desarrollador backend", highlight: "semi-bold" },
-        { text: " o " },
-        { text: "fullstack", highlight: "semi-bold" },
-        {
-          text: ". Busco aportar valor resolviendo problemas reales mientras consolido mis buenas prácticas y mi formación hacia la ",
-        },
-        { text: "arquitectura de software", highlight: "primary" },
+        { text: "administración de bases de datos", highlight: "semi-bold" },
+        { text: ", " },
+        { text: "infraestructura", highlight: "semi-bold" },
         { text: " y " },
+        { text: "desarrollo backend", highlight: "semi-bold" },
+        {
+          text: ", aportando soluciones confiables mientras fortalezco mis conocimientos en ",
+        },
         { text: "DevOps", highlight: "primary" },
+        { text: " y " },
+        { text: "arquitectura de software", highlight: "primary" },
         { text: "." },
       ],
     },
@@ -119,14 +114,14 @@ export const aboutData: AboutData = {
     {
       id: "technicalFocus",
       label: "Enfoque Técnico.",
-      title: "Backend, bases de datos, DevOps.",
-      description: "Profundizando en React & Next.js.",
+      title: "Bases de datos, backend, DevOps.",
+      description: "Profundizando en infraestructura y desarrollo.",
       icon: Server,
     },
     {
       id: "location",
       label: "Ubicación.",
-      title: "Monterrey, Nuevo León.",
+      title: "General Escobedo, Nuevo León.",
       description: "Presencial | Híbrido | Remoto.",
       icon: MapPin,
     },
